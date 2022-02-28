@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input id="id_nome" type="text" />
+    <input id="id_senha" type="text" />
+    <button onclick="teste()">teste</button>
+  </body>
+</html>
+<script>
+  function teste(){
+
+      var varnome = id_nome.value;
+      var varsenha = id_senha.value;
+    
+      fetch('/',{
+          method:'POST',    
+          headers: {
+              "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+              nome: varnome,
+              senha: varsenha,
+          })
+      }).then((res)=>{
+        console.log("conta criada")
+        window.location = './paulo.html'
+          }).catch((error)=>{
+              console.log(error);
+          })
+      }
+  
+</script>
