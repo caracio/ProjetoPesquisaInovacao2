@@ -1,0 +1,495 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  list-style: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+
+header nav {
+  width: 60%;
+  height: 13vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  padding-left: 30%;
+}
+
+header nav a {
+  color: #747474;
+  margin-top: 5rem;
+}
+
+header nav .cadastro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  margin-left: 15%;
+  background-color: #02e493;
+  height: 3rem;
+  width: 12rem;
+  border-radius: 25px;
+}
+
+.banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 87vh;
+  justify-content: space-evenly;
+}
+
+.banner h1 {
+  font-size: 3rem;
+}
+
+.banner p {
+  color: #747474;
+  text-align: center;
+}
+
+.banner .cadastro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  background-color: #02e493;
+  height: 3rem;
+  width: 17rem;
+  border-radius: 25px;
+}
+
+.informacao {
+  height: auto;
+  background-color: #02e493;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.informacao h1{
+  text-align: center;
+  width: 100%;
+}
+
+.img-container{
+  height: 70%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, auto));
+  grid-template-rows: auto;
+  justify-items: center;
+  align-items: center;
+}
+
+.img-container .CardUm{
+  display: flex;
+  justify-content: flex-start;
+  width: 45%;
+  padding: 1rem;
+}
+
+.img-container .CardDois{
+  display: flex;
+  justify-content: flex-end;
+  width: 45%;
+  padding: 1rem;
+}
+
+.img-container .CardUm img{
+  height: 100%;
+  width: 30vw;
+  border-radius: 8px;
+}
+
+.img-container .CardDois img{
+  height: 100%;
+  width: 30vw;
+  border-radius: 8px;
+
+}
+
+.informacao h1 {
+  color: #ffffff;
+  font-size: 2.5rem;
+}
+
+.informacao .cadastro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  color: #02e493;
+  height: 3rem;
+  width: 12rem;
+  border-radius: 25px;
+}
+
+.informacaoDispositivo {
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, auto));
+  grid-template-rows: 100vh;
+  justify-items: center;
+  align-items: center;
+}
+
+.informacaoDispositivo div {
+  width: 40vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.informacaoDispositivo .div-dispositivo-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50vw;
+}
+
+.informacaoDispositivo .div-dispositivo-container .img-dispositivo{
+  height: 70%;
+  width: 70%;
+}
+
+.informacaoDispositivo div h1 {
+  font-size: 2.5rem;
+  padding-bottom: 1rem;
+  text-align: left;
+}
+
+.informacaoDispositivo div p {
+  color: #747474;
+}
+
+.informacaoSuporte {
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.informacaoSuporte h1 {
+  font-size: 2.5rem;
+}
+
+.informacaoSuporte p {
+  color: #747474;
+}
+
+.informacaoSuporte .barra {
+  height: 3%;
+  width: 60%;
+  background-color: #02e493;
+  border-radius: 25px;
+}
+
+.informacaoSuporte .conhecerProduto {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  background-color: #02e493;
+  height: 3rem;
+  width: 12rem;
+  border-radius: 25px;
+}
+
+footer {
+  background-color: #747474;
+  height: 15vh;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+
+footer p {
+  color: #ffffff;
+  margin-right: 3%;
+}
+
+@media (min-width: 426px) and (max-width: 768px){
+
+  *{
+    width: auto;
+  }
+
+  .banner h1 {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+
+  .informacao h1{
+    font-size: 2rem;
+  }
+
+  .img-container .CardUm{
+    display: flex;
+    justify-content: center;
+    width: 45%;
+    padding: 1rem;
+  }
+
+  .img-container .CardDois{
+    display: flex;
+    justify-content: center;
+    width: 45%;
+    padding: 1rem;
+  }
+
+  .img-container .CardUm img{
+    width: 100%;
+    height: 100%;
+  }
+
+  .img-container .CardDois img{
+    width: 100%;
+    height: 100%;
+  }
+
+  .informacaoDispositivo div {
+    height: 20vh;
+    width: 90%;
+  }
+
+  .informacaoDispositivo .div-dispositivo-container .img-dispositivo{
+    width: 90%;
+    height: 300vh;
+  }
+
+  .informacaoDispositivo div h1 {
+    font-size: 1.5rem;
+    flex-wrap: wrap;
+  }
+  .informacaoSuporte{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .informacaoSuporte h1{
+    font-size: 1.5rem;
+  }
+
+  .informacaoSuporte p{
+    text-align: center;
+  }
+}
+
+@media (min-width: 376px) and (max-width: 425px){
+  *{
+    width: auto;
+  }
+
+  .banner h1 {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+
+  .informacao h1{
+    font-size: 2rem;
+  }
+
+  .img-container .CardUm{
+    display: flex;
+    justify-content: center;
+    width: 45%;
+    padding: 1rem;
+  }
+
+  .img-container .CardDois{
+    display: flex;
+    justify-content: center;
+    width: 45%;
+    padding: 1rem;
+  }
+
+  .img-container .CardUm img{
+    width: 100%;
+    height: 100%;
+  }
+
+  .img-container .CardDois img{
+    width: 100%;
+    height: 100%;
+  }
+
+  .informacaoDispositivo div {
+    height: 20vh;
+    width: 90%;
+  }
+
+  .informacaoDispositivo .div-dispositivo-container .img-dispositivo{
+    width: 90%;
+    height: 300vh;
+  }
+
+  .informacaoDispositivo div h1 {
+    font-size: 1.5rem;
+    flex-wrap: wrap;
+  }
+  .informacaoSuporte{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .informacaoSuporte h1{
+    font-size: 1.5rem;
+  }
+
+  .informacaoSuporte p{
+    text-align: center;
+  }
+
+  .informacaoSuporte .barra {
+    width: 90%;
+  }
+}
+
+@media (min-width: 321px) and (max-width: 375px){
+  *{
+    width: auto;
+  }
+
+  .banner h1 {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+
+  .informacao h1{
+    font-size: 2rem;
+  }
+
+  .img-container .CardUm{
+    display: flex;
+    justify-content: center;
+    width: 45%;
+    padding: 1rem;
+  }
+
+  .img-container .CardDois{
+    display: flex;
+    justify-content: center;
+    width: 45%;
+    padding: 1rem;
+  }
+
+  .img-container .CardUm img{
+    width: 100%;
+    height: 100%;
+  }
+
+  .img-container .CardDois img{
+    width: 100%;
+    height: 100%;
+  }
+
+  .informacaoDispositivo div {
+    height: 20vh;
+    width: 90%;
+  }
+
+  .informacaoDispositivo .div-dispositivo-container .img-dispositivo{
+    width: 90%;
+    height: 300vh;
+  }
+
+  .informacaoDispositivo div h1 {
+    font-size: 1.5rem;
+    flex-wrap: wrap;
+  }
+  .informacaoSuporte{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .informacaoSuporte h1{
+    font-size: 1.5rem;
+  }
+
+  .informacaoSuporte p{
+    text-align: center;
+  }
+
+  .informacaoSuporte .barra {
+    width: 90%;
+  }
+}
+
+@media (max-width: 320px){
+  *{
+    width: auto;
+  }
+
+  .banner h1 {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+
+  .informacao h1{
+    font-size: 2rem;
+  }
+
+  .img-container .CardUm{
+    display: flex;
+    justify-content: center;
+    width: 45%;
+    padding: 1rem;
+  }
+
+  .img-container .CardDois{
+    display: flex;
+    justify-content: center;
+    width: 45%;
+    padding: 1rem;
+  }
+
+  .img-container .CardUm img{
+    width: 100%;
+    height: 100%;
+  }
+
+  .img-container .CardDois img{
+    width: 100%;
+    height: 100%;
+  }
+
+  .informacaoDispositivo div {
+    height: 20vh;
+    width: 90%;
+  }
+
+  .informacaoDispositivo .div-dispositivo-container .img-dispositivo{
+    width: 90%;
+    height: 300vh;
+  }
+
+  .informacaoDispositivo div h1 {
+    font-size: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .informacaoSuporte{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .informacaoSuporte h1{
+    font-size: 1.5rem;
+  }
+
+  .informacaoSuporte p{
+    text-align: center;
+  }
+
+  .informacaoSuporte .barra {
+    width: 90%;
+  }
+  
+}
