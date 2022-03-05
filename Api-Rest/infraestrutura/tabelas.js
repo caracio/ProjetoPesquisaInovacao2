@@ -6,6 +6,7 @@ class Tabelas {
     this.Computador();
     this.MemoriaMassa();
     this.Monitoramento();
+    this.MonitoradoresFiliais();
   }
   //projetoPiFarmacia --> Criação das Tabelas no Banco de Dados
   RedeFarmacia() {
@@ -119,6 +120,36 @@ class Tabelas {
         throw new Error("Erro ao Criar Tabela Monitoramento --->" + error);
       }
       console.log("Tabela Monitoramento criada com sucesso!!!\n");
+    });
+  }
+
+  MonitoradoresFiliais() {
+    const sql = `
+                create table if not exists projetoPiFarmacia.MonitoradoresFiliais (
+								  fkMonitorador int,
+                                  fkRedeFarmacia int,
+                                  fkFilial int,
+                                  login varchar(30),
+                                  senha varchar(30),
+                                  constraint fkMonitorador_MonitoradoresFiliais
+										foreign key (fkMonitorador)
+											references Monitorador(idMonitorador),
+								   constraint fkRedeFarmacia_MonitoradoresFiliais
+										foreign key(fkRedeFarmacia)
+											references  Monitorador(fkRedeFarmacia),
+									constraint fkFilial_MonitoradoresFiliais 
+										foreign key (fkFilial)
+											references Filial(idFilial),
+									primary key (fkMonitorador,fkRedeFarmacia,fkFilial)
+							
+									);
+                `;
+
+    this.conexao.query(sql, (error) => {
+      if (error) {
+        throw new Error("Erro ao Criar Tabela MonitoradoresFiliais --->" + error);
+      }
+      console.log("Tabela MonitoradoresFiliais criada com sucesso!!!\n");
     });
   }
 }

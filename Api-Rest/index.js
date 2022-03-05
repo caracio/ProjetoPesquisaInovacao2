@@ -12,5 +12,6 @@ conexao.connect((err) => {
   Tabelas.init(conexao);
 
   const app = customExpress();
+  
   app.listen(3000, () => console.log("Estamos rodando na Porta 3000"));
 });
