@@ -19,32 +19,31 @@ header .hamburguer {
   cursor: pointer;
 }
 
-.show-menu .hamburguer{
+.show-menu .hamburguer {
   right: 16rem;
 }
 
 .line {
   width: 100%;
-  height: .1rem;
+  height: 0.1rem;
   background-color: #fff;
   box-shadow: 0.1rem 0.1rem 1px #000;
   transition: transform 1s;
-
 }
 
-.show-menu #line1{
-  transform: rotate(45deg) translate(.3rem, .45rem);
+.show-menu #line1 {
+  transform: rotate(45deg) translate(0.3rem, 0.45rem);
 }
 
-.show-menu #line2{
+.show-menu #line2 {
   opacity: 0;
   visibility: hidden;
 }
 
-.show-menu #line3{
-  transform: rotate(-45deg) translate(.1rem, -.45rem);
+.show-menu #line3 {
+  transform: rotate(-45deg) translate(0.1rem, -0.45rem);
 }
-.hamburguer span{
+.hamburguer span {
   position: absolute;
   left: 3rem;
   height: 2rem;
@@ -57,21 +56,21 @@ header .hamburguer {
   opacity: 0;
 }
 
-.hamburguer span::before{
+.hamburguer span::before {
   content: "";
   position: absolute;
-  border-right: .5rem solid #02e493;
-  border-top: .5rem solid transparent;
-  border-left: .5rem solid transparent;
-  border-bottom: .5rem solid transparent;
+  border-right: 0.5rem solid #02e493;
+  border-top: 0.5rem solid transparent;
+  border-left: 0.5rem solid transparent;
+  border-bottom: 0.5rem solid transparent;
   left: -1rem;
 }
 
-.show-menu .hamburguer:hover span{
+.show-menu .hamburguer:hover span {
   opacity: 1;
 }
 
-.sidebar{
+.sidebar {
   width: 20rem;
   height: 100vh;
   background-color: #fff;
@@ -82,7 +81,7 @@ header .hamburguer {
   display: none;
 }
 
-.show-menu .sidebar{
+.show-menu .sidebar {
   right: 0;
 }
 
@@ -99,16 +98,16 @@ header .hamburguer {
 
 .menu-item {
   text-align: center;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
 
-.menu-link{
+.menu-link {
   font-size: 2rem;
   color: #555;
   transition: color 1s;
 }
 
-.menu-link:hover{
+.menu-link:hover {
   color: #02e493;
 }
 
@@ -126,6 +125,10 @@ header nav a {
   margin-top: 5rem;
 }
 
+header nav a:hover{
+  font-weight: bold;
+}
+
 header nav .cadastro {
   display: flex;
   align-items: center;
@@ -136,6 +139,10 @@ header nav .cadastro {
   height: 3rem;
   width: 12rem;
   border-radius: 25px;
+}
+
+header nav .cadastro:hover{
+  color: #747474;
 }
 
 .banner {
@@ -166,6 +173,11 @@ header nav .cadastro {
   border-radius: 25px;
 }
 
+.banner .cadastro:hover {
+  color: #747474;
+  font-weight: bold;
+}
+
 .informacao {
   height: auto;
   background-color: #02e493;
@@ -177,12 +189,12 @@ header nav .cadastro {
   flex-wrap: wrap;
 }
 
-.informacao h1{
+.informacao h1 {
   text-align: center;
   width: 100%;
 }
 
-.img-container{
+.img-container {
   height: 70%;
   width: 100%;
   display: grid;
@@ -192,31 +204,30 @@ header nav .cadastro {
   align-items: center;
 }
 
-.img-container .CardUm{
+.img-container .CardUm {
   display: flex;
   justify-content: flex-start;
   width: 45%;
   padding: 1rem;
 }
 
-.img-container .CardDois{
+.img-container .CardDois {
   display: flex;
   justify-content: flex-end;
   width: 45%;
   padding: 1rem;
 }
 
-.img-container .CardUm img{
+.img-container .CardUm img {
   height: 100%;
   width: 30vw;
   border-radius: 8px;
 }
 
-.img-container .CardDois img{
+.img-container .CardDois img {
   height: 100%;
   width: 30vw;
   border-radius: 8px;
-
 }
 
 .informacao h1 {
@@ -239,27 +250,28 @@ header nav .cadastro {
   height: auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, auto));
-  grid-template-rows: 100vh;
+  grid-template-rows: 80vh;
   justify-items: center;
   align-items: center;
+  padding-left: 15%;
 }
 
 .informacaoDispositivo div {
-  width: 40vw;
+  width: auto;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
 }
 
-.informacaoDispositivo .div-dispositivo-container{
+.informacaoDispositivo .div-dispositivo-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 50vw;
+  width: auto;
 }
 
-.informacaoDispositivo .div-dispositivo-container .img-dispositivo{
+.informacaoDispositivo .div-dispositivo-container .img-dispositivo {
   height: 70%;
   width: 70%;
 }
@@ -271,6 +283,85 @@ header nav .cadastro {
 }
 
 .informacaoDispositivo div p {
+  color: #747474;
+}
+
+.sobre {
+  height: 70%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, auto));
+  grid-template-rows: auto;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-left: 15%;
+  grid-column-gap: 10%;
+}
+
+.sobre .div-img-sobre {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.div-img-sobre .img-sobre {
+  height: 75%;
+}
+
+.sobre .containerText {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  width: 80%;
+  flex-direction: column;
+}
+
+.sobre .containerText h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.sobre .containerText p {
+  color: #747474;
+}
+
+.quemSomos {
+  height: 70%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, auto));
+  grid-template-rows: auto;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-left: 15%;
+  grid-column-gap: 10%;
+}
+
+.quemSomos .div-img-quemSomos {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.div-img-quemSomos .img-quemSomos {
+  height: 75%;
+  width: 70%;
+}
+
+.quemSomos .containerText {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: auto;
+  width: 90%;
+  flex-direction: column;
+}
+
+.quemSomos .containerText h1 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.quemSomos .containerText p {
   color: #747474;
 }
 
@@ -308,6 +399,11 @@ header nav .cadastro {
   border-radius: 25px;
 }
 
+.informacaoSuporte .conhecerProduto:hover {
+  color: #747474;
+  font-weight: bold;
+}
+
 footer {
   background-color: #747474;
   height: 15vh;
@@ -321,32 +417,31 @@ footer p {
   margin-right: 3%;
 }
 
-@media (min-width: 426px) and (max-width: 767px){
-  header .hamburguer{
+@media (min-width: 768px) and (max-width: 950px) {
+  header .hamburguer {
     display: flex;
   }
 
-  header nav{
+  header nav {
     display: none;
   }
 
-  .sidebar{
+  .sidebar {
     display: block;
   }
 }
 
-@media (min-width: 426px) and (max-width: 768px){
-
-  *{
-    width: auto;
+@media (min-width: 425px) and (max-width: 768px) {
+  header .hamburguer {
+    display: flex;
   }
 
-  header nav{
-    width: 70%;
+  header nav {
+    display: none;
   }
 
-  header nav .cadastro{
-    margin-left: 5%;
+  .sidebar {
+    display: block;
   }
 
   .banner h1 {
@@ -354,32 +449,36 @@ footer p {
     text-align: center;
   }
 
-  .informacao h1{
+  .informacao h1 {
     font-size: 2rem;
   }
 
-  .img-container .CardUm{
+  .img-container .CardUm {
     display: flex;
     justify-content: center;
     width: 45%;
     padding: 1rem;
   }
 
-  .img-container .CardDois{
+  .img-container .CardDois {
     display: flex;
     justify-content: center;
     width: 45%;
     padding: 1rem;
   }
 
-  .img-container .CardUm img{
+  .img-container .CardUm img {
     width: 70vw;
     height: 70vh;
   }
 
-  .img-container .CardDois img{
+  .img-container .CardDois img {
     width: 70vw;
     height: 70vh;
+  }
+
+  .informacaoDispositivo{
+    padding-left: 0;
   }
 
   .informacaoDispositivo div {
@@ -387,43 +486,98 @@ footer p {
     width: 90%;
   }
 
-  .informacaoDispositivo .div-dispositivo-container .img-dispositivo{
-    width: 90%;
-    height: 300vh;
+  .informacaoDispositivo .div-dispositivo-container .img-dispositivo {
+    width: 70%;
+    height: 70vh;
   }
 
   .informacaoDispositivo div h1 {
     font-size: 1.5rem;
     flex-wrap: wrap;
   }
-  .informacaoSuporte{
+
+  .sobre {
+    padding: 0;
+    grid-row-gap: 1rem;
+  }
+
+  .sobre .div-img-sobre {
+    width: 100%;
+    margin-top: 8rem;
+  }
+
+  .div-img-sobre .img-sobre {
+    width: 80%;
+    height: 40vh;
+  }
+
+  .sobre .containerText {
+    width: auto;
+    padding: 1rem;
+  }
+
+  .sobre .containerText h1 {
+    font-size: 1.5rem;
+  }
+
+  .quemSomos {
+    padding: 0;
+    grid-row-gap: 1rem;
+  }
+
+  .quemSomos .div-img-quemSomos {
+    width: 100%;
+    margin-top: 1rem;
+    justify-content: center;
+  }
+
+  .div-img-quemSomos .img-quemSomos {
+    width: 80%;
+    height: 40vh;
+  }
+
+  .quemSomos .containerText {
+    width: auto;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .quemSomos .containerText h1 {
+    font-size: 1.5rem;
+  }
+
+  .quemSomos .containerText p {
+    text-align: left;
+  }
+
+  .informacaoSuporte {
     padding-top: 2rem;
     padding-bottom: 2rem;
   }
 
-  .informacaoSuporte h1{
+  .informacaoSuporte h1 {
     font-size: 1.5rem;
   }
 
-  .informacaoSuporte p{
+  .informacaoSuporte p {
     text-align: center;
   }
 }
 
-@media (min-width: 376px) and (max-width: 425px){
-  *{
+@media (min-width: 375px) and (max-width: 425px) {
+  * {
     width: auto;
   }
 
-  header .hamburguer{
+  header .hamburguer {
     display: flex;
   }
 
-  header nav{
+  header nav {
     display: none;
   }
 
-  .sidebar{
+  .sidebar {
     display: block;
   }
 
@@ -432,32 +586,36 @@ footer p {
     text-align: center;
   }
 
-  .informacao h1{
+  .informacao h1 {
     font-size: 2rem;
   }
 
-  .img-container .CardUm{
+  .img-container .CardUm {
     display: flex;
     justify-content: center;
     width: 45%;
     padding: 1rem;
   }
 
-  .img-container .CardDois{
+  .img-container .CardDois {
     display: flex;
     justify-content: center;
     width: 45%;
     padding: 1rem;
   }
 
-  .img-container .CardUm img{
+  .img-container .CardUm img {
     width: 70vw;
     height: 70vh;
   }
 
-  .img-container .CardDois img{
+  .img-container .CardDois img {
     width: 70vw;
     height: 70vh;
+  }
+
+  .informacaoDispositivo{
+    padding-left: 0;
   }
 
   .informacaoDispositivo div {
@@ -465,25 +623,88 @@ footer p {
     width: 90%;
   }
 
-  .informacaoDispositivo .div-dispositivo-container .img-dispositivo{
-    width: 90%;
-    height: 300vh;
+  .informacaoDispositivo .div-dispositivo-container .img-dispositivo {
+    width: 70%;
+    height: 70vh;
   }
 
   .informacaoDispositivo div h1 {
     font-size: 1.5rem;
     flex-wrap: wrap;
+    text-align: center;
   }
-  .informacaoSuporte{
+
+  .informacaoDispositivo div p {
+    text-align: center;
+  }
+
+  .sobre {
+    padding: 0;
+    grid-row-gap: 1rem;
+  }
+
+  .sobre .div-img-sobre {
+    width: 100%;
+    margin-top: 8rem;
+  }
+
+  .div-img-sobre .img-sobre {
+    width: 80%;
+    height: 40vh;
+  }
+
+  .sobre .containerText {
+    width: auto;
+    padding: 1rem;
+  }
+
+  .sobre .containerText h1 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .sobre .containerText p {
+    text-align: center;
+  }
+
+  .quemSomos {
+    padding: 0;
+    grid-row-gap: 1rem;
+  }
+
+  .quemSomos .div-img-quemSomos {
+    width: 100%;
+    margin-top: 1rem;
+    justify-content: center;
+  }
+
+  .div-img-quemSomos .img-quemSomos {
+    width: 80%;
+    height: 40vh;
+  }
+
+  .quemSomos .containerText {
+    width: auto;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .quemSomos .containerText h1 {
+    font-size: 1.5rem;
+    text-align: center;
+    width: 100%;
+  }
+
+  .informacaoSuporte {
     padding-top: 2rem;
     padding-bottom: 2rem;
   }
 
-  .informacaoSuporte h1{
+  .informacaoSuporte h1 {
     font-size: 1.5rem;
   }
 
-  .informacaoSuporte p{
+  .informacaoSuporte p {
     text-align: center;
   }
 
@@ -492,20 +713,20 @@ footer p {
   }
 }
 
-@media (min-width: 321px) and (max-width: 375px){
-  *{
+@media (min-width: 321px) and (max-width: 375px) {
+  * {
     width: auto;
   }
 
-  header .hamburguer{
+  header .hamburguer {
     display: flex;
   }
 
-  header nav{
+  header nav {
     display: none;
   }
 
-  .sidebar{
+  .sidebar {
     display: block;
   }
 
@@ -514,30 +735,30 @@ footer p {
     text-align: center;
   }
 
-  .informacao h1{
+  .informacao h1 {
     font-size: 2rem;
   }
 
-  .img-container .CardUm{
+  .img-container .CardUm {
     display: flex;
     justify-content: center;
     width: 45%;
     padding: 1rem;
   }
 
-  .img-container .CardDois{
+  .img-container .CardDois {
     display: flex;
     justify-content: center;
     width: 45%;
     padding: 1rem;
   }
 
-  .img-container .CardUm img{
+  .img-container .CardUm img {
     width: 70vw;
     height: 70vh;
   }
 
-  .img-container .CardDois img{
+  .img-container .CardDois img {
     width: 70vw;
     height: 70vh;
   }
@@ -547,25 +768,96 @@ footer p {
     width: 90%;
   }
 
-  .informacaoDispositivo .div-dispositivo-container .img-dispositivo{
-    width: 90%;
-    height: 300vh;
+  .informacaoDispositivo .div-dispositivo-container .img-dispositivo {
+    width: 70%;
+    height: 70vh;
+  }
+
+  .informacaoDispositivo{
+    padding-left: 0;
   }
 
   .informacaoDispositivo div h1 {
     font-size: 1.5rem;
     flex-wrap: wrap;
+    text-align: center;
   }
-  .informacaoSuporte{
+
+  .informacaoDispositivo div p {
+    text-align: center;
+  }
+
+  .sobre {
+    padding: 0;
+    grid-row-gap: 1rem;
+  }
+
+  .sobre .div-img-sobre {
+    width: 100%;
+    margin-top: 8rem;
+  }
+
+  .div-img-sobre .img-sobre {
+    width: 80%;
+    height: 40vh;
+  }
+
+  .sobre .containerText {
+    width: auto;
+    padding: 1rem;
+  }
+
+  .sobre .containerText h1 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .sobre .containerText p {
+    text-align: center;
+  }
+
+  .quemSomos {
+    padding: 0;
+    grid-row-gap: 1rem;
+  }
+
+  .quemSomos .div-img-quemSomos {
+    width: 100%;
+    margin-top: 1rem;
+    justify-content: center;
+  }
+
+  .div-img-quemSomos .img-quemSomos {
+    width: 80%;
+    height: 40vh;
+  }
+
+  .quemSomos .containerText {
+    width: auto;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .quemSomos .containerText h1 {
+    font-size: 1.5rem;
+    text-align: center;
+    width: 100%;
+  }
+
+  .quemSomos .containerText p {
+    text-align: center;
+  }
+
+  .informacaoSuporte {
     padding-top: 2rem;
     padding-bottom: 2rem;
   }
 
-  .informacaoSuporte h1{
+  .informacaoSuporte h1 {
     font-size: 1.5rem;
   }
 
-  .informacaoSuporte p{
+  .informacaoSuporte p {
     text-align: center;
   }
 
@@ -574,20 +866,20 @@ footer p {
   }
 }
 
-@media (max-width: 320px){
-  *{
+@media (max-width: 320px) {
+  * {
     width: auto;
   }
 
-  header .hamburguer{
+  header .hamburguer {
     display: flex;
   }
 
-  header nav{
+  header nav {
     display: none;
   }
 
-  .sidebar{
+  .sidebar {
     display: block;
   }
 
@@ -596,32 +888,36 @@ footer p {
     text-align: center;
   }
 
-  .informacao h1{
+  .informacao h1 {
     font-size: 2rem;
   }
 
-  .img-container .CardUm{
+  .img-container .CardUm {
     display: flex;
     justify-content: center;
     width: 45%;
     padding: 1rem;
   }
 
-  .img-container .CardDois{
+  .img-container .CardDois {
     display: flex;
     justify-content: center;
     width: 45%;
     padding: 1rem;
   }
 
-  .img-container .CardUm img{
+  .img-container .CardUm img {
     width: 70vw;
     height: 70vh;
   }
 
-  .img-container .CardDois img{
+  .img-container .CardDois img {
     width: 70vw;
     height: 70vh;
+  }
+
+  .informacaoDispositivo{
+    padding-left: 0;
   }
 
   .informacaoDispositivo div {
@@ -629,26 +925,92 @@ footer p {
     width: 90%;
   }
 
-  .informacaoDispositivo .div-dispositivo-container .img-dispositivo{
-    width: 70vw;
+  .informacaoDispositivo .div-dispositivo-container .img-dispositivo {
+    width: 70%;
     height: 70vh;
   }
 
   .informacaoDispositivo div h1 {
     font-size: 1.5rem;
     flex-wrap: wrap;
+    text-align: center;
   }
 
-  .informacaoSuporte{
+  .informacaoDispositivo div p {
+    text-align: center;
+  }
+
+  .sobre {
+    padding: 0;
+    grid-row-gap: 1rem;
+  }
+
+  .sobre .div-img-sobre {
+    width: 100%;
+    margin-top: 8rem;
+  }
+
+  .div-img-sobre .img-sobre {
+    width: 80%;
+    height: 30vh;
+  }
+
+  .sobre .containerText {
+    width: auto;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .sobre .containerText h1 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .informacaoSuporte {
     padding-top: 2rem;
     padding-bottom: 2rem;
   }
 
-  .informacaoSuporte h1{
+  .quemSomos {
+    padding: 0;
+    grid-row-gap: 1rem;
+  }
+
+  .quemSomos .div-img-quemSomos {
+    width: 100%;
+    margin-top: 1rem;
+    justify-content: center;
+  }
+
+  .div-img-quemSomos .img-quemSomos {
+    width: 80%;
+    height: 30vh;
+  }
+
+  .quemSomos .containerText {
+    width: auto;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .quemSomos .containerText h1 {
     font-size: 1.5rem;
   }
 
-  .informacaoSuporte p{
+  .quemSomos .containerText p {
+    text-align: center;
+  }
+
+  .informacaoSuporte {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .informacaoSuporte h1 {
+    font-size: 1.5rem;
+  }
+
+  .informacaoSuporte p {
     text-align: center;
   }
 
