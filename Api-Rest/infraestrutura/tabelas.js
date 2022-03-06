@@ -6,6 +6,7 @@ class Tabelas {
     this.Computador();
     this.MemoriaMassa();
     this.Monitoramento();
+    this.Monitorador();
     this.MonitoradoresFiliais();
   }
   //projetoPiFarmacia --> Criação das Tabelas no Banco de Dados
@@ -21,14 +22,39 @@ class Tabelas {
         `;
     this.conexao.query(sql, (error) => {
       if (error) {
-        throw new Error("Erro ao Criar Tabela Filial -->" + error);
+        throw new Error("Erro ao Criar Tabela RedeFarmacia -->" + error);
       }
       console.log("Tabela RedeFarmacia criada com sucesso!!!\n");
     });
   }
+  Monitorador() {
+    const sql = `
+    create table if not exists projetoPiFarmacia.Monitorador (
+      idMonitorador int primary key auto_increment,
+      nome varchar(45),
+      CPF char(11), 
+      email varchar(30),
+      senha varchar(25),
+      grauAcesso char(1),
+      fkRedeFarmacia int, 
+      constraint fk_redeFarmacia 
+        foreign key (fkRedeFarmacia) 
+          references redeFarmacia(idRedeFarmacia),
+      constraint Acesso
+        check (grauAcesso = 'P' or grauAcesso = 'T')
+        );
+
+  `;
+    this.conexao.query(sql, (error) => {
+      if (error) {
+        throw new Error("Erro ao Criar Tabela Monitorador --->" + error);
+      }
+      console.log("Tabela Monitorador criada com sucesso!!!\n");
+    });
+  }
   Filial() {
     const sql = `
-    create table if not exists Filial (
+    create table if not exists projetoPiFarmacia.Filial (
       idFilial int primary key auto_increment,
       rua varchar(40),
       bairro varchar(30),
@@ -38,9 +64,7 @@ class Tabelas {
                 fkRedeFarmacia int,
                 constraint fk_redeFarmacia_Filial
           foreign key (fkRedeFarmacia)
-            references redeFarmacia(idRedeFarmacia),
-              constraint Acesso
-                check (grauAcesso = 'P' or grauAcesso = 'T')
+            references RedeFarmacia(idRedeFarmacia)
       );
 
   `;
