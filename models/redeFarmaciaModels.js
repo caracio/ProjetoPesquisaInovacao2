@@ -1,6 +1,7 @@
 const conexao = require("../infraestrutura/conexao");
 
 class RedeFarmaciaModels {
+
   cadastrarRedeFarmacia(req, res) {
     const sql = `
  
