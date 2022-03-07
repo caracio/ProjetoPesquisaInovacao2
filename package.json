@@ -1,0 +1,23 @@
+{
+  "name": "api-rest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Grupo 2",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.2",
+    "consign": "^0.1.6",
+    "express": "^4.17.3",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.3.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
