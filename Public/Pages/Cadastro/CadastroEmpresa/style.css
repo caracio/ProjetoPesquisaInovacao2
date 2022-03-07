@@ -194,13 +194,6 @@ main .form .formCadastroMonitorador .campos label input{
   width: 15vw;
 }
 
-main .form .formCadastroMonitorador .campos label select{
-  height: 1.7rem;
-  border: 2px solid #000;
-  border-radius: 8px;
-  width: 15vw;
-}
-
 main .form .formCadastroMonitorador .campos label .inputEmail{
   height: 1.5rem;
   border: 2px solid #000;
@@ -290,7 +283,7 @@ main .form .formCadastroMonitorador .optionButton .botao:hover{
     border: 2px solid #000;
     border-radius: 8px;
     padding: 0.5rem;
-    background-image: url("../Images/bannerLoginMobile.png");
+    background-image: url("../../Images/bannerLoginMobile.png");
     background-size: cover;
     background-position: center;
   }
@@ -307,10 +300,6 @@ main .form .formCadastroMonitorador .optionButton .botao:hover{
   }
   
   main .form .formCadastroMonitorador .campos label input{
-    width: 25vw;
-  }
-
-  main .form .formCadastroMonitorador .campos label select{
     width: 25vw;
   }
   
@@ -366,7 +355,7 @@ main .form .formCadastroMonitorador .optionButton .botao:hover{
     border: 2px solid #000;
     border-radius: 8px;
     padding: 0.5rem;
-    background-image: url("../Images/bannerLoginMobile.png");
+    background-image: url("../../Images/bannerLoginMobile.png");
     background-size: cover;
     background-position: center;
   }
@@ -386,10 +375,6 @@ main .form .formCadastroMonitorador .optionButton .botao:hover{
     width: 25vw;
   }
 
-  main .form .formCadastroMonitorador .campos label select{
-    width: 25vw;
-  }
-  
   main .form .formCadastroMonitorador .campos label .inputEmail{
     width: 52vw;
   }
@@ -438,7 +423,7 @@ main .form .formCadastroMonitorador .optionButton .botao:hover{
     border: 2px solid #000;
     border-radius: 8px;
     padding: 0.5rem;
-    background-image: url("../Images/bannerLoginMobile.png");
+    background-image: url("../../Images/bannerLoginMobile.png");
     background-size: cover;
     background-position: center;
   }
@@ -455,10 +440,6 @@ main .form .formCadastroMonitorador .optionButton .botao:hover{
   }
   
   main .form .formCadastroMonitorador .campos label input{
-    width: 65vw;
-  }
-
-  main .form .formCadastroMonitorador .campos label select{
     width: 65vw;
   }
   
@@ -516,7 +497,7 @@ main .form .formCadastroMonitorador .optionButton .botao:hover{
     border: 2px solid #000;
     border-radius: 8px;
     padding: 0.5rem;
-    background-image: url("../Images/bannerLoginMobile.png");
+    background-image: url("../../Images/bannerLoginMobile.png");
     background-size: cover;
     background-position: center;
   }
@@ -533,10 +514,6 @@ main .form .formCadastroMonitorador .optionButton .botao:hover{
   }
   
   main .form .formCadastroMonitorador .campos label input{
-    width: 65vw;
-  }
-
-  main .form .formCadastroMonitorador .campos label select{
     width: 65vw;
   }
   
@@ -593,7 +570,7 @@ main .form .formCadastroMonitorador .optionButton .botao:hover{
     border: 2px solid #000;
     border-radius: 8px;
     padding: 0.5rem;
-    background-image: url("../Images/bannerLoginMobile.png");
+    background-image: url("../../Images/bannerLoginMobile.png");
     background-size: cover;
     background-position: center;
   }
@@ -610,10 +587,6 @@ main .form .formCadastroMonitorador .optionButton .botao:hover{
   }
   
   main .form .formCadastroMonitorador .campos label input{
-    width: 65vw;
-  }
-
-  main .form .formCadastroMonitorador .campos label select{
     width: 65vw;
   }
   

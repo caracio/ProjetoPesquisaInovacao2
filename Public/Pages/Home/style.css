@@ -565,9 +565,6 @@ footer p {
 }
 
 @media (min-width: 375px) and (max-width: 425px) {
-  * {
-    width: auto;
-  }
 
   header .hamburguer {
     display: flex;
@@ -714,9 +711,6 @@ footer p {
 }
 
 @media (min-width: 321px) and (max-width: 375px) {
-  * {
-    width: auto;
-  }
 
   header .hamburguer {
     display: flex;
@@ -867,9 +861,6 @@ footer p {
 }
 
 @media (max-width: 320px) {
-  * {
-    width: auto;
-  }
 
   header .hamburguer {
     display: flex;

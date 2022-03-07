@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cadastro</title>
+  <title>Cadastro Empresa</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -19,24 +19,24 @@
         <span>fechar</span>
       </div>
       <nav>
-        <a href="../Home/index.html#">Home</a>
-        <a href="../Home/index.html#quemSomos">Quem Somos</a>
-        <a href="../Home/index.html#sobre">Sobre</a>
+        <a href="../../Home/index.html#">Home</a>
+        <a href="../../Home/index.html#quemSomos">Quem Somos</a>
+        <a href="../../Home/index.html#sobre">Sobre</a>
         <a href="#">Contato</a>
-        <a href="#" class="cadastro">Cadastre-se</a>
+        <a href="../index.html#" class="cadastro">Cadastre-se</a>
       </nav>
     </header>
     <div class="sidebar">
       <nav>
         <ul class="menu">
-          <li class="menu-item"><a href="../Home/index.html#" class="menu-link">Home</a></li>
+          <li class="menu-item"><a href="../../Home/index.html#" class="menu-link">Home</a></li>
           <li class="menu-item">
-            <a href="../Home/index.html#quemSomos" class="menu-link">Quem Somos</a>
+            <a href="../../Home/index.html#quemSomos" class="menu-link">Quem Somos</a>
           </li>
-          <li class="menu-item"><a href="../Home/index.html#sobre" class="menu-link">Sobre</a></li>
+          <li class="menu-item"><a href="../../Home/index.html#sobre" class="menu-link">Sobre</a></li>
           <li class="menu-item"><a href="#" class="menu-link">Contato</a></li>
           <li class="menu-item">
-            <a href="#" class="menu-link">Cadastre-se</a>
+            <a href="../index.html#" class="menu-link">Cadastre-se</a>
           </li>
         </ul>
       </nav>
@@ -44,24 +44,16 @@
     <main>
       <div class="form">
         <div class="bannerForm">
-          <img src="../Images/bannerLogin.png">
+          <img src="../../Images/bannerLogin.png">
         </div>
         <form id="formCadastroMonitorador" class="formCadastroMonitorador" method="post" onsubmit="return entrar()">
           <div class="titulo">
-            <h1>Cadatro Monitorador</h1>
-            <p>Coloque os dados do seu monitorador</p>
+            <h1>Cadatro Empresa</h1>
+            <p>Coloque os dados da sua empresa</p>
           </div>
           <div class="campos">
-            <label>nome:<input name="nome" type="text"></label>
-            <label>Sobrenome:<input name="sobreNome" type="text"></label>
-            <label>cpf:<input name="cpf" type="text"></label>
-            <label>grau de acesso
-              <select name="grauAcesso">
-                <option value=""></option>
-                <option value="P">Parcial</option>
-                <option value="T">Total</option>
-              </select>
-            </label>
+            <label>nome da empresa:<input name="nomeEmpresa" type="text" class="inputEmail"></label>
+            <label>cnpj:<input name="cnpj" type="text" class="inputEmail"></label>
             <label>email:<input name="email" class="inputEmail" type="text"></label>
             <label>senha:<input name="senha" type="password"></label>
             <label>confirmar senha:<input name="confirmarSenha" type="password"></label>
@@ -71,8 +63,8 @@
           </div>
           <div class="optionButton">
             <button type="submit" class="botao">Cadastrar</button>
-            <a href="./CadastroEmpresa/index.html#" class="botao">Cadastrar Empresa</a>
-            <a href="./CadastroLocalEmpresa/index.html#" class="botao">Cadastrar Local Empresa</a>
+            <a href="../CadastroLocalEmpresa/index.html#" class="botao">Cadastrar Local Empresa</a>
+            <a href="../index.html#" class="botao">Cadastrar Monitorador</a>
           </div>
         </form>
       </div>
