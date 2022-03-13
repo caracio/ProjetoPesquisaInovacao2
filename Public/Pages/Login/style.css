@@ -144,21 +144,19 @@ main{
 }
 
 main .form{
-  height: auto;
-  width: 70%;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, auto));
-  grid-template-rows: auto;
-  justify-items: left;
+  height: 50vh;
+  width: 40%;
+  display: flex;
+  justify-items: center;
   align-items: center;
   margin-top: 7vh;
-  border: 2px solid #000;
+  border: 1px solid #000;
   border-radius: 8px;
 }
 
 main .bannerForm{
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
 }
 
@@ -167,8 +165,8 @@ main .form .formLogin{
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  align-items: flex-start;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 main .form .formLogin .titulo p{
@@ -182,7 +180,7 @@ main .form .formLogin .campos{
 
 main .form .formLogin .campos input{
   height: 1.5rem;
-  border: 2px solid #000;
+  border: 1px solid #000;
   border-radius: 8px;
   width: 30vw;
 }
@@ -205,7 +203,8 @@ main .form .formLogin .optionsConta a{
 main .form .formLogin .optionButton{
   width: 100%;
   display: flex;
-  padding-left: 15%;
+  justify-content: center;
+  margin-top: 2rem;
 }
 
 main .form .formLogin .optionButton button{
@@ -217,7 +216,7 @@ main .form .formLogin .optionButton button{
   height: 2rem;
   width: 38%;
   border: none;
-  border-radius: 25px;
+  border-radius: 10px;
 }
 
 main .form .formLogin .optionButton button:hover{
