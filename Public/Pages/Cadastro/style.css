@@ -150,7 +150,6 @@ main .form{
   justify-items: center;
   align-items: center;
   margin-top: 7vh;
-  border: 1px solid #000;
   border-radius: 8px;
 }
 
@@ -163,8 +162,13 @@ main .form .formCadastroMonitorador{
   align-items: center;
 }
 
+main .form .formCadastroMonitorador .titulo{
+  color: #474747;
+}
+
 main .form .formCadastroMonitorador .titulo p{
-  color: #747474;
+  color: #adadad;
+  text-align: center;
 }
 
 main .form .formCadastroMonitorador .campos{
@@ -175,26 +179,28 @@ main .form .formCadastroMonitorador .campos{
 
 main .form .formCadastroMonitorador .campos label{
   display: flex;
+  margin-top: 1rem;
   flex-direction: column;
+  color: #adadad;
 }
 
 main .form .formCadastroMonitorador .campos label input{
   height: 1.5rem;
-  border: 1px solid #000;
+  border: 1px solid #adadad;
   border-radius: 8px;
   width: 15vw;
 }
 
 main .form .formCadastroMonitorador .campos label select{
   height: 1.7rem;
-  border: 1px solid #000;
+  border: 1px solid #adadad;
   border-radius: 8px;
   width: 15vw;
 }
 
 main .form .formCadastroMonitorador .campos label .inputEmail{
   height: 1.5rem;
-  border: 1px solid #000;
+  border: 1px solid #adadad;
   border-radius: 8px;
   width: 33.5vw;
 }
@@ -202,16 +208,17 @@ main .form .formCadastroMonitorador .campos label .inputEmail{
 main .form .formCadastroMonitorador .optionsConta{
   display: flex;
   width: 75%;
+  margin-bottom: 1rem;
   justify-content: space-between;
 }
 
 main .form .formCadastroMonitorador .optionsConta p{
-  color: #747474;
+  color: #adadad;
 }
 
 main .form .formCadastroMonitorador .optionsConta a{
   font-weight: bold;
-  color: #000;
+  color: #474747;
 }
 
 main .form .formCadastroMonitorador .optionButton{
@@ -220,6 +227,7 @@ main .form .formCadastroMonitorador .optionButton{
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-evenly;
+  flex-direction: column;
   height: 19vh;
 }
 
@@ -230,13 +238,13 @@ main .form .formCadastroMonitorador .optionButton .botao{
   color: #ffffff;
   background-color: #02e493;
   height: 2rem;
-  width: 45%;
+  width: 84%;
   border: none;
   border-radius: 10px;
 }
 
 main .form .formCadastroMonitorador .optionButton .botao:hover{
-  color: #747474;
+  color: #adadad;
   font-weight: 400;
   cursor: pointer;
 }

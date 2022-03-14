@@ -150,7 +150,6 @@ main .form{
   justify-items: center;
   align-items: center;
   margin-top: 7vh;
-  border: 1px solid #000;
   border-radius: 8px;
 }
 
@@ -169,20 +168,28 @@ main .form .formLogin{
   align-items: center;
 }
 
+main .form .formLogin .titulo{
+  text-align: center;
+  color: #474747;
+}
+
 main .form .formLogin .titulo p{
-  color: #747474;
+  color: #adadad;
 }
 
 main .form .formLogin .campos{
   display: flex;
   flex-direction: column;
+  color: #adadad;
+  margin-top: 1rem;
 }
 
 main .form .formLogin .campos input{
   height: 1.5rem;
-  border: 1px solid #000;
+  border: 1px solid #adadad;
   border-radius: 8px;
   width: 30vw;
+  margin-bottom: 1rem;
 }
 
 main .form .formLogin .optionsConta{
@@ -192,12 +199,13 @@ main .form .formLogin .optionsConta{
 }
 
 main .form .formLogin .optionsConta p{
-  color: #747474;
+  color: #474747;
+
 }
 
 main .form .formLogin .optionsConta a{
   font-weight: bold;
-  color: #000;
+  color: #474747;
 }  
 
 main .form .formLogin .optionButton{
@@ -214,13 +222,13 @@ main .form .formLogin .optionButton button{
   color: #ffffff;
   background-color: #02e493;
   height: 2rem;
-  width: 38%;
+  width: 75%;
   border: none;
   border-radius: 10px;
 }
 
 main .form .formLogin .optionButton button:hover{
-  color: #747474;
+  color: #adadad;
   font-weight: bold;
   cursor: pointer;
 }
