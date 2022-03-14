@@ -407,14 +407,28 @@ header nav .cadastro:hover{
 footer {
   background-color: #747474;
   height: 15vh;
+  width: 100%;
   display: flex;
-  flex-direction: row-reverse;
   align-items: center;
+  justify-content: space-between;
 }
 
 footer p {
   color: #ffffff;
   margin-right: 3%;
+}
+
+.img_midiaSocial_container{
+  width: 57%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.img_midiaSocial{
+  padding-right: 2%;
+  width: 3vw;
+  height: 100%;
 }
 
 @media (min-width: 768px) and (max-width: 950px) {
@@ -562,6 +576,24 @@ footer p {
   .informacaoSuporte p {
     text-align: center;
   }
+
+  footer {
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .img_midiaSocial_container{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  
+  .img_midiaSocial{
+    padding-right: 0;
+    width: 5%;
+    height: 5vh;
+  }
 }
 
 @media (min-width: 375px) and (max-width: 425px) {
@@ -707,6 +739,24 @@ footer p {
 
   .informacaoSuporte .barra {
     width: 90%;
+  }
+
+  footer {
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .img_midiaSocial_container{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  
+  .img_midiaSocial{
+    padding-right: 0;
+    width: 8%;
+    height: 5vh;
   }
 }
 
@@ -858,6 +908,24 @@ footer p {
   .informacaoSuporte .barra {
     width: 90%;
   }
+
+  footer {
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .img_midiaSocial_container{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  
+  .img_midiaSocial{
+    padding-right: 0;
+    width: 10%;
+    height: 5vh;
+  }
 }
 
 @media (max-width: 320px) {
@@ -1007,5 +1075,23 @@ footer p {
 
   .informacaoSuporte .barra {
     width: 90%;
+  }
+
+  footer {
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .img_midiaSocial_container{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  
+  .img_midiaSocial{
+    padding-right: 0;
+    width: 11%;
+    height: 5vh;
   }
 }

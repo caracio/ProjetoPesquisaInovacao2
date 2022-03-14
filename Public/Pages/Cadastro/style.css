@@ -145,21 +145,12 @@ main{
 
 main .form{
   height: auto;
-  width: 70%;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, auto));
-  grid-template-rows: auto;
-  justify-items: left;
+  width: 40%;
+  display: flex;
+  justify-items: center;
   align-items: center;
   margin-top: 7vh;
-  border: 2px solid #000;
   border-radius: 8px;
-}
-
-main .bannerForm{
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
 }
 
 main .form .formCadastroMonitorador{
@@ -167,60 +158,67 @@ main .form .formCadastroMonitorador{
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
+}
+
+main .form .formCadastroMonitorador .titulo{
+  color: #474747;
 }
 
 main .form .formCadastroMonitorador .titulo p{
-  color: #747474;
+  color: #adadad;
+  text-align: center;
 }
 
 main .form .formCadastroMonitorador .campos{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  margin-right: 20%;
 }
 
 main .form .formCadastroMonitorador .campos label{
   display: flex;
+  margin-top: 1rem;
   flex-direction: column;
+  color: #adadad;
 }
 
 main .form .formCadastroMonitorador .campos label input{
   height: 1.5rem;
-  border: 2px solid #000;
+  border: 1px solid #adadad;
   border-radius: 8px;
   width: 15vw;
 }
 
 main .form .formCadastroMonitorador .campos label select{
   height: 1.7rem;
-  border: 2px solid #000;
+  border: 1px solid #adadad;
   border-radius: 8px;
   width: 15vw;
 }
 
 main .form .formCadastroMonitorador .campos label .inputEmail{
   height: 1.5rem;
-  border: 2px solid #000;
+  border: 1px solid #adadad;
   border-radius: 8px;
-  width: 30.5vw;
+  width: 33.5vw;
 }
 
 main .form .formCadastroMonitorador .optionsConta{
   display: flex;
   width: 75%;
+  margin-bottom: 1rem;
   justify-content: space-between;
 }
 
 main .form .formCadastroMonitorador .optionsConta p{
-  color: #747474;
+  color: #adadad;
 }
 
 main .form .formCadastroMonitorador .optionsConta a{
   font-weight: bold;
-  color: #000;
+  color: #474747;
 }
 
 main .form .formCadastroMonitorador .optionButton{
@@ -229,7 +227,8 @@ main .form .formCadastroMonitorador .optionButton{
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-evenly;
-  height: 30vh;
+  flex-direction: column;
+  height: 19vh;
 }
 
 main .form .formCadastroMonitorador .optionButton .botao{
@@ -239,13 +238,13 @@ main .form .formCadastroMonitorador .optionButton .botao{
   color: #ffffff;
   background-color: #02e493;
   height: 2rem;
-  width: 50%;
+  width: 84%;
   border: none;
-  border-radius: 25px;
+  border-radius: 10px;
 }
 
 main .form .formCadastroMonitorador .optionButton .botao:hover{
-  color: #747474;
+  color: #adadad;
   font-weight: 400;
   cursor: pointer;
 }
@@ -270,10 +269,6 @@ main .form .formCadastroMonitorador .optionButton .botao:hover{
   
   .sidebar {
     display: block;
-  }
-  
-  main .bannerForm{
-    display: none;
   }
   
   header nav .cadastro {
@@ -348,10 +343,6 @@ main .form .formCadastroMonitorador .optionButton .botao:hover{
     display: block;
   }
 
-  main .bannerForm{
-    display: none;
-  }
-
   header nav .cadastro {
     margin-left: 5%;
   }
@@ -422,10 +413,6 @@ main .form .formCadastroMonitorador .optionButton .botao:hover{
 
   .sidebar {
     display: block;
-  }
-
-  main .bannerForm{
-    display: none;
   }
 
   main .form{
@@ -502,10 +489,6 @@ main .form .formCadastroMonitorador .optionButton .botao:hover{
     display: block;
   }
 
-  main .bannerForm{
-    display: none;
-  }
-
   main .form{
     height: auto;
     width: 70%;
@@ -577,10 +560,6 @@ main .form .formCadastroMonitorador .optionButton .botao:hover{
 
   .sidebar {
     display: block;
-  }
-
-  main .bannerForm{
-    display: none;
   }
 
   main .form{

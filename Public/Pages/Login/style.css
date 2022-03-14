@@ -144,21 +144,18 @@ main{
 }
 
 main .form{
-  height: auto;
-  width: 70%;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, auto));
-  grid-template-rows: auto;
-  justify-items: left;
+  height: 50vh;
+  width: 40%;
+  display: flex;
+  justify-items: center;
   align-items: center;
   margin-top: 7vh;
-  border: 2px solid #000;
   border-radius: 8px;
 }
 
 main .bannerForm{
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
 }
 
@@ -167,24 +164,32 @@ main .form .formLogin{
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  align-items: flex-start;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+main .form .formLogin .titulo{
+  text-align: center;
+  color: #474747;
 }
 
 main .form .formLogin .titulo p{
-  color: #747474;
+  color: #adadad;
 }
 
 main .form .formLogin .campos{
   display: flex;
   flex-direction: column;
+  color: #adadad;
+  margin-top: 1rem;
 }
 
 main .form .formLogin .campos input{
   height: 1.5rem;
-  border: 2px solid #000;
+  border: 1px solid #adadad;
   border-radius: 8px;
   width: 30vw;
+  margin-bottom: 1rem;
 }
 
 main .form .formLogin .optionsConta{
@@ -194,18 +199,20 @@ main .form .formLogin .optionsConta{
 }
 
 main .form .formLogin .optionsConta p{
-  color: #747474;
+  color: #474747;
+
 }
 
 main .form .formLogin .optionsConta a{
   font-weight: bold;
-  color: #000;
+  color: #474747;
 }  
 
 main .form .formLogin .optionButton{
   width: 100%;
   display: flex;
-  padding-left: 15%;
+  justify-content: center;
+  margin-top: 2rem;
 }
 
 main .form .formLogin .optionButton button{
@@ -215,13 +222,13 @@ main .form .formLogin .optionButton button{
   color: #ffffff;
   background-color: #02e493;
   height: 2rem;
-  width: 38%;
+  width: 75%;
   border: none;
-  border-radius: 25px;
+  border-radius: 10px;
 }
 
 main .form .formLogin .optionButton button:hover{
-  color: #747474;
+  color: #adadad;
   font-weight: bold;
   cursor: pointer;
 }
