@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="script.js"></script>
     <link rel="stylesheet" href="style.css" />
     <title>Farmagraph Solutions</title>
   </head>
@@ -22,7 +23,7 @@
           <a href="#quemSomos">Quem Somos</a>
           <a href="#sobre">Sobre</a>
           <a href="#">Contato</a>
-          <a href="../Cadastro/index.html" class="cadastro">Cadastre-se</a>
+          <button onclick="abrirModal()" class="cadastro">Cadastre-se</button>
         </nav>
       </header>
       <div class="sidebar">
@@ -37,19 +38,15 @@
             </li>
             <li class="menu-item"><a href="#" class="menu-link">Contato</a></li>
             <li class="menu-item">
-              <a href="../Cadastro/CadastroEmpresa/index.html" class="menu-link"
-                >Cadastre-se</a
+              <button onclick="abrirModal()" class="cadastro">
+                Cadastre-se
+              </button>
               >
             </li>
           </ul>
         </nav>
       </div>
-      <!-- modal -->
-      <div id="modal" class="blackGroundModal">
-        <div class="conteudoModal">
-          <span class="closeModal">&times;</span>
-        </div>
-      </div>
+
       <article>
         <section class="banner">
           <h1>Seus dados em tempo real</h1>
@@ -64,9 +61,7 @@
             <br />
             máximo de agilidade e eficiência
           </p>
-          <a href="../Cadastro/CadastroEmpresa/index.html" class="cadastro"
-            >Cadastre-se</a
-          >
+          <button onclick="abrirModal()" class="cadastro">Cadastre-se</button>
         </section>
         <section class="informacao">
           <h1>Fácil Navegação</h1>
@@ -78,9 +73,7 @@
               <img src="../Images/CardHomeDois.png" />
             </div>
           </div>
-          <a href="../Cadastro/CadastroLocalEmpresa/index.html" class="cadastro"
-            >Cadastre-se</a
-          >
+          <button onclick="abrirModal()" class="cadastro">Cadastre-se</button>
         </section>
         <section class="informacaoDispositivo">
           <div>
@@ -158,6 +151,11 @@
         <p>FEITO POR ALUNOS DA SPTECH</p>
       </footer>
     </div>
+    <!-- modal -->
+    <div id="modal" class="blackGroundModal">
+      <div class="conteudoModal">
+        <span onclick="fecharModal()" class="closeModal">&times;</span>
+      </div>
+    </div>
   </body>
-  <script src="script.js"></script>
 </html>

@@ -134,16 +134,21 @@ header nav a:hover{
   font-weight: bold;
 }
 
+.cadastro {
+  color: #fff;
+  background-color: #02e493;
+  height: 3rem;
+  width: 12rem;
+  border-radius: 25px; 
+  border-color: transparent; 
+  cursor: pointer;
+}
+
 header nav .cadastro {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #ffffff;
   margin-left: 15%;
-  background-color: #02e493;
-  height: 3rem;
-  width: 12rem;
-  border-radius: 25px;
 }
 
 header nav .cadastro:hover{
@@ -167,21 +172,17 @@ header nav .cadastro:hover{
   text-align: center;
 }
 
-.banner .cadastro {
+/* .banner .cadastro {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #ffffff;
-  background-color: #02e493;
-  height: 3rem;
-  width: 17rem;
-  border-radius: 25px;
+ 
 }
-
+*/
 .banner .cadastro:hover {
   color: #747474;
   font-weight: bold;
-}
+} 
 
 .informacao {
   height: auto;
@@ -445,15 +446,17 @@ footer p {
   z-index: 2;
   top: -100%;
   display: block;
-  transition: all 400ms;
+  transition: all ease-in-out 2ms;
+  
 }
 .conteudoModal{
   width: 40%;
   height: 75%;
-  background-color: #Fafafa;
-  border: 1px solid #000;
-  border-radius: 5px;
+  background-color: #fafafa;
+  box-shadow: 1px 1px 1px 1px #00000080;
+  border-radius: 4%; 
   margin: 80px auto 0 auto;
+  
 }
 
 .conteudoModal span{
@@ -463,7 +466,9 @@ footer p {
   color: rgb(97, 94, 94);
   margin-top:1vh;
   margin-right: 1vw;
-  transition: all 350ms;
+  transition: all ease-in-out 10ms;
+  transition-duration: 20s;
+  transition-delay: 20s;
 }
 
 .conteudoModal span:hover{

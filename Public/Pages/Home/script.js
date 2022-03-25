@@ -5,11 +5,18 @@ toggle uma classe chamada show que muda o comportamento da sidebar
 
 var hamburguer = document.querySelector(".hamburguer");
 
-hamburguer.addEventListener("click", function(){
-    document.querySelector(".container").classList.toggle("show-menu")
+hamburguer.addEventListener("click", function () {
+  document.querySelector(".container").classList.toggle("show-menu");
 });
 
 /* OU usando arrow function
 document.querySelector(".hamburguer").addEventListener("click", () =>
       document.querySelector(".container").classList.toggle("show-menu")
 );*/
+
+function abrirModal() {
+  document.getElementById("modal").style.top = "0";
+}
+function fecharModal() {
+  document.getElementById("modal").style.top = "-100%";
+}
