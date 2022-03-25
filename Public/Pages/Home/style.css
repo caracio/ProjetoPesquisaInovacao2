@@ -450,12 +450,12 @@ footer p {
   
 }
 .conteudoModal{
-  width: 40%;
-  height: 75%;
+  width: 60%;
+  height: 70%;
   background-color: #fafafa;
   box-shadow: 1px 1px 1px 1px #00000080;
-  border-radius: 4%; 
-  margin: 80px auto 0 auto;
+  border-radius: 2%; 
+  margin: 16vh auto 0 auto;
   
 }
 
