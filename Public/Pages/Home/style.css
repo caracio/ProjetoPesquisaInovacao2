@@ -48,6 +48,7 @@ header .hamburguer {
 .show-menu #line3 {
   transform: rotate(-45deg) translate(0.1rem, -0.45rem);
 }
+
 .hamburguer span {
   position: absolute;
   left: 3rem;
@@ -130,7 +131,7 @@ header nav a {
   margin-top: 5rem;
 }
 
-header nav a:hover{
+header nav a:hover {
   font-weight: bold;
 }
 
@@ -139,8 +140,8 @@ header nav a:hover{
   background-color: #02e493;
   height: 3rem;
   width: 12rem;
-  border-radius: 25px; 
-  border-color: transparent; 
+  border-radius: 25px;
+  border-color: transparent;
   cursor: pointer;
 }
 
@@ -151,7 +152,7 @@ header nav .cadastro {
   margin-left: 15%;
 }
 
-header nav .cadastro:hover{
+header nav .cadastro:hover {
   color: #747474;
 }
 
@@ -182,7 +183,7 @@ header nav .cadastro:hover{
 .banner .cadastro:hover {
   color: #747474;
   font-weight: bold;
-} 
+}
 
 .informacao {
   height: auto;
@@ -424,57 +425,90 @@ footer p {
   margin-right: 3%;
 }
 
-.img_midiaSocial_container{
+.img_midiaSocial_container {
   width: 57%;
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
 
-.img_midiaSocial{
+.img_midiaSocial {
   padding-right: 2%;
   width: 3vw;
   height: 100%;
 }
 
 /* abrindo modal */
-.blackGroundModal{
-  width: 100%;
-  height: 100%;
-  background-color: rgba(10, 10, 10, 0.356);
+.blackGroundModal {
   position: fixed;
-  z-index: 2;
   top: -100%;
+  z-index: 2;
+
+  height: 100%;
+  width: 100%;
+
   display: block;
+  background-color: rgba(10, 10, 10, 0.356);
   transition: all ease-in-out 2ms;
-  
-}
-.conteudoModal{
-  width: 60%;
-  height: 70%;
-  background-color: #fafafa;
-  box-shadow: 1px 1px 1px 1px #00000080;
-  border-radius: 2%; 
-  margin: 16vh auto 0 auto;
-  
+
 }
 
-.conteudoModal span{
+.ModalCadastro {
+  width: 60%;
+  height: 70%;
+  margin: 16vh auto 0 auto;
+
+  display: flex;
+  flex-direction: column;
+
+  background-color: #FAFAFA;
+  box-shadow: 1px 1px 1px 1px #00000080;
+}
+
+.ModalCadastro .closeModal {
   float: right;
   cursor: pointer;
+
+  display: flex;
+  flex-direction: row-reverse;
+
   font-size: 22px;
   color: rgb(97, 94, 94);
-  margin-top:1vh;
+
+  margin-top: 1vh;
   margin-right: 1vw;
+
   transition: all ease-in-out 10ms;
   transition-duration: 20s;
   transition-delay: 20s;
 }
 
-.conteudoModal span:hover{
-  color:#000;
+.ModalCadastro .closeModal:hover {
+  color: #000;
   transition: all 350ms;
 }
+
+.ModalCadastro .container-modalCadastro {
+  width: 100%;
+  height: 96%;
+}
+
+.ModalCadastro .container-modalCadastro .alinhamentoTextoModal {
+  width: 20%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 40px;
+  text-align: center;
+
+  background-color: #fff;
+
+}
+
+
 
 
 @media (min-width: 768px) and (max-width: 950px) {
@@ -537,7 +571,7 @@ footer p {
     height: 70vh;
   }
 
-  .informacaoDispositivo{
+  .informacaoDispositivo {
     padding-left: 0;
   }
 
@@ -628,14 +662,14 @@ footer p {
     justify-content: space-evenly;
   }
 
-  .img_midiaSocial_container{
+  .img_midiaSocial_container {
     width: 100%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
   }
-  
-  .img_midiaSocial{
+
+  .img_midiaSocial {
     padding-right: 0;
     width: 5%;
     height: 5vh;
@@ -689,7 +723,7 @@ footer p {
     height: 70vh;
   }
 
-  .informacaoDispositivo{
+  .informacaoDispositivo {
     padding-left: 0;
   }
 
@@ -792,14 +826,14 @@ footer p {
     justify-content: space-evenly;
   }
 
-  .img_midiaSocial_container{
+  .img_midiaSocial_container {
     width: 100%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
   }
-  
-  .img_midiaSocial{
+
+  .img_midiaSocial {
     padding-right: 0;
     width: 8%;
     height: 5vh;
@@ -863,7 +897,7 @@ footer p {
     height: 70vh;
   }
 
-  .informacaoDispositivo{
+  .informacaoDispositivo {
     padding-left: 0;
   }
 
@@ -960,14 +994,14 @@ footer p {
     justify-content: space-evenly;
   }
 
-  .img_midiaSocial_container{
+  .img_midiaSocial_container {
     width: 100%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
   }
-  
-  .img_midiaSocial{
+
+  .img_midiaSocial {
     padding-right: 0;
     width: 10%;
     height: 5vh;
@@ -1021,7 +1055,7 @@ footer p {
     height: 70vh;
   }
 
-  .informacaoDispositivo{
+  .informacaoDispositivo {
     padding-left: 0;
   }
 
@@ -1128,14 +1162,14 @@ footer p {
     justify-content: space-evenly;
   }
 
-  .img_midiaSocial_container{
+  .img_midiaSocial_container {
     width: 100%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
   }
-  
-  .img_midiaSocial{
+
+  .img_midiaSocial {
     padding-right: 0;
     width: 11%;
     height: 5vh;
