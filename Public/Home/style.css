@@ -450,7 +450,6 @@ footer p {
   display: block;
   background-color: rgba(10, 10, 10, 0.356);
   transition: all ease-in-out 2ms;
-
 }
 
 .ModalCadastro {
@@ -459,13 +458,12 @@ footer p {
   margin: 16vh auto 0 auto;
 
   display: flex;
-  flex-direction: column;
 
-  background-color: #FAFAFA;
+  background-color: #fafafa;
   box-shadow: 1px 1px 1px 1px #00000080;
 }
 
-.ModalCadastro .closeModal {
+.root .closeModal {
   float: right;
   cursor: pointer;
 
@@ -474,9 +472,6 @@ footer p {
 
   font-size: 22px;
   color: rgb(97, 94, 94);
-
-  margin-top: 1vh;
-  margin-right: 1vw;
 
   transition: all ease-in-out 10ms;
   transition-duration: 20s;
@@ -488,14 +483,10 @@ footer p {
   transition: all 350ms;
 }
 
-.ModalCadastro .container-modalCadastro {
-  width: 100%;
-  height: 96%;
-}
-
-.ModalCadastro .container-modalCadastro .alinhamentoTextoModal {
+.ModalCadastro .alinhamentoTextoModal {
   width: 20%;
   height: 100%;
+  background-color: #e5dede;
 
   display: flex;
   align-items: center;
@@ -503,12 +494,29 @@ footer p {
   flex-direction: column;
   padding: 0 40px;
   text-align: center;
-
-  background-color: #fff;
-
 }
 
+.ModalCadastro .root {
+  width: 80%;
+  height: 100%;
+  padding: 2% 2% 2% 2%;
 
+  display: flex;
+  flex-direction: column;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+form .field {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5%;
+}
 
 
 @media (min-width: 768px) and (max-width: 950px) {
@@ -677,7 +685,6 @@ footer p {
 }
 
 @media (min-width: 375px) and (max-width: 425px) {
-
   header .hamburguer {
     display: flex;
   }
@@ -841,7 +848,6 @@ footer p {
 }
 
 @media (min-width: 321px) and (max-width: 375px) {
-
   header .hamburguer {
     display: flex;
   }
@@ -1009,7 +1015,6 @@ footer p {
 }
 
 @media (max-width: 320px) {
-
   header .hamburguer {
     display: flex;
   }

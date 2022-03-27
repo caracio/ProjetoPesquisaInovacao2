@@ -4,16 +4,15 @@ class RedeFarmaciaModels {
 
   cadastrarRedeFarmacia(req, res) {
     const sql = `
- 
-    INSERT INTO RedeFarmacia (CNPJ,nomeRede, email,senha) 
-    SELECT * FROM (SELECT '${req.CNPJ}' AS cnpj,
-                          '${req.nomeRede}' AS nomeRede, 
-                          '${req.email}' AS email,
-                          '${req.senha}' AS senha) AS redeFarmacia
+
+    INSERT INTO RedeFarmacia (NM_Rede, Email,Senha) 
+    SELECT * FROM (SELECT '${req.nome}' AS nomeRede, 
+                          '${req.Email}'    AS email,
+                          '${req.Senha}'    AS senha) AS redeFarmacia
                            WHERE NOT EXISTS(
-                                            SELECT CNPJ
+                                            SELECT Email
                                             FROM RedeFarmacia 
-                                            WHERE CNPJ = '${req.CNPJ}'
+                                            WHERE Email = '${req.Email}'
                     );    
     `;
 

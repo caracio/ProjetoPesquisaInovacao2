@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="./Home/style.css" />
   <title>Farmagraph Solutions</title>
 </head>
 
@@ -65,10 +65,10 @@
         <h1>Fácil Navegação</h1>
         <div class="img-container">
           <div class="CardUm">
-            <img src="../Images/CardHomeUm.png" />
+            <img src="./Images/CardHomeUm.png" />
           </div>
           <div class="CardDois">
-            <img src="../Images/CardHomeDois.png" />
+            <img src="./Images/CardHomeDois.png" />
           </div>
         </div>
         <button onclick="abrirModal()" class="cadastro">Cadastre-se</button>
@@ -83,12 +83,12 @@
           </p>
         </div>
         <div class="div-dispositivo-container">
-          <img class="img-dispositivo" src="../Images/TelaCelular.png" />
+          <img class="img-dispositivo" src="./Images/TelaCelular.png" />
         </div>
       </section>
       <section id="sobre" class="sobre">
         <div class="div-img-sobre">
-          <img class="img-sobre" src="../Images/BannerQuemSomos.svg" />
+          <img class="img-sobre" src="./Images/BannerQuemSomos.svg" />
         </div>
         <div class="containerText">
           <h1>Saiba mais sobre o nosso monitoramento de maquinas</h1>
@@ -113,7 +113,7 @@
           </p>
         </div>
         <div class="div-img-quemSomos">
-          <img class="img-quemSomos" src="../Images/BannerSobreNos.svg" />
+          <img class="img-quemSomos" src="./Images/BannerSobreNos.svg" />
         </div>
       </section>
       <section class="informacaoSuporte">
@@ -130,9 +130,9 @@
     </article>
     <footer>
       <div class="img_midiaSocial_container">
-        <img src="../Images/design_twitter.png" class="img_midiaSocial" alt="Logo Twitter" />
-        <img src="../Images/design_facebook.png" class="img_midiaSocial" alt="Logo Facebook" />
-        <img src="../Images/design_linkedin.png" class="img_midiaSocial" alt="Logo Linkedin" />
+        <img src="./Images/design_twitter.png" class="img_midiaSocial" alt="Logo Twitter" />
+        <img src="./Images/design_facebook.png" class="img_midiaSocial" alt="Logo Facebook" />
+        <img src="./Images/design_linkedin.png" class="img_midiaSocial" alt="Logo Linkedin" />
       </div>
       <p>FEITO POR ALUNOS DA SPTECH</p>
     </footer>
@@ -140,21 +140,39 @@
   <!-- modal -->
   <div id="modal" class="blackGroundModal">
     <div class="ModalCadastro">
-      <div onclick="fecharModal()" class="closeModal">&times;</div>
-      <div class="container-modalCadastro">
-        <div class="alinhamentoTextoModal">
-          <p>
-            Bem vindo <br>
-            ao <br>
-            Farmagraph
-          </p>
-        </div>
-        <div class=""></div>
+      <div class="alinhamentoTextoModal">
+        <p>
+          Bem vindo <br>
+          ao <br>
+          Farmagraph
+        </p>
       </div>
+      <div class="root">
+        <div onclick="fecharModal()" class="closeModal">&times;</div>
 
+        <form action="/cadastro/RedeFarmacia" method="post">
+          <div class="field">
+            <div class="label">Nome: </div>
+            <input type="nome" name="nome" id="in_nome">
+          </div>
+          <div class="field">
+            <div class="label">Email: </div>
+            <input type="Email" name="Email" id="in_Email">
+          </div>
+          <div class="field">
+            <div class="label">Senha: </div>
+            <input type="Senha" name="Senha" id="in_Senha">
+          </div>    
+          <div class="field">
+            <div class="label">Confirmar Senha: </div>
+            <input type="confirmar_Senha" name="confirmar_Senha" id="in_confirmar_Senha">
+          </div>    
+          <button type="submit">Cadastar</button>
+        </form>
+
+      </div>
     </div>
-  </div>
 </body>
-<script src="script.js"></script>
+<script src="./Home/script.js"></script>
 
 </html>
