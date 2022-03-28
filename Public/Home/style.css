@@ -1,5 +1,5 @@
 * {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Roboto', sans-serif;
   list-style: none;
   text-decoration: none;
   margin: 0;
@@ -456,68 +456,135 @@ footer p {
   width: 60%;
   height: 70%;
   margin: 16vh auto 0 auto;
-
   display: flex;
-
   background-color: #fafafa;
-  box-shadow: 1px 1px 1px 1px #00000080;
+  box-shadow: 0.5px 0.5px 0px 0.5px #f5f5f580;
+  border-radius: 10px;
+  
 }
 
-.root .closeModal {
-  float: right;
-  cursor: pointer;
-
-  display: flex;
-  flex-direction: row-reverse;
-
-  font-size: 22px;
+.closeModal {
   color: rgb(97, 94, 94);
-
-  transition: all ease-in-out 10ms;
-  transition-duration: 20s;
-  transition-delay: 20s;
+  cursor: pointer;
+  font-size: 22px;
+  display: flex;
+  justify-content: flex-end;
 }
-
+.closeModal span {
+  float: right;
+  transition: all ease-in-out 10ms;
+}
 .ModalCadastro .closeModal:hover {
   color: #000;
-  transition: all 350ms;
+  transition: all 35ms;
 }
 
-.ModalCadastro .alinhamentoTextoModal {
-  width: 20%;
+.alinhamentoTextoModal {
+  width: 40%;
   height: 100%;
-  background-color: #e5dede;
+  background-color: #02e493;
+}
 
+.containerTitulo {
+  margin-top: 19vh;
   display: flex;
-  align-items: center;
   justify-content: center;
-  flex-direction: column;
-  padding: 0 40px;
-  text-align: center;
+  padding: 0 0 3em 1em;
 }
 
-.ModalCadastro .root {
-  width: 80%;
-  height: 100%;
-  padding: 2% 2% 2% 2%;
-
-  display: flex;
-  flex-direction: column;
+.containerTitulo h1 {
+  font-weight: 400;
+  color: #fafafa;
 }
 
-form {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
+.containerSubTitulo {
+  padding: 0 0 1em 1em;
+}
+.containerSubTitulo h2 {
+  color: #fafafa;
+  font-weight: 300;
 }
 
-form .field {
+.containerButton{
+  padding: 0 0 0 1em;
+}
+.containerButton button{
+  padding: 0.7em;
+  font-size: 12pt;
+  color: #fafafa;
+  background-color: #02e493;
+  border-radius: 8px;
+  border: 1px solid #fafafa;
+  cursor: pointer;
+}
+.headerFundoModalBranca{
+  width: 35vw;
+  height: 3.5vh;
+  margin-bottom: 8vh;
+}
+
+.tituloConta{
   display: flex;
-  align-items: center;
   justify-content: center;
+  margin-bottom: 1vh;
+}
+.tituloConta h1{
+  font-weight: 400;
+}
+.subtituloConta{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5vh;
+}
+.subtituloConta{
+  font-weight: 300;
+}
+.containerCadastro{
+  display: flex;
+  justify-content: center;
+}
+.field {
   margin-bottom: 5%;
 }
+.field input {
+  border: 1px solid #000 ;
+  border-radius: 3px;
+  width: 22vw;
+  padding: 0.5em;
+  display: inline-block;
+  outline: none;
+}
 
+
+.fieldSenha input {
+  border: 1px solid #000 ;
+  border-radius: 3px;
+  width: 9vw;
+  padding: 0.5em;
+  display: inline-block;
+  outline: none;
+  margin-bottom: 3vh;
+}
+
+.label {
+  font-weight: 400;
+  margin-bottom: 0.3vh;
+}
+.cardSenha{
+  display: flex;
+  justify-content: center;
+  gap: 2.4em;
+}
+
+.buttonTeste button {
+  padding: 0.7em;
+  font-size: 12pt;
+  color: #fafafa;
+  background-color: #02e493;
+  border-radius: 8px;
+  border: 1px solid #fafafa;
+  cursor: pointer;
+}
 
 @media (min-width: 768px) and (max-width: 950px) {
   header .hamburguer {

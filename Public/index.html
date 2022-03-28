@@ -6,6 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="./Home/style.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;0,700;0,900;1,100&display=swap"
+    rel="stylesheet">
   <title>Farmagraph Solutions</title>
 </head>
 
@@ -141,34 +145,56 @@
   <div id="modal" class="blackGroundModal">
     <div class="ModalCadastro">
       <div class="alinhamentoTextoModal">
-        <p>
-          Bem vindo <br>
-          ao <br>
-          Farmagraph
-        </p>
+        <div class="containerTitulo">
+          <h1>
+            Bem vindo ao Farma Graph
+          </h1>
+        </div>
+        <div class="containerSubTitulo">
+          <h2>Acesse sua conta</h2>
+        </div>
+        <div class="containerButton">
+          <button>Login</button>
+        </div>
       </div>
-      <div class="root">
-        <div onclick="fecharModal()" class="closeModal">&times;</div>
 
-        <form action="/cadastro/RedeFarmacia" method="post">
-          <div class="field">
-            <div class="label">Nome: </div>
-            <input type="nome" name="nome" id="in_nome">
-          </div>
-          <div class="field">
-            <div class="label">Email: </div>
-            <input type="Email" name="Email" id="in_Email">
-          </div>
-          <div class="field">
-            <div class="label">Senha: </div>
-            <input type="Senha" name="Senha" id="in_Senha">
-          </div>    
-          <div class="field">
-            <div class="label">Confirmar Senha: </div>
-            <input type="confirmar_Senha" name="confirmar_Senha" id="in_confirmar_Senha">
-          </div>    
-          <button type="submit">Cadastar</button>
-        </form>
+
+      <div class="fundoModalBranca">
+        <div class="headerFundoModalBranca">
+          <div onclick="fecharModal()" class="closeModal">&times;</div>
+        </div>
+        <div class="tituloConta">
+          <h1>Crie sua Conta</h1>
+        </div>
+        <div class="subtituloConta">
+          <p>Faça o monitoramento de todas as suas maquinas em tempo real</p>
+        </div>
+        <div class="containerCadastro">
+          <form action="/cadastro/RedeFarmacia" method="post">
+            <div class="field">
+              <div class="label">Nome: </div>
+              <input type="nome" name="nome" id="in_nome">
+            </div>
+            <div class="field">
+              <div class="label">Email: </div>
+              <input type="Email" name="Email" id="in_Email">
+            </div>
+            <div class="cardSenha">
+              <div class="fieldSenha">
+                <div class="label">Senha: </div>
+                <input class="inputSenha" type="password" name="Senha" id="in_Senha">
+              </div>
+              <div class="fieldSenha">
+                <div class="label">Confirmar Senha: </div>
+                <input class="inputSenha" type="password" name="confirmar_Senha" id="in_confirmar_Senha">
+              </div>
+            </div>
+            <div>
+              <div class="buttonTeste">
+              <button type="submit">Cadastar</button></div>
+            </div>  
+          </form>
+        </div>
 
       </div>
     </div>
