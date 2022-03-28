@@ -534,7 +534,7 @@ footer p {
 .subtituloConta{
   display: flex;
   justify-content: center;
-  margin-bottom: 5vh;
+  margin-bottom: 2vh;
 }
 .subtituloConta{
   font-weight: 300;
@@ -555,28 +555,39 @@ footer p {
   outline: none;
 }
 
-
 .fieldSenha input {
   border: 1px solid #000 ;
   border-radius: 3px;
-  width: 9vw;
+  width: 10vw;
   padding: 0.5em;
   display: inline-block;
   outline: none;
-  margin-bottom: 3vh;
 }
 
 .label {
   font-weight: 400;
   margin-bottom: 0.3vh;
 }
-.cardSenha{
-  display: flex;
-  justify-content: center;
-  gap: 2.4em;
+
+.containerOlho{
+ display: flex;
+ margin-top: -3.1vh;
+ padding-left: 9.6vw;
+ cursor: pointer;
+ color: rgba(58, 58, 58, 0.589);
 }
 
-.buttonTeste button {
+
+
+.cardSenha{
+  display: flex;
+  justify-content: flex-end;
+  gap: 1em;
+  width: 88%;
+  margin-bottom: 2.5vh;
+}
+
+.buttonCadastraLogin button {
   padding: 0.7em;
   font-size: 12pt;
   color: #fafafa;
@@ -584,6 +595,17 @@ footer p {
   border-radius: 8px;
   border: 1px solid #fafafa;
   cursor: pointer;
+  margin-bottom: 1vh;
+}
+
+.containerTeste{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+}
+.containerTeste p{
+  font-weight: 300;
 }
 
 @media (min-width: 768px) and (max-width: 950px) {
