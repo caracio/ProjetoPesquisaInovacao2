@@ -9,50 +9,42 @@
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;0,700;0,900;1,100&display=swap"
         rel="stylesheet">
     <script src="https://kit.fontawesome.com/bf14d8c695.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Farm</title>
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="sideBar.css">
+    <link rel="stylesheet" href="stylesGeral.css">
 </head>
 
 <body>
-    <div>
-        <header>
-            <div class="main-container">
-                <div class="container">
-                    <div>
-                        <img class="logo" src="../../Images/logo.png" alt="logo da empresa">
-                    </div>
-                    <ul class="sidebar">
-                        <li><input type="text"></li>
-                        <li><img src="../../Images/fotoPerfil.png" alt=""></li>
-                        <li><i class="fa-regular fa-bell"></i></li>
-                        <li><i class="fa-regular fa-laptop-code"></i></li>
-                        <li><i class="fa-regular fa-arrow-right-from-bracket"></i></li>
-                    </ul>
-                </div>
+    <header>
+        <div class="nav-bar">
+            <div class="logo">
+                <img src="../../Images/logo.png" alt="">
             </div>
-            <nav>
-                <input type="checkbox" id="check">
-                <label for="check" class="bar-btn">
-                    <i class="fa-solid fa-bars"></i>
-                </label>
-                <ul class="nav-menu">
-                    <li><label class="teste" for=""><a class="active" href="">Home</a><i
-                                class="fa-solid fa-house"></i></label></li>
-                    <li><label class="teste" for=""><a href="">Dashboard</a><i
-                                class="fa-regular fa-table-columns"></i></label></li>
-                    <li><label class="teste" for=""><a href="">Relatorios</a><i class="fa-regular fa-paste"></i></label>
-                    </li>
-                    <li><label class="teste" for=""><a href="">Local</a><i
-                                class="fa-regular fa-location-dot"></i></label></li>
-                    <li><label class="teste" for=""><a href="">Mensagem</a><i class="fa-regular fa-message"></i></label>
-                    </li>
-                    <li><label class="teste" for=""><a href="">Configurações</a><i
-                                class="fa-regular fa-gear"></i></label></li>
-                </ul>
-
-            </nav>
-        </header>
-    </div>
+            <div class="search">
+               <input type="text">
+            </div>
+               <ul class="funcionalidade">
+                   <li class="lista_funcionalidade">
+                     <i><img src="../../Images/fotoPerfil.png" alt=""></i>
+                   </li>
+                   <li><i class="fa-solid fa-bell"></i></li>
+                   <li><i class="fa-solid fa-laptop"></i></li>
+                   <li><i class="fa-solid fa-arrow-right-from-bracket"></i></li>
+               </ul>
+        </div>
+    </header>
+    <section>
+        <div id="sidebar">
+            <div class="menu-hambuger">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <div class="logo-empresa">
+                <img src="../../Images/Logo-Empresa.png" alt="">
+                <a href="">guilhermepereiradossantos41@outlook.com</a>
+            </div>
+        </div>
+    </section>
 </body>
 
 </html>

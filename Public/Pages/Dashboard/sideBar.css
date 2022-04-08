@@ -1,0 +1,40 @@
+#sidebar {
+  height: 80%;
+  width: 15%;
+  background-color: #fafafa;
+  margin-left: 1.5%;
+  margin-top: 2%;
+}
+
+.menu-hambuger {
+  display: flex;
+  flex-direction: row-reverse;
+
+  height: 5%;
+  padding: 1.5%;
+
+  background-color: aqua;
+}
+
+.menu-hambuger .fa-bars {
+  cursor: pointer;
+}
+
+.logo-empresa {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+   
+    height: 25%;
+    width: 100%;
+    background-color:aquamarine;
+  }
+  .logo-empresa img{
+    height: 85%;
+  }
+
+  .logo-empresa a{
+    font-size: 6.5px;
+  }
+  
