@@ -1,0 +1,19 @@
+.conteudo-filial {
+    width: 80%;
+    height: 100%;
+    background-color: blue ;
+}
+
+.interacao-usuario {
+    display: 'flex';
+    background-color: black;
+}
+
+.item {
+    width: 50%;
+    background-color: aquamarine;
+}
+
+img {
+ width: 50%;
+}
