@@ -4,12 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;0,700;0,900;1,100&display=swap"
         rel="stylesheet" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
     <script src="https://kit.fontawesome.com/bf14d8c695.js" crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
@@ -64,14 +67,9 @@
                 <div class="sales">
                     <span class="material-icons-sharp">analytics</span>
                     <div class="middle">
-                        <div class="left">
-                            <h3>Total Sales</h3>
-                            <h1>$25,00</h1>
-                        </div>
+            
                         <div class="progress">
-                            <svg>
-                                <circle cx='38' cy='38' r='36'></circle>
-                            </svg>
+                            <div id="curve_chart" style="width: 300px; height: 200px; "></div>
                             <div class="number">
                                 <p>81%</p>
                             </div>
@@ -86,8 +84,8 @@
                     <span class="material-icons-sharp">bar_chart</span>
                     <div class="middle">
                         <div class="left">
-                            <h3>Total Expenses</h3>
-                            <h1>$25,00</h1>
+                            <h3>Velocidade</h3>
+                            <h1>Cpu</h1>
                         </div>
                         <div class="progress">
                             <svg>
@@ -107,8 +105,8 @@
                     <span class="material-icons-sharp">stacked_line_chart</span>
                     <div class="middle">
                         <div class="left">
-                            <h3>Total Sales</h3>
-                            <h1>$25,00</h1>
+                            <h3>Uso da Cpu</h3>
+                            <h1>Cpu</h1>
                         </div>
                         <div class="progress">
                             <svg>
@@ -128,8 +126,8 @@
                     <span class="material-icons-sharp">memory</span>
                     <div class="middle">
                         <div class="left">
-                            <h3>Total Sales</h3>
-                            <h1>$25,00</h1>
+                            <h3>Uso da mémoria ram</h3>
+                            <h1>Mémoria ram</h1>
                         </div>
                         <div class="progress">
                             <svg>
@@ -146,8 +144,8 @@
                     <span class="material-icons-sharp">av_timer</span>
                     <div class="middle">
                         <div class="left">
-                            <h3>Total Sales</h3>
-                            <h1>$25,00</h1>
+                            <h3>memorias</h3>
+                            <h1>Mémoria de massa</h1>
                         </div>
                         <div class="progress">
                             <svg>
