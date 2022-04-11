@@ -1,17 +1,17 @@
 const conexao = require("../infraestrutura/conexao");
 
-class RedeFarmaciaModels {
+class ResponsavelModels {
 
-  cadastrarRedeFarmacia(req, res) {
+  cadastrarResponsavel(req, res) {
     const sql = `
 
-    INSERT INTO RedeFarmacia (NM_Rede, Email,Senha) 
-    SELECT * FROM (SELECT '${req.nome}' AS nomeRede, 
+    INSERT INTO Responsavel (NM_Rede, Email,Senha) 
+    SELECT * FROM (SELECT '${req.nome}'     AS nomeResponsavel, 
                           '${req.Email}'    AS email,
-                          '${req.Senha}'    AS senha) AS redeFarmacia
+                          '${req.Senha}'    AS senha) AS Responsavel
                            WHERE NOT EXISTS(
                                             SELECT Email
-                                            FROM RedeFarmacia 
+                                            FROM Responsavel 
                                             WHERE Email = '${req.Email}'
                     );    
     `;
@@ -38,4 +38,4 @@ class RedeFarmaciaModels {
   }
 }
 
-module.exports = new RedeFarmaciaModels();
+module.exports = new ResponsavelModels();

@@ -172,7 +172,7 @@
           </div>
         </div>
         <div class="containerCadastro">
-          <form action="/cadastro/RedeFarmacia" method="post">
+          <form id="form_cadastro" method="post" onsubmit="return cadastrar()">
             <div class="field">
               <div class="label">Nome: </div>
               <input type="nome" name="nome" id="in_nome">
@@ -184,30 +184,29 @@
             <div class="cardSenha">
               <div class="fieldSenha">
                 <div class="label">Senha: </div>
-                <input  type="password" name="Senha" id="in_Senha">
+                <input type="password" name="Senha" id="in_Senha">
                 <div class="containerOlho">
                   <i class="fa-solid fa-eye"></i>
                 </div>
               </div>
               <div class="fieldSenha">
                 <div class="label">Confirmar Senha: </div>
-                <input  type="password" name="confirmar_Senha" id="in_confirmar_Senha">
+                <input type="password" name="confirmar_Senha" id="in_confirmar_Senha">
                 <div class="containerOlho">
                   <i class="fa-solid fa-eye"></i>
                 </div>
               </div>
             </div>
-            
-              <div class="buttonCadastraLogin">
+
+            <div class="buttonCadastraLogin">
               <button type="submit">Cadastar</button>
             </div>
-              <div class="containerTeste">
-                <input type="checkbox" id="tecnologia" name="tecnologia" value="termos">
-                <p>Ao se cadastra você vai aceitar com os nossos termos</p>
-              </div>
-            </div>  
-          </form>
+            <div class="containerTeste">
+              <input type="checkbox" id="tecnologia" name="tecnologia" value="termos">
+              <p>Ao se cadastra você vai aceitar com os nossos termos</p>
+            </div>
         </div>
+<<<<<<< HEAD
       </div>
     </div> -->
   <div class="corpo">
@@ -247,10 +246,15 @@
             <button class="btn btn-second">Entrar</button>
           </form>
         </div>
+=======
+        </form>
+>>>>>>> 3f3ae744fc4c8e3e4d1eb7b1fe1be7466cf2c120
       </div>
+
     </div>
   </div>
 </body>
 <script src="./Home/script.js"></script>
+<script src="./Home/cadastro.js"></script>
 
 </html>
