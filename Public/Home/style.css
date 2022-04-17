@@ -479,24 +479,29 @@ footer p {
 
 .title-primary{
   color: #fff;
+  text-align: center;
 }
 
 .title-second{
   color: #02e493;
+  text-align: center;
 }
 
 .description{
   font-size: 14px;
   font-weight: 300;
   line-height: 30px;
+  text-align: center;
 }
 
 .description-primary{
   color: #fff;
+  text-align: center;
 }
 
 .description-second{
   color: #7f8c8d;
+  text-align: center;
 }
 
 
@@ -508,7 +513,7 @@ footer p {
   padding: 10px 50px;
   cursor: pointer;
   font-weight: bold;
-  width: 150px;
+  width: 20vw;
   align-self: center;
   border: none;
 }
@@ -527,6 +532,8 @@ footer p {
 .btn-second{
   background-color: #02e493;
   border: 1px solid #02e493;
+  justify-content: center;
+  display: flex;
 }
 
 .btn-second:hover{
@@ -564,10 +571,10 @@ footer p {
 }
 
 .form input{
-  height: 45px;
+  height: 5vh;
   border: none;
   background-color: #ecf0f1;
-  margin: 5px;
+  margin: 0,625rem;
 }
 
 .second-content{
