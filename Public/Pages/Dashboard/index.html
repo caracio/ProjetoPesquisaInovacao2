@@ -5,59 +5,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;0,700;0,900;1,100&display=swap"
         rel="stylesheet" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/bf14d8c695.js" crossorigin="anonymous"></script>
-    <script src="./script.js"></script>
+    <script type="text/javascript" src="https://www.chartjs.org/dist/2.8.0/Chart.min.js"></script>
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 
-<body>
-<<<<<<< HEAD
-    <div>
-        <header>
-            <!-- <div class="main-container">
-                <div class="container">
-                    <ul class="sidebar">
-                        <li><input type="text"></li>
-                        <li><img src="../../Images/fotoPerfil.png" alt=""></li>
-                        <li><i class="fa-regular fa-bell"></i></li>
-                        <li><i class="fa-regular fa-laptop-code"></i></li>
-                        <li><i class="fa-regular fa-arrow-right-from-bracket"></i></li>
-                    </ul>
-                </div>
-            </div> -->
-            <nav>
-                <div>
-                    <img class="logo" src="../../Images/logo.png" alt="logo da empresa">
-                </div>
-                <input type="checkbox" id="check">
-                <label for="check" class="bar-btn">
-                    <i class="fa-solid fa-bars"></i>
-                </label>
-                <ul class="nav-menu">
-                    <li><label class="teste" for=""><a class="active" href="">Home</a><i
-                                class="fa-solid fa-house"></i></label></li>
-                    <li><label class="teste" for=""><a href="">Dashboard</a><i
-                                class="fa-regular fa-table-columns"></i></label></li>
-                    <li><label class="teste" for=""><a href="">Relatorios</a><i class="fa-regular fa-paste"></i></label>
-                    </li>
-                    <li><label class="teste" for=""><a href="">Local</a><i
-                                class="fa-regular fa-location-dot"></i></label></li>
-                    <li><label class="teste" for=""><a href="">Mensagem</a><i class="fa-regular fa-message"></i></label>
-                    </li>
-                    <li><label class="teste" for=""><a href="">Configurações</a><i
-                                class="fa-regular fa-gear"></i></label></li>
-                </ul>
-
-            </nav>
-        </header>
-=======
+<body
+    onload='plotarGrafico("grafico-temperatura"),plotarGrafico1("grafico-memoriaRam"),plotarGrafico2("grafico-memoriaMassa"),plotarGrafico3("grafico-velocidade"),plotarGrafico4("grafico-usoCpu")'>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <div class="container">
         <aside>
             <div class="top">
@@ -104,101 +64,41 @@
             </div>
 
             <div class="insights">
+                <!-- graficos -->
                 <div class="sales">
                     <span class="material-icons-sharp">analytics</span>
-                    <div class="middle">
-            
-                        <div class="progress">
-                            <div id="curve_chart" style="width: 300px; height: 200px; "></div>
-                            <div class="number">
-                                <p>81%</p>
-                            </div>
-                        </div>
-                    </div>
+                    <canvas id="grafico-temperatura"></canvas>
                     <small class="text-muted">Ultimas 24 horas</small>
                 </div>
-
-                <!-- final dos preços -->
-
+                <!-- grafico-memoriaRam -->
                 <div class="expenses">
                     <span class="material-icons-sharp">bar_chart</span>
-                    <div class="middle">
-                        <div class="left">
-                            <h3>Velocidade</h3>
-                            <h1>Cpu</h1>
-                        </div>
-                        <div class="progress">
-                            <svg>
-                                <circle cx='38' cy='38' r='36'></circle>
-                            </svg>
-                            <div class="number">
-                                <p>81%</p>
-                            </div>
-                        </div>
-                    </div>
+                    <canvas id="grafico-memoriaRam"></canvas>
                     <small class="text-muted">Ultimas 24 horas</small>
                 </div>
-
-                <!-- final dos preços -->
-
+                <!-- grafico-memoriaMassa -->
                 <div class="income">
                     <span class="material-icons-sharp">stacked_line_chart</span>
-                    <div class="middle">
-                        <div class="left">
-                            <h3>Uso da Cpu</h3>
-                            <h1>Cpu</h1>
-                        </div>
-                        <div class="progress">
-                            <svg>
-                                <circle cx='38' cy='38' r='36'></circle>
-                            </svg>
-                            <div class="number">
-                                <p>81%</p>
-                            </div>
-                        </div>
-                    </div>
+                    <canvas id="grafico-memoriaMassa"></canvas>
                     <small class="text-muted">Ultimas 24 horas</small>
                 </div>
-                <!-- final dos preços -->
             </div>
+
+            <!-- grafico-velocidade -->
             <div class="graficos">
                 <div class="memory">
                     <span class="material-icons-sharp">memory</span>
-                    <div class="middle">
-                        <div class="left">
-                            <h3>Uso da mémoria ram</h3>
-                            <h1>Mémoria ram</h1>
-                        </div>
-                        <div class="progress">
-                            <svg>
-                                <circle cx='38' cy='38' r='36'></circle>
-                            </svg>
-                            <div class="number">
-                                <p>81%</p>
-                            </div>
-                        </div>
-                    </div>
+                    <canvas id="grafico-velocidade"></canvas>
                     <small class="text-muted">Ultimas 24 horas</small>
                 </div>
+
+                <!-- grafico-usoCpu -->
                 <div class="memory-massa">
                     <span class="material-icons-sharp">av_timer</span>
-                    <div class="middle">
-                        <div class="left">
-                            <h3>memorias</h3>
-                            <h1>Mémoria de massa</h1>
-                        </div>
-                        <div class="progress">
-                            <svg>
-                                <circle cx='38' cy='38' r='36'></circle>
-                            </svg>
-                            <div class="number">
-                                <p>81%</p>
-                            </div>
-                        </div>
-                    </div>
+                    <canvas id="grafico-usoCpu"></canvas>
                     <small class="text-muted">Ultimas 24 horas</small>
                 </div>
-                <a href="">Show All</a>
+
             </div>
         </main>
         <!-- final dos graficos -->
@@ -233,15 +133,21 @@
                             <p><b>Victor Angelo</b> Escolha a maquina em que deseja administrar da sua farmacia</p>
                         </div>
                         <div class="input-maquinas">
-                            <input type="search">
+                            <select class="maquinas" name="teste" id="select-maquinas">
+                                <option value="">Maquina 1</option>
+                                <option value="">Maquina 2</option>
+                                <option value="">Maquina 3</option>
+                                <option value="">Maquina 4</option>
+                                <option value="">Maquina 5</option>
+                            </select>
                         </div>
                         <small class="text-muted">2 minutes Agosto</small>
                     </div>
                 </div>
             </div>
         </div>
->>>>>>> 3f3ae744fc4c8e3e4d1eb7b1fe1be7466cf2c120
     </div>
 </body>
 
 </html>
+<script src="script.js"></script>
