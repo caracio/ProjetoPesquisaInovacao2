@@ -209,14 +209,18 @@
       </div>
     </div> -->
   <div id="corpo">
+    <div id="modal" class="fundo-modal">
     <div class="containerModal">
       <div class="content first-content">
         <div class="first-column">
           <h2 class="title title-primary">Bem-vindo ao Farmagraph</h2>
-          <p class="description description-primary">Acesse sua conta</p>
+          <p class="description description-primary">Já tenho a minha conta em Farmagraph</p>
           <button id="signin" class="btn btn-primary">Entrar</button>
         </div>
         <div class="second-column">
+          <div class="headerFundoModalBranca">
+            <div onclick="fecharModal()" class="closeModal">&times;</div>
+          </div>
           <h2 class="title title-second">Crie sua conta</h2>
           <p class="description description-second">Faça o monitoramento de todas as suas maquinas em tempo real</p>
           <form class="form">
@@ -232,10 +236,13 @@
       <div class="content second-content">
         <div class="first-column">
           <h2 class="title title-primary">Bem-vindo de volta!</h2>
-          <p class="description description-primary">Cadastre-se aqui</p>
+          <p class="description description-primary">Não tenho conta no Farmagraph</p>
           <button id="signup" class="btn btn-primary">Cadastrar</button>
         </div>
         <div class="second-column">
+          <div class="headerFundoModalBrancaSecond">
+            <div onclick="fecharModal()" class="closeModalSecond">&times;</div>
+          </div>
           <h2 class="title title-second">Entre na sua conta</h2>
           <p class="description escription-second">Faça o monitoramento de todas as suas maquinas em tempo real</p>
           <form class="form">
@@ -246,8 +253,8 @@
           </form>
         </div>
       </div>
-
     </div>
+  </div>
   </div>
 </body>
 <script src="./Home/script.js"></script>

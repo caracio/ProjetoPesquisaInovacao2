@@ -440,18 +440,72 @@ footer p {
 
 /* abrindo modal */
 
+.fundo-modal{
+  position: fixed;
+  top: -100%; 
+  z-index: 2;
+  height: 100%;
+  width: 100%;
+  display: block;
+  background-color: rgba(10, 10, 10, 0.356);
+  transition: all ease-in-out 2ms;
+}
+
+.headerFundoModalBranca{
+  width: 33vw;
+  margin-top: -75px;
+}
+
+
+.closeModal {
+  color: rgb(97, 94, 94);
+  cursor: pointer;
+  font-size: 22px;
+  display: flex;
+  justify-content: flex-end;
+}
+.closeModal span {
+  float: right;
+  transition: all ease-in-out 10ms;
+}
+.ModalCadastro .closeModal:hover {
+  color: #000;
+  transition: all 35ms;
+}
+
+.closeModalSecond{
+  color: rgb(97, 94, 94);
+  cursor: pointer;
+  font-size: 22px;
+  display: flex;
+  justify-content: flex-start;
+  margin-top: -75px;
+}
+
+.headerFundoModalBrancaSecond{
+  width: 33vw;
+ 
+}
+
+.closeModalSecond span {
+  float: right;
+  transition: all ease-in-out 10ms;
+}
+.ModalCadastro .closeModalSecond:hover {
+  color: #000;
+  transition: all 35ms;
+}
+
 .containerModal{
   display: flex;
-  border: 2px solid red;
   justify-content: center;
   align-items: center;
-  height: 90vh;
-  background-color: #ecf0f1;
+  margin-top: 180px;
 }
 .content{
   border-radius: 15px;
   background-color: #fff;
-  width: 80%;
+  width: 60%;
   height: 70%;
   justify-content: space-between;
   align-items: center;
@@ -466,7 +520,6 @@ footer p {
   height: 100%;
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
-
   left: 0%;
 }
 
@@ -475,6 +528,8 @@ footer p {
   font-size: 28px;
   font-weight: bold;
   text-transform: capitalize;
+  display: flex;
+  justify-content: center;
 }
 
 .title-primary{
@@ -489,10 +544,13 @@ footer p {
   font-size: 14px;
   font-weight: 300;
   line-height: 30px;
+  width: 320px;
 }
 
 .description-primary{
   color: #fff;
+  display: flex;
+  justify-content: center;
 }
 
 .description-second{
@@ -872,6 +930,10 @@ footer p {
 .containerTeste p{
   font-weight: 300;
 }} */
+
+
+/* ================responsividade==========  */
+
 
 @media (min-width: 768px) and (max-width: 950px) {
   header .hamburguer {

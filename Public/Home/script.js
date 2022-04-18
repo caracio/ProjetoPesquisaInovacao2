@@ -5,11 +5,11 @@ hamburguer.addEventListener("click", function () {
 });
 
 function abrirModal() {
-  document.getElementById("modal").style.top = "0";
+  document.getElementById('modal').style.top = "0";
 }
 
 function fecharModal() {
-  document.getElementById("modal").style.top = "-100%";
+  document.getElementById('modal').style.top = "-100%";
 }
 
 let btnOlho = document.querySelector('.fa-eye');
