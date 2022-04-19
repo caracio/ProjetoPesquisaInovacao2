@@ -364,17 +364,9 @@ main .insights small {
 main .graficos {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 0.5rem;
+    gap: 2rem;
 }
 
-
-
-main .graficos>div.memoryteste {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
 
 main .graficos>div {
     background: var(--color-white);
@@ -410,10 +402,11 @@ main .graficos>div .icome span {
 }
 
 
-main .graficos>div .middle {
+/* main .graficos>div .middle {
     display: flex;
     align-items: center;
-}
+
+} */
 
 main .graficos h3 {
     margin: 1rem 0 0.6rem;
@@ -452,6 +445,7 @@ main .graficos .memory-massa svg circle {
     stroke-dasharray: 80;
 } */
 
+
 main .graficos small {
     margin-top: 1.3rem;
     display: block;
@@ -468,6 +462,7 @@ main .graficos a {
 
 .right {
     margin-top: 1.4rem;
+    max-width: 14rem;
 }
 
 .right .top {
@@ -528,6 +523,7 @@ main .graficos a {
     border-radius: var(--card-border-radius);
     box-shadow: var(--box-shadow);
     transition: all 300ms ease;
+    height: 86vh;
 }
 
 .right .recent-updates .updates:hover {
@@ -570,7 +566,7 @@ main .graficos a {
     }
 
     aside .sidebar {
-        height: 100vh;
+        height: 197vh;
     }
 
     aside .sidebar a {
@@ -593,6 +589,10 @@ main .graficos a {
 
     main .graficos {
         grid-template-columns: 1fr;
+    }
+
+    .right .recent-updates .updates{
+        height: 197vh;
     }
 
 }
@@ -678,8 +678,19 @@ main .graficos a {
     .right .top button span{
         font-size: 2rem;
     }
-    .updates{
-        max-width: 40rem;
+    .right .recent-updates .updates{
+        display: flex;
+        align-items: center;
+        justify-content: center;
         height: 30vh;
     }
+    .right .recent-updates .updates:hover {
+        box-shadow: none;
+    }
+
+    .right .recent-updates{
+        padding: 1rem;
+        width: 25rem;
+    }
+   
 }
