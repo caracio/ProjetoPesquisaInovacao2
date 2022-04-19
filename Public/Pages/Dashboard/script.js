@@ -28,7 +28,7 @@ function plotarGrafico(idGrafico) {
 
 function gerarDados() {
   dados = [];
-  for (let index = 0; index < 10; index++) {
+  for (let index = 0; index < 5; index++) {
     dados.push((Math.random() * 100).toFixed(0));
   }
   return dados;
@@ -36,7 +36,7 @@ function gerarDados() {
 
 function gerarDatas() {
   datas = [];
-  for (let index = 0; index < 10; index++) {
+  for (let index = 0; index < 5; index++) {
     datas.push(
       (Math.random() * 23).toFixed(0) +
         ":" +
@@ -78,7 +78,7 @@ function plotarGrafico1(idGrafico) {
 
 function gerarDadosMemoriaRam() {
   dados = [];
-  for (let index = 0; index < 10; index++) {
+  for (let index = 0; index < 5; index++) {
     dados.push((Math.random() * 100).toFixed(0));
   }
   return dados;
@@ -86,7 +86,7 @@ function gerarDadosMemoriaRam() {
 
 function gerarDatasMemoriaRam() {
   datas = [];
-  for (let index = 0; index < 10; index++) {
+  for (let index = 0; index < 5; index++) {
     datas.push(
       (Math.random() * 23).toFixed(0) +
         ":" +
