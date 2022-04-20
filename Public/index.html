@@ -210,51 +210,51 @@
     </div> -->
   <div id="corpo">
     <div id="modal" class="fundo-modal">
-    <div class="containerModal">
-      <div class="content first-content">
-        <div class="first-column">
-          <h2 class="title title-primary">Bem-vindo ao Farmagraph</h2>
-          <p class="description description-primary">Já tenho a minha conta em Farmagraph</p>
-          <button id="signin" class="btn btn-primary">Entrar</button>
-        </div>
-        <div class="second-column">
-          <div class="headerFundoModalBranca">
-            <div onclick="fecharModal()" class="closeModal">&times;</div>
+      <div class="containerModal">
+        <div class="content first-content">
+          <div class="first-column">
+            <h2 class="title title-primary">Bem-vindo ao Farmagraph</h2>
+            <p class="description description-primary">Já tenho a minha conta em Farmagraph</p>
+            <button id="signin" class="btn btn-primary">Entrar</button>
           </div>
-          <h2 class="title title-second">Crie sua conta</h2>
-          <p class="description description-second">Faça o monitoramento de todas as suas maquinas em tempo real</p>
-          <form class="form">
-            <input type="text" placeholder="Digite seu nome">
-            <input type="email" placeholder="Digite seu e-mail">
-            <input type="password" placeholder="Digite sua senha">
-            <input type="password" placeholder="Digite sua senha novamente">
-            <button class="btn btn-second">Cadastrar</button>
-          </form>
+          <div class="second-column">
+            <div class="headerFundoModalBranca">
+              <div onclick="fecharModal()" class="closeModal">&times;</div>
+            </div>
+            <h2 class="title title-second">Crie sua conta</h2>
+            <p class="description description-second">Faça o monitoramento de todas as suas maquinas em tempo real</p>
+            <form id="form_cadastro"  method="post" onsubmit="return cadastrar()" class="form" >
+              <input type="text"      name="Nome"  placeholder="Digite seu nome">
+              <input type="email"     name="Email" placeholder="Digite seu e-mail">
+              <input type="password"  name="Senha" placeholder="Digite sua senha">
+              <input type="password"  placeholder="Digite sua senha novamente">
+              <button type="submit" class="btn btn-second">Cadastrar</button>
+            </form>
 
-        </div>
-      </div>
-      <div class="content second-content">
-        <div class="first-column">
-          <h2 class="title title-primary">Bem-vindo de volta!</h2>
-          <p class="description description-primary">Não tenho conta no Farmagraph</p>
-          <button id="signup" class="btn btn-primary">Cadastrar</button>
-        </div>
-        <div class="second-column">
-          <div class="headerFundoModalBrancaSecond">
-            <div onclick="fecharModal()" class="closeModalSecond">&times;</div>
           </div>
-          <h2 class="title title-second">Entre na sua conta</h2>
-          <p class="description escription-second">Faça o monitoramento de todas as suas maquinas em tempo real</p>
-          <form class="form">
-            <input type="email" placeholder="Digite seu e-mail">
-            <input type="password" placeholder="Digite sua senha">
-            <a class="password" href="#">Esqueci minha senha</a>
-            <button class="btn btn-second">Entrar</button>
-          </form>
+        </div>
+        <div class="content second-content">
+          <div class="first-column">
+            <h2 class="title title-primary">Bem-vindo de volta!</h2>
+            <p class="description description-primary">Não tenho conta no Farmagraph</p>
+            <button id="signup" class="btn btn-primary">Cadastrar</button>
+          </div>
+          <div class="second-column">
+            <div class="headerFundoModalBrancaSecond">
+              <div onclick="fecharModal()" class="closeModalSecond">&times;</div>
+            </div>
+            <h2 class="title title-second">Entre na sua conta</h2>
+            <p class="description escription-second">Faça o monitoramento de todas as suas maquinas em tempo real</p>
+            <form class="form">
+              <input type="email" placeholder="Digite seu e-mail">
+              <input type="password" placeholder="Digite sua senha">
+              <a class="password" href="#">Esqueci minha senha</a>
+              <button class="btn btn-second">Entrar</button>
+            </form>
+          </div>
         </div>
       </div>
     </div>
-  </div>
   </div>
 </body>
 <script src="./Home/script.js"></script>
