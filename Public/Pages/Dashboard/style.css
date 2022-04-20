@@ -99,6 +99,11 @@ text-muted {
   color: var(--color-info-dark);
 }
 
+.text-muted2 {
+  color: #535960;
+  font-weight: 300;
+}
+
 p {
   color: var(--color-dark-variant);
 }
@@ -123,9 +128,10 @@ b {
   color: var(--color-warning);
 }
 
+/* ===================aside esquerda====================== */
+
 aside {
   height: 100vh;
-  /* margin-top: 1rem; */
 }
 
 aside .top {
@@ -140,12 +146,9 @@ aside .logo {
   gap: 0.8rem;
 }
 
-
 aside .close {
   display: none;
 }
-
-/* sidebar */
 
 aside .sidebar {
   background: white;
@@ -153,7 +156,8 @@ aside .sidebar {
   flex-direction: column;
   height: 86vh;
   position: relative;
-  top: 3rem;
+  top: 2rem;
+  border-radius: var(--border-radius-2);
 }
 
 aside h3 {
@@ -207,20 +211,10 @@ aside .sidebar a:hover span {
   margin-left: 1rem;
 }
 
-/* icone de mensagem */
-
-/* aside .sidebar .message-count {
-    background: var(--color-danger);
-    color: var(--color-white);
-    padding: 2px 10px;
-    font-size: 11px;
-    border-radius: var(--border-radius-1);
-} */
-
 /* =========================main================== */
 
 main {
-  margin-top: 1.4rem;
+  margin-top: 1rem;
   max-width: 100%;
 }
 
@@ -237,7 +231,7 @@ main .date input[type="date"] {
   color: var(--color-dark);
 }
 
-/* =============graficos=================  */
+/* =============graficos primeira parte=================  */
 
 main .insights {
   display: grid;
@@ -266,23 +260,6 @@ main .insights > div span {
   font-size: 2rem;
 }
 
-main .insights > div.sales span {
-  background: var(--color-warning);
-}
-
-main .insights > div.expenses span {
-  background: var(--color-danger);
-}
-
-main .insights > div .icome span {
-  background: var(--color-sucess);
-}
-
-/* main .insights h3 {
-    margin: 1rem 0 0.6rem;
-    font-size: 1rem;
-} */
-
 main .insights.progress {
   position: relative;
   width: 92px;
@@ -305,50 +282,11 @@ main .insights svg circle {
   stroke-dashoffset: 92;
 }
 
-main .insights .vitao{
-    display: flex;
-    align-items: center;
-    gap: 1rem;
+main .insights .cotaniner-icones {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
-
-/* main .insights .sales svg circle {
-    stroke-dashoffset: -30;
-    stroke-dasharray: 200;
-} */
-
-/* main .insights .sales {
-    min-width: 280px;
-    min-height: 300px;
-}
-
-main .insights .expenses {
-    min-width: 280px;
-    min-height: 300px;
-}
-main .insights .income {
-    min-width: 280px;
-    min-height: 300px;
-} */
-/* main .insights .expenses svg circle {
-    stroke-dashoffset: 20;
-    stroke-dasharray: 80;
-}
-
-main .insights .income svg circle {
-    stroke-dashoffset: 35;
-    stroke-dasharray: 110;
-} */
-
-/* main .insights .progress .number {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} */
 
 main .insights small {
   margin-top: 1.3rem;
@@ -382,24 +320,6 @@ main .graficos > div span {
   font-size: 2rem;
 }
 
-main .graficos > div.memory span {
-  background: var(--color-warning);
-}
-
-main .graficos > div.expenses span {
-  background: var(--color-danger);
-}
-
-main .graficos > div .icome span {
-  background: var(--color-sucess);
-}
-
-/* main .graficos>div .middle {
-    display: flex;
-    align-items: center;
-
-} */
-
 main .graficos h3 {
   margin: 1rem 0 0.6rem;
   font-size: 1rem;
@@ -412,36 +332,11 @@ main .graficos.progress {
   border-radius: 50%;
 }
 
-main .graficos .vitao{
-    display: flex;
-    align-items: center;
-    gap: 1rem;
+main .graficos .cotaniner-icones {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
-
-/* main .graficos svg {
-    width: 7rem;
-    height: 7rem;
-}
-
-main .graficos svg circle {
-    fill: none;
-    stroke: var(--color-primary);
-    stroke-width: 14;
-    stroke-linecap: round;
-    transform: translate(5px, 5px);
-    stroke-dasharray: 110;
-    stroke-dashoffset: 92;
-}
-
-main .graficos .memory svg circle {
-    stroke-dashoffset: -30;
-    stroke-dasharray: 200;
-} */
-/* 
-main .graficos .memory-massa svg circle {
-    stroke-dashoffset: 20;
-    stroke-dasharray: 80;
-} */
 
 main .graficos small {
   margin-top: 1.3rem;
@@ -464,7 +359,7 @@ main .graficos a {
 .right .top {
   display: flex;
   justify-content: end;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
 .right .top button {
@@ -506,7 +401,7 @@ main .graficos a {
 /* --------recentes updates--------- */
 
 .right .recent-updates {
-  margin-top: 1rem;
+  margin-top: 2rem;
 }
 
 .right .recent-updates h2 {
@@ -515,7 +410,7 @@ main .graficos a {
 
 .right .recent-updates .updates {
   background: var(--color-white);
-  padding: var(--card-padding);
+  padding: 17px;
   border-radius: var(--card-border-radius);
   box-shadow: var(--box-shadow);
   transition: all 300ms ease;
@@ -535,27 +430,21 @@ main .graficos a {
 
 .right .recent-updates .message {
   margin-bottom: 2rem;
+  font-size: 1.4rem;
 }
 
-.right .recent-updates .input-maquinas {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    -ms-appearance: none;
-    appearance: none;
-    outline: 0;
-    border: 0!important;
-    background: var(--color-dark);
-    background-image: none;
+.right .recent-updates .select-maquinas select {
+  width: 100%;
+  padding: 0.7rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--color-dark);
+  font-size: 13pt;
+  cursor: pointer;
 }
-
-.right .recent-updates .input-maquinas::-ms-expand{
-    display: none;
-}
-
 
 /*---------- responsividade ------------*/
 
-@media screen and (max-width: 1286px) {
+@media screen and (max-width: 1422px) {
   .container {
     width: 94%;
     grid-template-columns: 7rem auto 13rem;
@@ -613,7 +502,7 @@ main .graficos a {
   }
 
   aside .sidebar {
-    height: 289vh;
+    height: 245vh;
   }
 
   aside .sidebar a {
@@ -625,9 +514,6 @@ main .graficos a {
     margin-top: 1.8rem;
   }
 
-  /* .right {
-        min-width: 14rem;
-    } */
 
   main .insights {
     grid-template-columns: 1fr;
@@ -639,7 +525,7 @@ main .graficos a {
   }
 
   .right .recent-updates .updates {
-    height: 289vh;
+    height: 240vh;
   }
 }
 
@@ -735,7 +621,9 @@ main .graficos a {
   }
 
   .right .recent-updates {
-    padding: 1rem;
-    width: 25rem;
+    padding: 0.7rem;
+  }
+  .right .recent-updates {
+    margin-top: 0px;
   }
 }
