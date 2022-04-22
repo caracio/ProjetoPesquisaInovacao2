@@ -1,8 +1,8 @@
-const res = require("express/lib/response");
 const conexao = require("../infraestrutura/conexao");
 
 class ResponsavelModels {
   cadastrarResponsavel(req, res) {
+
     const sql = `CALL SP_Cadastro_Responsavel( ?, ?, ?,@saida,@saida_Rotulo);`;
 
     conexao.query(

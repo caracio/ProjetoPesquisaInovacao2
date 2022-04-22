@@ -11,8 +11,8 @@ function login() {
   })
     .then(async (response) => {
       if (!response.ok) {
-        const erroInformatiom = await response.json();
-        messageErrorLogin(erroInformatiom.saida_rotulo);
+        const errorInformatiom = await response.json();
+        messageErrorLogin(errorInformatiom.saida_rotulo);
         return;
       }
       const res = await response.json();
@@ -31,6 +31,6 @@ function login() {
   return false;
 }
 
-function messageErrorLogin(erroInformatiom) {
-  console.log(erroInformatiom);
+function messageErrorLogin(errorInformatiom) {
+  console.log(errorInformatiom);
 }
