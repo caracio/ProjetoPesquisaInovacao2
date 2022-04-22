@@ -155,9 +155,19 @@ body * {
   transition: all ease-in-out 500ms;
 }
 
+.btn-login a {
+  color: #2b134b;
+  transition: all ease-in-out 500ms;
+  text-decoration: none;
+}
+
 .btn-login:hover {
   color: #fafafa;
   background-color: #00ff8859;
+}
+
+.btn-login a:hover {
+  color: #fafafa;
 }
 
 /* ========================responsividade ======================= */
