@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cadastro</title>
+    <title>Login</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;0,700;0,900;1,100&display=swap"
       rel="stylesheet"
@@ -16,6 +16,43 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div class="container">
+      <header>
+        <div class="hamburguer">
+          <div class="line" id="line1"></div>
+          <div class="line" id="line2"></div>
+          <div class="line" id="line3"></div>
+          <span>fechar</span>
+        </div>
+        <nav>
+          <a href="../../index.html">Home</a>
+          <a href="../../index.html#quemSomos">Quem Somos</a>
+          <a href="../../index.html#sobre">Sobre</a>
+          <a href="../../index.html#">Contato</a>
+        </nav>
+      </header>
+      <!-- menu amburge -->
+      <div class="sidebar">
+        <nav>
+          <ul class="menu">
+            <li class="menu-item">
+              <a href="../../index.html" class="menu-link">Home</a>
+            </li>
+            <li class="menu-item">
+              <a href="../../index.html#quemSomos" class="menu-link"
+                >Quem Somos</a
+              >
+            </li>
+            <li class="menu-item">
+              <a href="../../index.html#sobre" class="menu-link">Sobre</a>
+            </li>
+            <li class="menu-item">
+              <a href="../../index.html#" class="menu-link">Contato</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
     <div class="main-login">
       <div class="left-login">
         <h1>Seja bem vindo ao Farmagraph</h1>
@@ -29,27 +66,26 @@
           onsubmit="return login()"
           class="card-login"
         >
-          <h1>Crie sua Conta</h1>
+          <h1>Crie sua conta</h1>
           <div class="text-field">
-            <label for="nome">Nome</label>
+            <label for="usuario">Nome</label>
             <input name="Nome" placeholder="Nome" type="text" />
           </div>
           <div class="text-field">
             <label for="usuario">Email</label>
-            <input name="Email" placeholder="Email" type="password" />
+            <input name="Email" placeholder="Usuario" type="text" />
           </div>
           <div class="text-field">
             <label for="usuario">Senha</label>
             <input name="Senha" placeholder="Senha" type="password" />
-          </div>
-          <div class="container-options">
-            <a href="../Login/index.html">Já tenho conta</a>
-            <div class="options">
-              <label for="input-termos">Eu li e concordo com os termos</label>
-              <input id="termos" type="checkbox" />
+            <div class="container-options">
+              <a href="../Login/index.html">Já tenho conta</a>
+              <div class="options">
+                <label for="input-termos">Eu li e concordo com os termos</label>
+                <input id="termos" type="checkbox" />
+              </div>
             </div>
-          </div>
-          <button type="submit" class="btn-login"> <a href="">Cadastrar</a> </button>
+          <button type="submit" class="btn-login">Cadastra</button>
         </form>
       </div>
     </div>

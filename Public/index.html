@@ -47,7 +47,9 @@
             </li>
             <li class="menu-item"><a href="#" class="menu-link">Contato</a></li>
             <li class="menu-item">
-              <a href="./Pages/Login/index.html" class="menu-link">Cadastre-se</a>
+              <a href="./Pages/Login/index.html" class="menu-link"
+                >Cadastre-se</a
+              >
             </li>
           </ul>
         </nav>
@@ -67,7 +69,6 @@
             <br />
             máximo de agilidade e eficiência
           </p>
-          <a href="./Pages/Login/index.html" class="cadastro">Cadastre-se</a>
         </section>
         <section class="informacao">
           <h1>Fácil Navegação</h1>
@@ -125,6 +126,7 @@
           </div>
         </section>
         <section class="informacaoSuporte">
+          <div class="barra"></div>
           <h1>SUPORTE</h1>
           <p>
             Contamos com uma equipe especializada para que seu sistema
@@ -132,8 +134,6 @@
             esteja sempre de prontidão para lhe atender sempre quando
             necessário.
           </p>
-          <div class="barra"></div>
-          <a href="#" class="conhecerProduto">Conheça o produto</a>
         </section>
       </article>
       <footer>
@@ -157,145 +157,6 @@
         <p>FEITO POR ALUNOS DA SPTECH</p>
       </footer>
     </div>
-    <!-- modal -->
-    <!-- 
-  <div id="modal" class="blackGroundModal">
-    <div class="ModalCadastro">
-      <div class="alinhamentoTextoModal">
-        <div class="containerTitulo">
-          <h1>
-            Bem vindo ao Farma Graph
-          </h1>
-        </div>
-        <div class="containerSubTitulo">
-          <h2>Acesse sua conta</h2>
-        </div>
-        <div class="containerButton">
-          <button>Login</button>
-        </div>
-      </div>
-
-
-      <div class="fundoModalBranca">
-        <div class="headerFundoModalBranca">
-          <div onclick="fecharModal()" class="closeModal">&times;</div>
-        </div>
-        <div class="tituloConta">
-          <h1>Crie sua Conta</h1>
-          <div class="subtituloConta">
-            <p>Faça o monitoramento de todas as suas maquinas em tempo real</p>
-          </div>
-        </div>
-        <div class="containerCadastro">
-          <form id="form_cadastro" method="post" onsubmit="return cadastrar()">
-            <div class="field">
-              <div class="label">Nome: </div>
-              <input type="nome" name="nome" id="in_nome">
-            </div>
-            <div class="field">
-              <div class="label">Email: </div>
-              <input type="Email" name="Email" id="in_Email">
-            </div>
-            <div class="cardSenha">
-              <div class="fieldSenha">
-                <div class="label">Senha: </div>
-                <input type="password" name="Senha" id="in_Senha">
-                <div class="containerOlho">
-                  <i class="fa-solid fa-eye"></i>
-                </div>
-              </div>
-              <div class="fieldSenha">
-                <div class="label">Confirmar Senha: </div>
-                <input type="password" name="confirmar_Senha" id="in_confirmar_Senha">
-                <div class="containerOlho">
-                  <i class="fa-solid fa-eye"></i>
-                </div>
-              </div>
-            </div>
-
-            <div class="buttonCadastraLogin">
-              <button type="submit">Cadastar</button>
-            </div>
-            <div class="containerTeste">
-              <input type="checkbox" id="tecnologia" name="tecnologia" value="termos">
-              <p>Ao se cadastra você vai aceitar com os nossos termos</p>
-            </div>
-        </div>
-      </div>
-    </div> -->
-    <!-- <div id="corpo">
-      <div id="modal" class="fundo-modal">
-        <div class="containerModal">
-          <div class="content first-content">
-            <div class="first-column">
-              <h2 class="title title-primary">Bem-vindo ao Farmagraph</h2>
-              <p class="description description-primary">
-                Já tenho a minha conta em Farmagraph
-              </p>
-              <button id="signin" class="btn btn-primary">Entrar</button>
-            </div>
-            <div class="second-column">
-              <div class="headerFundoModalBranca">
-                <div onclick="fecharModal()" class="closeModal">&times;</div>
-              </div>
-              <h2 class="title title-second">Crie sua conta</h2>
-              <p class="description description-second">
-                Faça o monitoramento de todas as suas maquinas em tempo real
-              </p>
-              <form
-                id="form_cadastro"
-                method="post"
-                onsubmit="return cadastrar()"
-                class="form"
-              >
-                <input type="text" name="Nome" placeholder="Digite seu nome" />
-                <input
-                  type="email"
-                  name="Email"
-                  placeholder="Digite seu e-mail"
-                />
-                <input
-                  type="password"
-                  name="Senha"
-                  placeholder="Digite sua senha"
-                />
-                <input
-                  type="password"
-                  placeholder="Digite sua senha novamente"
-                />
-                <button type="submit" class="btn btn-second">Cadastrar</button>
-              </form>
-            </div>
-          </div>
-          <div class="content second-content">
-            <div class="first-column">
-              <h2 class="title title-primary">Bem-vindo de volta!</h2>
-              <p class="description description-primary">
-                Não tenho conta no Farmagraph
-              </p>
-              <button id="signup" class="btn btn-primary">Cadastrar</button>
-            </div>
-            <div class="second-column">
-              <div class="headerFundoModalBrancaSecond">
-                <div onclick="fecharModal()" class="closeModalSecond">
-                  &times;
-                </div>
-              </div>
-              <h2 class="title title-second">Entre na sua conta</h2>
-              <p class="description escription-second">
-                Faça o monitoramento de todas as suas maquinas em tempo real
-              </p>
-              <form class="form">
-                <input type="email" placeholder="Digite seu e-mail" />
-                <input type="password" placeholder="Digite sua senha" />
-                <a class="password" href="#">Esqueci minha senha</a>
-                <button class="btn btn-second">Entrar</button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> -->
   </body>
   <script src="./Home/script.js"></script>
   <script src="./Home/cadastro.js"></script>

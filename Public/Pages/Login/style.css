@@ -212,23 +212,15 @@ header nav a:hover {
   margin: 1.7rem 0px;
 }
 
-.container-options {
-  width: 90%;
-  margin-bottom: 1rem;
-}
-
 .options {
-  list-style: none;
-  display: flex;
-  justify-content: space-between;
-  margin: 0;
-  padding: 0;
-  font-weight: 300;
-  font-size: 13pt;
+  width: 95%;
+  margin-bottom: 1rem;
 }
 
 .options a {
   text-decoration: none;
+  font-weight: 300;
+  font-size: 13pt;
   transition: all ease-in-out 500ms;
 }
 
@@ -281,7 +273,7 @@ header nav a:hover {
   background-color: #00ff8859;
 }
 
-/* ========================responsividade ======================= */
+/* ===================== responsividade menu hamburger ======================= */
 
 @media (min-width: 768px) and (max-width: 950px) {
   header .hamburguer {
@@ -353,6 +345,8 @@ header nav a:hover {
   }
 }
 
+/* =========== reponsividade tela de login ============ */
+
 @media screen and (max-width: 1200px) {
   .options {
     font-size: 11pt;
@@ -370,7 +364,7 @@ header nav a:hover {
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
   .main-login {
     flex-direction: column;
     margin: 0;
@@ -380,7 +374,6 @@ header nav a:hover {
 
   .card-login {
     width: 75%;
-    height: 60vh;
   }
 
   .left-login h1 {
