@@ -2,41 +2,34 @@ const conexao = require("../infraestrutura/conexao");
 
 class MonitoradorModels {
   cadastrarMonitorador(req, res) {
+    const { FK_Loja, Nome, CPF, Email, Senha } = req;
     const sql = `
-    INSERT INTO Monitorador (nome,CPF,email,senha,grauAcesso,fkRedeFarmacia) 
-    SELECT * FROM (SELECT '${req.nome}' AS nome,
-                          '${req.CPF}' AS CPF, 
-                          '${req.email}' AS email,
-                          '${req.senha}' AS senha,
-                          '${req.grauAcesso}' AS grauAcesso,
-                          ${req.fkRedeFarmacia} AS fkRedeFarmacia
-                          ) AS Monitorador
-                           WHERE NOT EXISTS(
-                                            SELECT CPF
-                                            FROM Monitorador 
-                                            WHERE CPF = '${req.CPF}'
-                    );    
+         call SP_Cadastro_Monitorador(?, ?, ?, ?,?, @saida, @saida_Rotulo);
     `;
+    conexao.query(
+      sql,
+      [FK_Loja, Nome, CPF, Email, Senha],
+      async (error, results) => {
+        if (error) {
+          await res
+            .status(500)
+            .json({ ...error, Message: "Erro no servidor..." });
+          return;
+        }
 
-    conexao.query(sql, async (error, results) => {
-      if (error) {
-        await res
-          .status(400)
-          .json({ ...error, Message: "Cheque os campo novamente..." });
-        return;
-      }
+        if ((await results[0][0].saida) == "ERROR1") {
+          await res.status(400).json(results[0][0]);
+          return;
+        }
 
-      if ((await results.affectedRows) == 0) {
-        await res
-          .status(422)
-          .send({ ...results, messageError: "Monitorador já cadastrado" });
-        return;
+        if ((await results[0][0].saida) == "ERROR2") {
+          await res.status(500).send(results);
+          return;
+        }
+
+        await res.status(200).send(results[0][0]);
       }
-      res.status(200).send({
-        ...results,
-        Message: "Monitorador cadastrado com sucesso!!! ",
-      });
-    });
+    );
   }
 }
 

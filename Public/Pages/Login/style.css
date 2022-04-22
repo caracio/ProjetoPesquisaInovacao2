@@ -1,560 +1,218 @@
-* {
-  font-family: Arial, Helvetica, sans-serif;
-  list-style: none;
-  text-decoration: none;
+body {
   margin: 0;
   padding: 0;
+  font-family: "Roboto", sans-serif;
 }
 
-header .hamburguer {
-  width: 2rem;
-  height: 2rem;
-  position: fixed;
-  z-index: 100;
-  right: 2rem;
-  top: 2rem;
-  display: none;
-  flex-direction: column;
-  justify-content: space-evenly;
-  cursor: pointer;
+body * {
+  box-sizing: border-box;
 }
-
-.show-menu .hamburguer {
-  right: 16rem;
-}
-
-.line {
-  width: 100%;
-  height: 0.1rem;
-  background-color: #fff;
-  box-shadow: 0.1rem 0.1rem 1px #000;
-  transition: transform 1s;
-}
-
-.show-menu #line1 {
-  transform: rotate(45deg) translate(0.3rem, 0.45rem);
-}
-
-.show-menu #line2 {
-  opacity: 0;
-  visibility: hidden;
-}
-
-.show-menu #line3 {
-  transform: rotate(-45deg) translate(0.1rem, -0.45rem);
-}
-.hamburguer span {
-  position: absolute;
-  left: 3rem;
-  height: 2rem;
-  width: 6rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #02e493;
-  color: #fff;
-  opacity: 0;
-}
-
-.hamburguer span::before {
-  content: "";
-  position: absolute;
-  border-right: 0.5rem solid #02e493;
-  border-top: 0.5rem solid transparent;
-  border-left: 0.5rem solid transparent;
-  border-bottom: 0.5rem solid transparent;
-  left: -1rem;
-}
-
-.show-menu .hamburguer:hover span {
-  opacity: 1;
-}
-
-.sidebar {
-  width: 20rem;
+.main-login {
+  width: 100vw;
   height: 100vh;
-  background-color: #fff;
-  position: fixed;
-  top: 0;
-  right: -20rem;
-  transition: all 1s;
-  display: none;
-}
-
-.show-menu .sidebar {
-  right: 0;
-}
-
-.menu {
-  position: absolute;
-  width: 100%;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   display: flex;
   justify-content: center;
+  align-items: center;
+  background-color: #201b2c;
+}
+
+.left-login {
+  width: 50vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
 }
 
-.menu-item {
-  text-align: center;
-  margin-bottom: 0.5rem;
+.left-login > h1 {
+  font-size: 2.8vw;
+  color: #fafafa;
+  padding: 0;
+  margin: 0;
 }
 
-.menu-link {
-  font-size: 2rem;
-  color: #555;
-  transition: color 1s;
-}
-
-.menu-link:hover {
-  color: #02e493;
-}
-
-header nav {
-  width: 60%;
-  height: 13vh;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: flex-end;
-  padding-left: 30%;
-}
-
-header nav a {
-  color: #747474;
-  margin-top: 5rem;
-}
-
-header nav .cadastro {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #ffffff;
-  margin-left: 15%;
-  background-color: #02e493;
-  height: 3rem;
-  width: 12rem;
-  border-radius: 25px;
-}
-
-main{
+.left-login > h2 {
+  font-size: 2.8vw;
+  color: #fafafa;
+  font-weight: 200;
+  padding: 0;
+  margin: 0;
   display: flex;
   justify-content: center;
-  align-items: center;
-}
-
-main .form{
-  height: 50vh;
-  width: 40%;
-  display: flex;
-  justify-items: center;
-  align-items: center;
-  margin-top: 7vh;
-  border-radius: 8px;
-}
-
-main .bannerForm{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-main .form .formLogin{
-  height: 80%;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-}
-
-main .form .formLogin .titulo{
-  text-align: center;
-  color: #474747;
-}
-
-main .form .formLogin .titulo p{
-  color: #adadad;
-}
-
-main .form .formLogin .campos{
-  display: flex;
-  flex-direction: column;
-  color: #adadad;
-  margin-top: 1rem;
-}
-
-main .form .formLogin .campos input{
-  height: 1.5rem;
-  border: 1px solid #adadad;
-  border-radius: 8px;
-  width: 30vw;
+  width: 70%;
   margin-bottom: 1rem;
 }
 
-main .form .formLogin .optionsConta{
+.left-login-image {
+  width: 35vw;
+}
+
+.right-login {
+  width: 50vw;
+  height: 100vh;
   display: flex;
-  width: 75%;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
 }
 
-main .form .formLogin .optionsConta p{
-  color: #474747;
-
+.card-login {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 30px 35px;
+  background-color: #2f2841;
+  border-radius: 1.5rem;
+  box-shadow: 0 1rem 1.5 #00000056;
 }
 
-main .form .formLogin .optionsConta a{
-  font-weight: bold;
-  color: #474747;
-}  
+.card-login h1 {
+  color: #00ff88;
+  font-weight: 800;
+  margin: 0;
+}
 
-main .form .formLogin .optionButton{
+.card-login a {
+  color: #fafafa;
+}
+
+.text-field {
   width: 100%;
   display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   justify-content: center;
-  margin-top: 2rem;
+  margin: 1.7rem 0px;
 }
 
-main .form .formLogin .optionButton button{
+.container-options {
+  width: 90%;
+  margin-bottom: 1rem;
+}
+
+.options {
+  list-style: none;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #ffffff;
-  background-color: #02e493;
-  height: 2rem;
-  width: 75%;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  font-weight: 300;
+  font-size: 13pt;
+}
+
+.options a {
+  text-decoration: none;
+  transition: all ease-in-out 500ms;
+}
+
+.options a:hover {
+  color: #00ff88;
+}
+
+.text-field > input {
+  width: 100%;
   border: none;
-  border-radius: 10px;
+  border: 1rem;
+  padding: 0.8rem;
+  background-color: #514869;
+  color: #f0ffffde;
+  font-size: 12pt;
+  box-shadow: 0 0.1rem 1rem #00000056;
+  outline: none;
+  box-sizing: border-box;
+  border-radius: 0.5rem;
 }
 
-main .form .formLogin .optionButton button:hover{
-  color: #adadad;
-  font-weight: bold;
+.text-field label {
+  color: #f0ffffde;
+  margin-bottom: 0.3rem;
+}
+
+.text-field input::placeholder {
+  color: #f0ffff94;
+}
+
+.btn-login {
+  width: 80%;
+  padding: 0.8rem 0;
+  margin: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  outline: none;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 0.2rem;
+  color: #2b134b;
+  background-color: #00ff88;
   cursor: pointer;
+  box-shadow: 0px 15px 40px -12px #00ff8052;
+  transition: all ease-in-out 500ms;
 }
 
-@media (min-width: 768px) and (max-width: 920px) {
-  
-  header .hamburguer {
-    display: flex;
-  }
-  
-  header nav {
-    display: none;
-  }
-  
-  .sidebar {
-    display: block;
-  }
-  
-  main .bannerForm{
-    display: none;
-  }
-  
-  header nav .cadastro {
-    margin-left: 5%;
-  }
-  
-  main .form{
-    height: 80vh;
-    width: 70%;
-    display: flex;
-    justify-items: left;
-    align-items: center;
-    margin-top: 7vh;
-    border: 2px solid #000;
-    border-radius: 8px;
-    padding: 0.5rem;
-    background-image: url("../Images/bannerLoginMobile.png");
-    background-size: cover;
-    background-position: center;
-  }
-  
-  main .form .formLogin .titulo p{
-    color: #000;
-  }
-  
-  main .form .formLogin .campos input{
-    width: 50vw;
-  }
-  
-  main .form .formLogin .optionsConta{
-    width: 100%;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  main .form .formLogin .optionsConta p{
-    color: #000;
-  }
-  
-  main .form .formLogin .optionButton{
-    width: 85%;
-    display: flex;
-    padding-left: 30%;
-  }
-  
-  main .form .formLogin .optionButton button{
-    width: 50%;
+.btn-login:hover {
+  color: #fafafa;
+  background-color: #00ff8859;
+}
+
+/* ========================responsividade ======================= */
+
+@media screen and (max-width: 1200px) {
+  .options {
+    font-size: 11pt;
   }
 }
 
-@media (min-width: 426px) and (max-width: 768px) {
+@media screen and (max-width: 950px) {
 
-  header .hamburguer {
-    display: flex;
-  }
-
-  header nav {
-    display: none;
+  .container-options {
+    width: 100%; 
+    margin-bottom: 1rem;
   }
 
-  .sidebar {
-    display: block;
-  }
-
-  main .bannerForm{
-    display: none;
-  }
-
-  header nav .cadastro {
-    margin-left: 5%;
-  }
-
-  main .form{
-    height: 80vh;
-    width: 70%;
-    display: flex;
-    justify-items: left;
-    align-items: center;
-    margin-top: 7vh;
-    border: 2px solid #000;
-    border-radius: 8px;
-    padding: 0.5rem;
-    background-image: url("../Images/bannerLoginMobile.png");
-    background-size: cover;
-    background-position: center;
-  }
-  
-  main .form .formLogin .titulo p{
-    color: #000;
-  }
-  
-  main .form .formLogin .campos input{
-    width: 50vw;
-  }
-  
-  main .form .formLogin .optionsConta{
-    width: 100%;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  main .form .formLogin .optionsConta p{
-    color: #000;
-  }
-  
-  main .form .formLogin .optionButton{
-    width: 85%;
-    display: flex;
-    padding-left: 30%;
-  }
-  
-  main .form .formLogin .optionButton button{
-    width: 50%;
+  .options {
+    font-size: 11pt;
   }
 }
 
-@media (min-width: 376px) and (max-width: 425px) {
-
-  header .hamburguer {
-    display: flex;
-  }
-
-  header nav {
-    display: none;
-  }
-
-  .sidebar {
-    display: block;
-  }
-
-  main .bannerForm{
-    display: none;
-  }
-
-  main .form{
-    height: 80vh;
-    width: 70%;
-    display: flex;
-    justify-items: left;
-    align-items: center;
-    margin-top: 7vh;
-    border: 2px solid #000;
-    border-radius: 8px;
-    padding: 0.5rem;
-    background-image: url("../Images/bannerLoginMobile.png");
-    background-size: cover;
-    background-position: center;
-  }
-  
-  main .form .formLogin .titulo p{
-    font-size: 0.8rem;
-    color: #000;
-  }
-  
-  main .form .formLogin .campos input{
-    width: 55vw;
-  }
-  
-  main .form .formLogin .optionsConta{
-    width: 100%;
+@media screen and (max-width: 600px) {
+  .main-login {
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    margin: 0;
+    padding: 0;
   }
 
-  main .form .formLogin .optionsConta p{
-    color: #000;
-  }
-  
-  main .form .formLogin .optionButton{
-    width: 85%;
-    display: flex;
-    padding-left: 30%;
-  }
-  
-  main .form .formLogin .optionButton button{
-    width: 50%;
-  }
-}
-
-@media (min-width: 321px) and (max-width: 375px) {
-
-  header .hamburguer {
-    display: flex;
+  .card-login {
+    width: 75%;
   }
 
-  header nav {
+  .left-login h1 {
     display: none;
   }
 
-  .sidebar {
-    display: block;
-  }
-
-  main .bannerForm{
+  .left-login h2 {
     display: none;
   }
 
-  main .form{
-    height: 80vh;
-    width: 70%;
-    display: flex;
-    justify-items: left;
-    align-items: center;
-    margin-top: 7vh;
-    border: 2px solid #000;
-    border-radius: 8px;
-    padding: 0.5rem;
-    background-image: url("../Images/bannerLoginMobile.png");
-    background-size: cover;
-    background-position: center;
-  }
-  
-  main .form .formLogin .titulo p{
-    font-size: 0.8rem;
-    color: #000;
-  }
-  
-  main .form .formLogin .campos input{
-    width: 55vw;
-  }
-  
-  main .form .formLogin .optionsConta{
+  .left-login {
     width: 100%;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    height: auto;
   }
 
-  main .form .formLogin .optionsConta p{
-    color: #000;
-  }
-  
-  main .form .formLogin .optionButton{
-    width: 85%;
-    display: flex;
-    padding-left: 30%;
-  }
-  
-  main .form .formLogin .optionButton button{
-    width: 50%;
-  }
-}
-
-@media (max-width: 320px) {
-
-  header .hamburguer {
-    display: flex;
-  }
-
-  header nav {
-    display: none;
-  }
-
-  .sidebar {
-    display: block;
-  }
-
-  main .bannerForm{
-    display: none;
-  }
-
-  main .form{
-    height: 80vh;
-    width: 70%;
-    display: flex;
-    justify-items: left;
-    align-items: center;
-    margin-top: 7vh;
-    border: 2px solid #000;
-    border-radius: 8px;
-    padding: 0.5rem;
-    background-image: url("../Images/bannerLoginMobile.png");
-    background-size: cover;
-    background-position: center;
-  }
-  
-  main .form .formLogin .titulo p{
-    font-size: 0.8rem;
-    color: #000;
-  }
-  
-  main .form .formLogin .campos input{
-    width: 60vw;
-  }
-  
-  main .form .formLogin .optionsConta{
+  .right-login {
     width: 100%;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    height: auto;
   }
 
-  main .form .formLogin .optionsConta p{
-    color: #000;
+  .left-login-image {
+    width: 80vw;
   }
-  
-  main .form .formLogin .optionButton{
-    width: 85%;
-    display: flex;
-    padding-left: 30%;
+
+  .card-login {
+    width: 90%;
   }
-  
-  main .form .formLogin .optionButton button{
-    width: 50%;
+  .options {
+    font-size: 12pt;
   }
 }
