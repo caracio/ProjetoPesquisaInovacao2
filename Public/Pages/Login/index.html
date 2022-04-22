@@ -23,20 +23,21 @@
             <img src="./bonecos.svg" class="left-login-image" alt="animação">
         </div>
         <div class="right-login">
-            <form class="card-login">
+            <form id="form_login" method="post" onsubmit="return login()" class="card-login">
                 <h1>Login</h1>
                 <div class="text-field">
                     <label for="usuario">Usuario</label>
-                    <input placeholder="Usuario" type="text">
+                    <input name="Email" placeholder="Usuario" type="text">
                 </div>
                 <div class="text-field">
                     <label for="usuario">Senha</label>
-                    <input placeholder="Senha" type="password">
+                    <input name="Senha" placeholder="Senha" type="password">
                 </div>
                 <a href="#">Esqueci minha senha</a>
-                <button class="btn-login">Login</button>
+                <button type="submit" class="btn-login">Login</button>
             </form>
         </div>
     </div>
 </body>
 </html>
+<script src="./login.js"></script>

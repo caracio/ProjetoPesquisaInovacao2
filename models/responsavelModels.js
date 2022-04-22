@@ -11,43 +11,26 @@ class ResponsavelModels {
       async (error, results) => {
         if (error) {
           await res
-            .status(400)
-            .json({ ...error, Message: "Cheque os campo novamente..." });
+            .status(500)
+            .json({ ...error, Message: "Erro no servidor..." });
           return;
         }
 
-        if ((await results[0][0].saida) == "Este email já esta cadastrado!") {
-          await res.status(422).send(results);
+        if ((await results[0][0].saida) == "ERROR1") {
+          await res.status(400).json(results[0][0]);
           return;
         }
 
-        res.status(200).send({
-          ...results,
-          Message: "Responsavel cadastrado com sucesso!!! ",
-        });
+        if ((await results[0][0].saida) == "ERROR2") {
+          await res.status(500).send(results);
+          return;
+        }
+
+        await res.status(200).send(results[0][0]);
       }
     );
   }
 
-  loginResponsavel(req, res) {
-    const sql = `call SP_Login_Responsavel(?,?, @saida)`;
-
-    conexao.query(sql, [req.Email, req.Senha], async (error, results) => {
-      if (error) {
-        await res.status(500).send(results);
-        return;
-      }
-      console.log(results);
-      if ((await results.affectedRows) == 0) {
-        res
-          .status(404)
-          .send({ ...results, Message: "Login ou Senha incorretos!!!" });
-        return;
-      }
-
-      await res.status(202).json(results);
-    });
-  }
 }
 
 module.exports = new ResponsavelModels();

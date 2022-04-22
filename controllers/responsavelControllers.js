@@ -5,7 +5,4 @@ module.exports = (app) => {
      responsavelModels.cadastrarResponsavel(req.body, res);
   });
 
-  app.post("/login/Responsavel", (req,res) => {
-    responsavelModels.loginResponsavel(req.body,res);
-  })
 };
