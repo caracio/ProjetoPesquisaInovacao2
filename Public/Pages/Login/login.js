@@ -1,23 +1,30 @@
-  function login () {
-    const formulario = new URLSearchParams(new FormData(document.getElementById("form_login")));
+var hamburguer = document.querySelector(".hamburguer");
 
-    fetch('/login',
-     {
-        method:'POST',
-        body: formulario,
-     }).then(async (response)=>{
-         if(!response.ok){
-             console.log(await response.json());
-             return;
+hamburguer.addEventListener("click", function () {
+  document.querySelector(".container").classList.toggle("show-menu");
+});
 
-            console.log(await response.json());
-         } 
-         console.log(await response.json());
+function login() {
+  const formulario = new URLSearchParams(
+    new FormData(document.getElementById("form_login"))
+  );
 
-     }).catch((error)=>{
-         console.log(error + "AQ");
-     });
+  fetch("/login", {
+    method: "POST",
+    body: formulario,
+  })
+    .then(async (response) => {
+      if (!response.ok) {
+        console.log(await response.json());
+        return;
 
-     return false;
+        console.log(await response.json());
+      }
+      console.log(await response.json());
+    })
+    .catch((error) => {
+      console.log(error + "AQ");
+    });
 
+  return false;
 }
