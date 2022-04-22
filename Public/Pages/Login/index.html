@@ -1,43 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
     <link
-    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;0,700;0,900;1,100&display=swap"
-    rel="stylesheet"
-  />
-  <link
-    href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"
-    rel="stylesheet"
-  />
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;0,700;0,900;1,100&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <div class="main-login">
-        <div class="left-login">
-            <h1>Seja bem vindo ao Farmagraph</h1>
-            <h2>Otimeze  a sua farmacia com o nosso sistema</h2>
-            <img src="./bonecos.svg" class="left-login-image" alt="animação">
-        </div>
-        <div class="right-login">
-            <form id="form_login" method="post" onsubmit="return login()" class="card-login">
-                <h1>Login</h1>
-                <div class="text-field">
-                    <label for="usuario">Usuario</label>
-                    <input name="Email" placeholder="Usuario" type="text">
-                </div>
-                <div class="text-field">
-                    <label for="usuario">Senha</label>
-                    <input name="Senha" placeholder="Senha" type="password">
-                </div>
-                <a href="#">Esqueci minha senha</a>
-                <button type="submit" class="btn-login">Login</button>
-            </form>
-        </div>
+      <div class="left-login">
+        <h1>Seja bem vindo ao Farmagraph</h1>
+        <h2>Otimeze a sua farmacia com o nosso sistema</h2>
+        <img src="./bonecos.svg" class="left-login-image" alt="animação" />
+      </div>
+      <div class="right-login">
+        <form
+          id="form_login"
+          method="post"
+          onsubmit="return login()"
+          class="card-login"
+        >
+          <h1>Login</h1>
+          <div class="text-field">
+            <label for="usuario">Usuario</label>
+            <input name="Email" placeholder="Usuario" type="text" />
+          </div>
+          <div class="text-field">
+            <label for="usuario">Senha</label>
+            <input name="Senha" placeholder="Senha" type="password" />
+          </div>
+          <div class="container-options">
+            <ul class="options">
+              <li><a href="#">Esqueci minha senha</a></li>
+              <li><a href="#">Não tenho conta</a></li>
+            </ul>
+          </div>
+          <button type="submit" class="btn-login">Login</button>
+        </form>
+      </div>
     </div>
-</body>
+  </body>
 </html>
 <script src="./login.js"></script>
