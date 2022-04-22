@@ -1,23 +1,36 @@
-  function login () {
-    const formulario = new URLSearchParams(new FormData(document.getElementById("form_login")));
+const res = require("express/lib/response");
 
-    fetch('/login',
-     {
-        method:'POST',
-        body: formulario,
-     }).then(async (response)=>{
-         if(!response.ok){
-             console.log(await response.json());
-             return;
+function login() {
+  const formulario = new URLSearchParams(
+    new FormData(document.getElementById("form_login"))
+  );
 
-            console.log(await response.json());
-         } 
-         console.log(await response.json());
+  fetch("/login", {
+    method: "POST",
+    body: formulario,
+  })
+    .then(async (response) => {
+      if (!response.ok) {
+        const erroInformatiom = await response.json();
+        messageErrorLogin(erroInformatiom.saida_rotulo);
+        return;
+      }
+      const res = await response.json();
+      sessionStorage.setItem("res", JSON.stringify(res));
 
-     }).catch((error)=>{
-         console.log(error + "AQ");
-     });
+      if (sessionStorage.getItem("res")) {
+           window.location = "../Dashboard/index.html";
+           return;
+      }
+      alert("Erro!!!");
+    })
+    .catch((error) => {
+      console.log(error);
+    });
 
-     return false;
+  return false;
+}
 
+function messageErrorLogin(erroInformatiom) {
+  console.log(erroInformatiom);
 }

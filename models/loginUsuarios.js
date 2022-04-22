@@ -18,7 +18,7 @@ class LoginUsuarios {
         return;
       }
 
-      await res.status(200).json(results[0][0]);
+      await res.status(200).json(results[0]);
     });
   }
 }
