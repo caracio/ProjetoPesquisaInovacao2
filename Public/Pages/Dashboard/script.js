@@ -48,7 +48,6 @@ function gerarDatas() {
   return datas.sort();
 }
 
-
 // ==========memoria ram=============
 function plotarGrafico1(idGrafico) {
   const ctx = document.getElementById(idGrafico).getContext("2d");
@@ -98,7 +97,6 @@ function gerarDatasMemoriaRam() {
   return datas.sort();
 }
 
-
 // <==============memoria em massa==================>
 
 function plotarGrafico2(idGrafico) {
@@ -112,10 +110,7 @@ function plotarGrafico2(idGrafico) {
         {
           label: "Desempenho",
           data: gerarDadosVelocidade(),
-          backgroundColor: [
-            "#31C1E130",
-            "#11FBA760",
-          ],
+          backgroundColor: ["#31C1E130", "#11FBA760"],
           borderColor: ["#31C1E130", "rgba(80, 99, 132, 0.12)"],
           borderWidth: 1,
         },
@@ -131,7 +126,6 @@ function plotarGrafico2(idGrafico) {
   });
 }
 
-
 // ===========velocidade==============
 
 function plotarGrafico3(idGrafico) {
@@ -145,10 +139,7 @@ function plotarGrafico3(idGrafico) {
         {
           label: "Desempenho",
           data: gerarDadosVelocidade(),
-          backgroundColor: [
-            "#31C1E130",
-            "#11FBA760",
-          ],
+          backgroundColor: ["#31C1E130", "#11FBA760"],
           borderColor: ["#31C1E1", "#11FBA7"],
           borderWidth: 1,
         },
@@ -199,9 +190,7 @@ function plotarGrafico4(idGrafico) {
         {
           label: "Desempenho",
           data: gerarDadosUsoCpu(),
-          backgroundColor: [
-            "#31C1E130",
-          ],
+          backgroundColor: ["#31C1E130"],
           borderColor: ["#31C1E1"],
           borderWidth: 1,
         },
@@ -239,3 +228,24 @@ function gerarDatasUsoCpu() {
   return datas.sort();
 }
 
+//  ===============menu hamburger =================
+
+const sideMenu = document.querySelector("aside");
+const menuBtn = document.querySelector("#menu-btn");
+const closeBtn = document.querySelector("#close-btn");
+const themeToggler = document.querySelector(".theme-toggler");
+
+menuBtn.addEventListener("click", () => {
+  sideMenu.style.display = "block";
+});
+
+closeBtn.addEventListener("click", () => {
+  sideMenu.style.display = "none";
+});
+
+themeToggler.addEventListener("click", () => {
+  document.body.classList.toggle("dark-theme-variables");
+
+  themeToggler.querySelector("span: nth-child(1)").classList.toggle("active");
+  themeToggler.querySelector("span: nth-child(2)").classList.toggle("active");
+});

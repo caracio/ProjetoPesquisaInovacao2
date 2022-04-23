@@ -23,6 +23,18 @@
   --box-shadow: 0 2rem 3rem var(--color-light);
 }
 
+/* ================== modo dark ============================  */
+
+.dark-theme-variables {
+  --color-background: #181a1e;
+  --color-white: #202528;
+  --color-dark: #edeffd;
+  --color-dark-variant: #a3bdcc;
+  --color-light: rgba(0, 0, 0, 0.4);
+  --box-shadow: 0 2rem 3rem var(--color-light);
+}
+
+
 * {
   max-width: 100%;
   margin: 0;
@@ -64,7 +76,7 @@ img {
 }
 
 h1 {
-  font-weight: 800;
+  font-weight: 600;
   font-size: 1.8rem;
 }
 
@@ -100,7 +112,7 @@ text-muted {
 }
 
 .text-muted2 {
-  color: #535960;
+  color: var(--color-info-dark);
   font-weight: 300;
 }
 
@@ -151,12 +163,12 @@ aside .close {
 }
 
 aside .sidebar {
-  background: white;
+  background: var(--color-white);
   display: flex;
   flex-direction: column;
   height: 86vh;
   position: relative;
-  top: 2rem;
+  top: 5rem;
   border-radius: var(--border-radius-2);
 }
 
@@ -239,7 +251,7 @@ main .insights {
   gap: 0.5rem;
 }
 
-main .insights > div {
+main .insights>div {
   background: var(--color-white);
   padding: var(--card-padding);
   border-radius: var(--card-border-radius);
@@ -248,15 +260,15 @@ main .insights > div {
   transition: all 300ms ease;
 }
 
-main .insights > div:hover {
+main .insights>div:hover {
   box-shadow: none;
 }
 
-main .insights > div span {
+main .insights>div span {
   background: var(--color-primary);
   padding: 0.5rem;
   border-radius: 50%;
-  color: var(--color-white);
+  color: #fafafa;
   font-size: 2rem;
 }
 
@@ -299,7 +311,7 @@ main .graficos {
   gap: 2rem;
 }
 
-main .graficos > div {
+main .graficos>div {
   background: var(--color-white);
   padding: var(--card-padding);
   border-radius: var(--card-border-radius);
@@ -308,15 +320,15 @@ main .graficos > div {
   transition: all 300ms ease;
 }
 
-main .graficos > div:hover {
+main .graficos>div:hover {
   box-shadow: none;
 }
 
-main .graficos > div span {
+main .graficos>div span {
   background: var(--color-primary);
   padding: 0.5rem;
   border-radius: 50%;
-  color: var(--color-white);
+  color: #fafafa;
   font-size: 2rem;
 }
 
@@ -476,6 +488,7 @@ main .graficos a {
     grid-template-columns: repeat(2, 1fr);
     gap: 0.5rem;
   }
+
   main .graficos {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -529,7 +542,7 @@ main .graficos a {
   }
 }
 
-@media screen and (max-width: 868px) {
+@media screen and (max-width: 768px) {
   .container {
     width: 100%;
     grid-template-columns: 1fr;
@@ -537,7 +550,7 @@ main .graficos a {
 
   aside {
     position: fixed;
-    left: 0;
+    left: -100%;
     background: var(--color-white);
     width: 18rem;
     z-index: 3;
@@ -545,29 +558,42 @@ main .graficos a {
     height: 100vh;
     padding-right: var(--card-padding);
     display: none;
+    animation: showMenu 400ms ease forwards;
+  }
+
+  @keyframes showMenu {
+    to {
+      left: 0;
+    }
   }
 
   aside .logo {
     margin-left: 1rem;
   }
+
   aside .logo h2 {
     display: inline;
   }
+
   aside .sidebar h3 {
     display: inline;
   }
+
   aside .sidebar a {
     width: 100%;
     height: 3.4rem;
   }
+
   aside .sidebar a:last-child {
     position: absolute;
     bottom: 5rem;
   }
+
   aside .close {
     display: inline-block;
     cursor: pointer;
   }
+
   main {
     margin-top: 8rem;
     padding: 0 1rem;
@@ -577,6 +603,7 @@ main .graficos a {
     width: 94%;
     margin-top: 0 auto 4rem;
   }
+
   .right .top {
     position: fixed;
     top: 0;
@@ -587,7 +614,7 @@ main .graficos a {
     background: var(--color-white);
     width: 100%;
     z-index: 2;
-    box-shadow: 0 1rem 1rem var(--color-info-light);
+    box-shadow: -1 1rem 1rem var(--color-info-light);
   }
 
   .right .top .theme-toggler {
@@ -595,9 +622,11 @@ main .graficos a {
     position: absolute;
     left: 66%;
   }
+
   .right .profile .info {
     display: none;
   }
+
   .right .top button {
     display: inline-block;
     background: transparent;
@@ -610,12 +639,14 @@ main .graficos a {
   .right .top button span {
     font-size: 2rem;
   }
+
   .right .recent-updates .updates {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 30vh;
   }
+
   .right .recent-updates .updates:hover {
     box-shadow: none;
   }
@@ -623,6 +654,7 @@ main .graficos a {
   .right .recent-updates {
     padding: 0.7rem;
   }
+
   .right .recent-updates {
     margin-top: 0px;
   }
