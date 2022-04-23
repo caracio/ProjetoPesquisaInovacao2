@@ -12,7 +12,7 @@ function login() {
     .then(async (response) => {
       if (!response.ok) {
         const errorInformatiom = await response.json();
-        messageErrorLogin(errorInformatiom.saida_rotulo);
+        messageErrorLogin(errorInformatiom);
         return;
       }
       const res = await response.json();

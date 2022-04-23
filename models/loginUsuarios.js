@@ -13,7 +13,7 @@ class LoginUsuarios {
         return;
       }
 
-      if ((await results[0][0].saida) == "ERROR1") {
+      if ((await results[0][0].erro) == "ERROR1") {
         await res.status(400).json(results[0][0]);
         return;
       }

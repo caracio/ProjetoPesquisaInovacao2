@@ -16,7 +16,8 @@
     "consign": "^0.1.6",
     "express": "^4.17.3",
     "mysql": "^2.18.1",
-    "mysql2": "^2.3.3"
+    "mysql2": "^2.3.3",
+    "yup": "^0.32.11"
   },
   "devDependencies": {
     "nodemon": "^2.0.15"

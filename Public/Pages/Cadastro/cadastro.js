@@ -27,7 +27,7 @@ function cadastro() {
 }
 
 const messageError = (errorInformation) => {
-  console.log(errorInformation.saida_Rotulo);
+  console.log(errorInformation);
 };
 
 
