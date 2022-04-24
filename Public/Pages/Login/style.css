@@ -151,14 +151,14 @@ header nav a:hover {
   flex-direction: column;
 }
 
-.left-login > h1 {
+.left-login>h1 {
   font-size: 2.8vw;
   color: #fafafa;
   padding: 0;
   margin: 0;
 }
 
-.left-login > h2 {
+.left-login>h2 {
   font-size: 2.8vw;
   color: #fafafa;
   font-weight: 200;
@@ -228,7 +228,7 @@ header nav a:hover {
   color: #00ff88;
 }
 
-.text-field > input {
+.text-field>input {
   width: 100%;
   border: none;
   border: 1rem;
@@ -271,6 +271,16 @@ header nav a:hover {
 .btn-login:hover {
   color: #fafafa;
   background-color: #00ff8859;
+}
+
+.erro {
+  width: 95%;
+}
+
+.erro span{
+  font-weight: 400;
+  font-size: 13pt;
+  color: #fafafa;
 }
 
 /* ===================== responsividade menu hamburger ======================= */
@@ -401,6 +411,7 @@ header nav a:hover {
   .card-login {
     width: 90%;
   }
+
   .options {
     font-size: 12pt;
   }

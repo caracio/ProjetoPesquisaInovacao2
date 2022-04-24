@@ -484,6 +484,11 @@ main .graficos .memory .informations .teste {
   background: var(--color-victor);
 }
 
+.right .recent-updates .select-maquinas a {
+  color: var(--color-primary-variant);
+}
+
+
 .right .recent-updates .select-maquinas button:hover {
   color: var(--color-dark-variant-home);
   background-color: var(--color-sucess-varinat);
@@ -700,17 +705,17 @@ main .graficos .memory .informations .teste {
   }
 } */
 
- @media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .container {
     width: 100%;
     grid-template-columns: 1fr;
   }
 
-   main .graficos {
+  main .graficos {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: 0.5rem;
-  } 
+  }
 
   main .graficos .memory {
     flex-direction: column;
@@ -829,4 +834,4 @@ main .graficos .memory .informations .teste {
   .right .recent-updates {
     margin-top: 0px;
   }
-} 
+}

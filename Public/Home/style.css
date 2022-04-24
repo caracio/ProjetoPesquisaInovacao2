@@ -411,7 +411,7 @@ header nav .cadastro:hover {
 }
 
 footer {
-  background-color: #747474;
+  background-color: #0a0a0ac5;
   height: 15vh;
   width: 100%;
   display: flex;
@@ -420,14 +420,17 @@ footer {
 }
 
 footer p {
-  color: #ffffff;
+  color: #fafafa;
+  font-weight: 300;
+  font-size: 15pt;
   margin-right: 3%;
 }
 
 .img_midiaSocial_container {
+  padding: 0 0 0 3rem;
   width: 57%;
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
   align-items: center;
 }
 
@@ -439,9 +442,9 @@ footer p {
 
 /* ======================================  tela de login e cadastro abrindo modal =================================== */
 
-.fundo-modal{
+.fundo-modal {
   position: fixed;
-  top: -100%; 
+  top: -100%;
   z-index: 2;
   height: 100%;
   width: 100%;
@@ -574,6 +577,12 @@ footer p {
     height: 40vh;
   }
 
+  .banner p {
+    color: #747474;
+    text-align: center;
+    font-size: 12pt;
+  }
+
   .quemSomos .containerText {
     width: auto;
     padding: 1rem;
@@ -641,6 +650,12 @@ footer p {
 
   .informacao h1 {
     font-size: 2rem;
+  }
+
+  .banner p {
+    color: #747474;
+    text-align: center;
+    font-size: 12pt;
   }
 
   .img-container .CardUm {
@@ -796,6 +811,12 @@ footer p {
 
   header nav {
     display: none;
+  }
+
+  .banner p {
+    color: #747474;
+    text-align: center;
+    font-size: 12pt;
   }
 
   .sidebar {
@@ -979,6 +1000,13 @@ footer p {
   .informacao h1 {
     font-size: 2rem;
   }
+
+  .banner p {
+    color: #747474;
+    text-align: center;
+    font-size: 12pt;
+  }
+
 
   .img-container .CardUm {
     display: flex;

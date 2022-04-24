@@ -12,6 +12,7 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet" />
   <script type="text/javascript" src="https://www.chartjs.org/dist/2.8.0/Chart.min.js"></script>
   <link rel="stylesheet" href="home.css" />
+  <script src="./home/home.js"></script>
   <title>Document</title>
 </head>
 
@@ -47,7 +48,7 @@
           <h3>Lojas</h3>
         </a>
         <a href="#">
-          <span class="material-icons-sharp">unsubscribe</span>
+          <span class="material-icons-sharp">devices</span>
           <h3>Maquinas</h3>
         </a>
         <a href="#">
@@ -62,7 +63,7 @@
         Ultra Farma
         <h2 class="text-muted2">Escolha a filial em que deseja monitora</h2>
       </h1>
-      <div class="graficos">
+      <div id="lojas" class="graficos">
         <div class="memory">
           <div class="container-icones"><a href="./dashboard.html">
               <img src="./hospital-building-animate.svg" alt="loja"></a>
@@ -165,7 +166,7 @@
             </div>
             <div class="container-maquinas">
               <div class="select-maquinas">
-                <button>Adicionar Loja</button>
+                <button> <a href="./lojas.html">Adicionar Loja</a> </button>
               </div>
             </div>
           </div>
