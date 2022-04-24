@@ -103,33 +103,6 @@ function plotarGrafico2(idGrafico) {
 
 // ===========velocidade==============
 
-function plotarGrafico3(idGrafico) {
-  const ctx = document.getElementById(idGrafico).getContext("2d");
-  let myChart = new Chart(ctx, {
-    type: "bar",
-
-    data: {
-      labels: gerarDatasVelocidade(),
-      datasets: [
-        {
-          label: "Desempenho",
-          data: gerarDadosVelocidade(),
-          backgroundColor: ["#31C1E130", "#11FBA760"],
-          borderColor: ["#31C1E1", "#11FBA7"],
-          borderWidth: 1,
-        },
-      ],
-    },
-    options: {
-      scales: {
-        y: {
-          beginAtZero: true,
-        },
-      },
-    },
-  });
-}
-
 function gerarDadosVelocidade() {
   dados = [];
   for (let index = 0; index < 2; index++) {

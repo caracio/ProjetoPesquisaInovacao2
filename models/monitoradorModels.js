@@ -5,7 +5,7 @@ class MonitoradorModels {
     const { FK_Loja, Nome, CPF, Email, Senha } = req;
     const sql = `
          call SP_Cadastro_Monitorador(?, ?, ?, ?,?, @saida, @saida_Rotulo);
-    `;
+`;
     conexao.query(
       sql,
       [FK_Loja, Nome, CPF, Email, Senha],
