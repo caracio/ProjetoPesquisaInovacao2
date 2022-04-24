@@ -68,7 +68,7 @@
       </aside>
       <!-- fim da aside -->
       <main>
-        <h1>
+        <h1 id="nomeLoja">
           Ultra farma
           <h2 class="text-muted2">Maquina 1</h2>
         </h1>
@@ -147,7 +147,7 @@
             <div class="profile-photo">
               <img src="../../Images/fotoPerfil.png" alt="" />
             </div>
-          </div>
+          </div>  
         </div>
         <!--------------------- header final---------------->
         <div class="recent-updates">
@@ -159,13 +159,13 @@
               </div>
               <div class="message">
                 <p>
-                  Olá <b>Victor Angelo</b> Escolha a maquina em que deseja
+                  Olá <b id="nomeUsuario">Victor Angelo</b> Escolha a maquina em que deseja
                   administrar da sua farmacia
                 </p>
               </div>
               <div class="container-maquinas">
                 <div class="select-maquinas">
-                  <select>
+                  <select onchange="">
                     <option value="">Maquina 1</option>
                     <option value="">Maquina 2</option>
                     <option value="">Maquina 3</option>
@@ -182,6 +182,7 @@
   </body>
 </html>
 <script src="script.js"></script>
+<script src="dashboard.js"></script>
 <script src="charts/memoriaMassaChart.js"></script>
 <script src="charts/processadorCharts.js"></script>
 <script src="charts/memoriaRamChart.js"></script>
