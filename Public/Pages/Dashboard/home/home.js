@@ -10,7 +10,7 @@ function renderizarLojas() {
      </div>
      <ul class="informations">
        <li>
-         <h1>${informacoesUsuario.lojas[i].id_Loja}</h1>
+         <h1>${informacoesUsuario.lojas[i].nome}</h1>
        </li>
        <li>
          <h1 class="teste">${informacoesUsuario.lojas[i].cidade}</h1>

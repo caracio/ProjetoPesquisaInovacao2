@@ -7,7 +7,7 @@
   if (JSON.parse(sessionStorage.getItem("idLoja"))) {
     JSON.parse(sessionStorage.getItem("res")).lojas.forEach((element) => {
       if (element.id_Loja == JSON.parse(sessionStorage.getItem("idLoja"))) {
-        document.getElementById("nomeLoja").innerHTML = element.id_Loja;
+        document.getElementById("nomeLoja").innerHTML = element.nome;
       }
     });
   }
