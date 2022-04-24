@@ -140,6 +140,7 @@ header nav a {
 header nav a:hover {
   font-weight: bold;
 }
+
 .main-login {
   width: 100%;
   height: 100vh;
@@ -158,14 +159,14 @@ header nav a:hover {
   flex-direction: column;
 }
 
-.left-login > h1 {
+.left-login>h1 {
   font-size: 2.8vw;
   color: #fafafa;
   padding: 0;
   margin: 0;
 }
 
-.left-login > h2 {
+.left-login>h2 {
   font-size: 2.8vw;
   color: #fafafa;
   font-weight: 200;
@@ -221,7 +222,7 @@ header nav a:hover {
   margin: 0.7rem 0px;
 }
 
-.text-field > input {
+.text-field>input {
   width: 100%;
   border: none;
   border: 1rem;
@@ -245,11 +246,12 @@ header nav a:hover {
 }
 
 .container-options {
-  width: 90%;
+  width: 95%;
   margin-bottom: 1rem;
   list-style: none;
   margin-top: 0.8rem;
 }
+
 .container-options a {
   text-decoration: none;
   font-size: 13pt;
@@ -270,6 +272,7 @@ header nav a:hover {
   margin-top: 0.4rem;
   color: #fafafa;
   gap: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 .btn-login {
@@ -303,6 +306,13 @@ header nav a:hover {
 .btn-login a:hover {
   color: #fafafa;
 }
+
+.erro span {
+  font-weight: 400;
+  font-size: 13pt;
+  color: #fafafa;
+}
+
 
 /* ==========  responsividade menu hambuger =========== */
 
@@ -384,7 +394,7 @@ header nav a:hover {
   }
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 950px) {
   .main-login {
     flex-direction: column;
     margin: 0;
@@ -395,12 +405,13 @@ header nav a:hover {
   .card-login {
     width: 90%;
   }
+
   .container-options {
     width: 100%;
     margin-bottom: 1rem;
   }
 
-  .left-login-image{
+  .left-login-image {
     width: 50vw;
   }
 
@@ -446,6 +457,7 @@ header nav a:hover {
   .card-login {
     width: 90%;
   }
+
   .options {
     font-size: 12pt;
   }

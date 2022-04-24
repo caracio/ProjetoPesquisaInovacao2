@@ -484,6 +484,11 @@ main .graficos .memory .informations .teste {
   background: var(--color-victor);
 }
 
+.right .recent-updates .select-maquinas a {
+  color: var(--color-primary-variant);
+}
+
+
 .right .recent-updates .select-maquinas button:hover {
   color: var(--color-dark-variant-home);
   background-color: var(--color-sucess-varinat);
@@ -531,14 +536,14 @@ main .graficos .memory .informations .teste {
   }
 
   .right .recent-updates .updates {
-    height: 197vh;
+    height: auto;
   }
 }
 
 @media screen and (max-width: 1028px) {
   .container {
     width: 94%;
-    grid-template-columns: 7rem auto 14rem;
+    grid-template-columns: 7rem auto 15rem;
   }
 
   aside .logo h2 {
@@ -550,7 +555,7 @@ main .graficos .memory .informations .teste {
   }
 
   aside .sidebar {
-    height: 245vh;
+    height: 68vh;
   }
 
   aside .sidebar a {
@@ -569,14 +574,15 @@ main .graficos .memory .informations .teste {
   }
 
   .right .recent-updates .updates {
-    height: 240vh;
+    height: auto;
   }
 }
 
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
   .container {
     width: 100%;
     grid-template-columns: 1fr;
+    background-color: #00ff88;
   }
 
   main .graficos {
@@ -683,7 +689,7 @@ main .graficos .memory .informations .teste {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 30vh;
+    height: auto;
   }
 
   .right .recent-updates .updates:hover {
@@ -692,6 +698,137 @@ main .graficos .memory .informations .teste {
 
   .right .recent-updates {
     padding: 0.7rem;
+  }
+
+  .right .recent-updates {
+    margin-top: 0px;
+  }
+} */
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 100%;
+    grid-template-columns: 1fr;
+  }
+
+  main .graficos {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 0.5rem;
+  }
+
+  main .graficos .memory {
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+
+
+
+  aside {
+    position: fixed;
+    left: -100%;
+    background: var(--color-white);
+    width: 18rem;
+    z-index: 3;
+    box-shadow: -3rem 3rem 4rem var(--color-info-light);
+    height: 100vh;
+    padding-right: var(--card-padding);
+    display: none;
+    animation: showMenu 400ms ease forwards;
+  }
+
+  @keyframes showMenu {
+    to {
+      left: 0;
+    }
+  }
+
+  aside .logo {
+    margin-left: 1rem;
+  }
+
+  aside .logo h2 {
+    display: inline;
+  }
+
+  aside .sidebar h3 {
+    display: inline;
+  }
+
+  aside .sidebar a {
+    width: 100%;
+    height: 3.4rem;
+  }
+
+  aside .sidebar a:last-child {
+    position: absolute;
+    bottom: 5rem;
+  }
+
+  aside .close {
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  main {
+    margin-top: 8rem;
+    padding: 0 1rem;
+  }
+
+
+  .right {
+    width: 94%;
+    margin-top: 0 auto 4rem;
+  }
+
+  .right .top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    align-items: center;
+    height: 4.6rem;
+    background: var(--color-white);
+    width: 100%;
+    z-index: 2;
+    box-shadow: -1 1rem 1rem var(--color-info-light);
+  }
+
+  .right .top .theme-toggler {
+    width: 4.4rem;
+    position: absolute;
+    left: 66%;
+  }
+
+  .right .profile .info {
+    display: none;
+  }
+
+  .right .top button {
+    display: inline-block;
+    background: transparent;
+    cursor: pointer;
+    color: var(--color-dark);
+    position: absolute;
+    left: 1rem;
+  }
+
+  .right .top button span {
+    font-size: 2rem;
+  }
+
+  .right .recent-updates .updates {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+  }
+
+  .right .recent-updates .updates:hover {
+    box-shadow: none;
+  }
+
+  .right .recent-updates {
+    padding: 0.8rem;
   }
 
   .right .recent-updates {

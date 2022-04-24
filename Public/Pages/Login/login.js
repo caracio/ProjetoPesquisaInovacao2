@@ -33,4 +33,6 @@ function login() {
 
 function messageErrorLogin(errorInformatiom) {
   console.log(errorInformatiom);
+  document.getElementById("mensagemErro").innerHTML = errorInformatiom.message;
 }
+

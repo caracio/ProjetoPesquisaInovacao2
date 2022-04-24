@@ -435,9 +435,9 @@ main .graficos .memory .informations .teste {
 
 /* --------recentes updates--------- */
 
-.right .recent-updates {
+/* .right .recent-updates {
     margin-top: 2rem;
-}
+} */
 
 .right .recent-updates h2 {
     margin-bottom: 1rem;
@@ -449,7 +449,7 @@ main .graficos .memory .informations .teste {
     border-radius: var(--card-border-radius);
     box-shadow: var(--box-shadow);
     transition: all 300ms ease;
-    height: 90vh;
+    /* height: 90vh; */
 }
 
 .right .recent-updates .updates:hover {
@@ -562,26 +562,9 @@ main .graficos .memory .informations .teste {
     margin: 0.1rem 0px;
 }
 
-
-.text-field-teste>input {
-    width: 100%;
-    border: none;
-    border: 1rem;
-    padding: 0.8rem;
-    background-color: #514869;
-    color: #f0ffffde;
-    font-size: 12pt;
-    box-shadow: 0 0.1rem 1rem #00000056;
-    outline: none;
-    box-sizing: border-box;
-    border-radius: 0.5rem;
-}
-
-
 .text-field>input {
     width: 100%;
     border: none;
-    border: 1rem;
     padding: 0.8rem;
     background-color: #514869;
     color: #f0ffffde;
@@ -717,9 +700,9 @@ main .graficos .memory .informations .teste {
         padding: 0.8rem;
     }
 
-    .right .recent-updates .updates {
+    /* .right .recent-updates .updates {
         height: 90vh;
-    }
+    } */
 }
 
 @media screen and (max-width: 1028px) {
@@ -756,13 +739,13 @@ main .graficos .memory .informations .teste {
     }
 
     .right .recent-updates .updates {
-        height: 91vh;
+        /* height: 91vh; */
     }
 }
 
 @media screen and (max-width: 768px) {
     .container {
-        width: 100%;
+        /* width: 100%; */
         grid-template-columns: 1fr;
     }
 

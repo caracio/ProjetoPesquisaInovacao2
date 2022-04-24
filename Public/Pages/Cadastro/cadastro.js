@@ -1,8 +1,4 @@
-
-
-
 function cadastro() {
-
   const formulario = new URLSearchParams(
     new FormData(document.getElementById("form_cadastro"))
   );
@@ -28,6 +24,5 @@ function cadastro() {
 
 const messageError = (errorInformation) => {
   console.log(errorInformation);
+  document.getElementById("mensagemErro").innerHTML = errorInformation.message;
 };
-
-

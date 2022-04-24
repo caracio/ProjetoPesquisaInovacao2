@@ -454,6 +454,7 @@ main .graficos a {
   cursor: pointer;
 }
 
+
 .right .recent-updates .select-maquinas option {
   line-height: 1rem;
 }
@@ -558,7 +559,7 @@ main .graficos a {
     background: var(--color-white);
     width: 18rem;
     z-index: 3;
-    box-shadow: 1rem 3rem 4rem var(--color-info-light);
+    box-shadow: -3rem 3rem 4rem var(--color-info-light);
     height: 100vh;
     padding-right: var(--card-padding);
     display: none;
@@ -613,7 +614,6 @@ main .graficos a {
     top: 0;
     left: 0;
     align-items: center;
-    padding: 0 0.8rem;
     height: 4.6rem;
     background: var(--color-white);
     width: 100%;
