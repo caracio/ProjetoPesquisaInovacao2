@@ -49,31 +49,6 @@ function gerarDatas() {
 }
 
 // ==========memoria ram=============
-function plotarGrafico1(idGrafico) {
-  const ctx = document.getElementById(idGrafico).getContext("2d");
-  let myChart = new Chart(ctx, {
-    type: "bar",
-    data: {
-      labels: gerarDatasMemoriaRam(),
-      datasets: [
-        {
-          label: "Desempenho",
-          data: gerarDadosMemoriaRam(),
-          backgroundColor: "#31C1E130",
-          borderColor: "#31C1E1",
-          borderWidth: 1,
-        },
-      ],
-    },
-    options: {
-      scales: {
-        y: {
-          beginAtZero: true,
-        },
-      },
-    },
-  });
-}
 
 function gerarDadosMemoriaRam() {
   dados = [];
