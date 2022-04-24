@@ -127,32 +127,6 @@ function gerarDatasVelocidade() {
 
 // <==============uso da cpu==================>
 
-function plotarGrafico4(idGrafico) {
-  const ctx = document.getElementById(idGrafico).getContext("2d");
-  let myChart = new Chart(ctx, {
-    type: "line",
-
-    data: {
-      labels: gerarDatasUsoCpu(),
-      datasets: [
-        {
-          label: "Desempenho",
-          data: gerarDadosUsoCpu(),
-          backgroundColor: ["#31C1E130"],
-          borderColor: ["#31C1E1"],
-          borderWidth: 1,
-        },
-      ],
-    },
-    options: {
-      scales: {
-        y: {
-          beginAtZero: true,
-        },
-      },
-    },
-  });
-}
 
 function gerarDadosUsoCpu() {
   dados = [];
