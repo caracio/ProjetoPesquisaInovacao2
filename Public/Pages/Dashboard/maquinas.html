@@ -10,17 +10,17 @@
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;0,700;0,900;1,100&display=swap"
         rel="stylesheet" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet" />
-    <link rel="stylesheet" href="lojas.css" />
+    <script type="text/javascript" src="https://www.chartjs.org/dist/2.8.0/Chart.min.js"></script>
+    <link rel="stylesheet" href="maquinas.css" />
     <title>Document</title>
 </head>
-
 <body>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <div class="container">
         <aside>
             <div class="top">
                 <div class="logo">
-                   <a href="./home.html"> <img src="../../Images/logo.png" alt="" /></a>
+                   <a href="./home.html"><img src="../../Images/logo.png" alt="" /></a>
                     <h2><span class="danger"></span></h2>
                 </div>
                 <div class="close" id="close-btn">
@@ -36,11 +36,11 @@
                     <span class="material-icons-sharp">dashboard</span>
                     <h3>Dashboard</h3>
                 </a>
-                <a class="active" href="#">
+                <a href="./lojas.html">
                     <span class="material-icons-sharp">store</span>
                     <h3>Lojas</h3>
                 </a>
-                <a href="./maquinas.html">
+                <a class="active" href="./maquinas.html">
                     <span class="material-icons-sharp">devices</span>
                     <h3>Maquinas</h3>
                 </a>
@@ -56,14 +56,10 @@
                 Bem vindo ao nosso sistema de monitoramento de maquinas
                 <h2 class="text-muted2">Cadastre sua Loja</h2>
             </h1>
-
             <!-- primeira tela  -->
             <div class="graficos">
-
                 <img src="./location-search-animate.svg" alt="">
-
             </div>
-
         </main>
         <!-- final dos graficos -->
         <div class="right">
@@ -91,38 +87,14 @@
                 <div class="updates">
                     <div class="right-login">
                         <form id="form_cadastro" method="post" onsubmit="return cadastro()" class="card-login">
-                            <h1>Cadastre sua Loja </h1>
+                            <h1>Cadastre sua Maquina </h1>
                             <div class="text-field">
-                                <label for="Nome">Nome</label>
-                                <input name="Nome" placeholder="Nome" type="text" />
+                                <label for="Nome">Nome da Maquina</label>
+                                <input name="Nome" placeholder="Nome da Maquina" type="text" />
                             </div>
                             <div class="text-field">
-                                <label for="CNPJ">Cnpj</label>
-                                <input name="CNPJ" placeholder="Cnpj" type="text" />
-                            </div>
-                            <div class="text-field">
-                                <label for="CEP">Cep</label>
-                                <input name="CEP" placeholder="Cep" type="text" />
-                            </div>
-                            <div class="text-field">
-                                <label for="Estado">Estado</label>
-                                <input name="Estado" placeholder="Estado" type="text" />
-                            </div>
-                            <div class="text-field">
-                                <label for="Cidade">Cidade</label>
-                                <input name="Cidade" placeholder="Cidade" type="text" />
-                            </div>
-                            <div class="text-field">
-                                <label for="Bairro">Bairro</label>
-                                <input name="Bairro" placeholder="Bairro" type="text" />
-                            </div>
-                            <div class="text-field">
-                                <label for="Rua">Rua</label>
-                                <input name="Rua" placeholder="Rua" type="text" />
-                            </div>
-                            <div class="text-field">
-                                <label for="Numero">Número</label>
-                                <input name="Numero" placeholder="Número" type="password" />
+                                <label for="CNPJ">Senha</label>
+                                <input name="CNPJ" placeholder="Senha" type="password" />
                             </div>
                             <button type="submit" class="btn-login">Cadastra</button>
                         </form>
@@ -134,5 +106,5 @@
 </body>
 
 </html>
-<script src="lojas/cadastro.js"></script>
 <script src="./script.js"></script>
+<script src="lojas/cadastro.js"></script>
