@@ -13,11 +13,12 @@ function cadastro() {
   })
     .then(async (response) => {
       if (!response.ok) {
-        console.log(await response.json());
+        const errorInformation = await response.json();
+        messageError(errorInformation);
         return;
       }
 
-      console.log(await response.json());
+      window.Location = "./home.html";
     })
     .catch((error) => {
       console.log(error);
@@ -25,3 +26,8 @@ function cadastro() {
 
   return false;
 }
+
+const messageError = (errorInformation) => {
+  console.log(errorInformation);
+  document.getElementById("xxxxxxxxxxx").innerHTML = errorInformation.message;
+};
