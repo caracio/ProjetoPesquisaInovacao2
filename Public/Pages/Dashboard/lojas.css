@@ -85,6 +85,7 @@ a {
 img {
     display: block;
     width: 100%;
+
 }
 
 h1 {
@@ -263,6 +264,9 @@ main .graficos {
     gap: 2rem;
 }
 
+main .graficos img {
+    height: 70vh;
+}
 
 main .graficos>div {
     background: var(--color-white);
@@ -641,9 +645,10 @@ main .graficos .memory .informations .teste {
         gap: 0.5rem;
     }
 
-    main .graficos img {
-        height: 100%;
-    }
+    /* main .graficos img {
+        width: 80vw;
+        height: 20vh;
+    } */
 
     .right .recent-updates{
         padding: 0.8rem;
@@ -686,12 +691,12 @@ main .graficos .memory .informations .teste {
 
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 868px) {
     .container {
         /* width: 100%; */
         grid-template-columns: 1fr;
     }
-
+    
     main .graficos {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
