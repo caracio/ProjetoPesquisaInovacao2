@@ -76,6 +76,7 @@ async function plotarGrafico3(idGrafico) {
       },
     },
   });
+  
   setInterval(async () => {
     if (myChart.data.datasets[0].data.length == 5) {
       myChart.data.datasets[0].data.shift();
