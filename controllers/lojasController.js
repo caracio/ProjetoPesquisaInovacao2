@@ -10,7 +10,6 @@ module.exports = (app) => {
       });
       return;
     }
-    res.status(200).json(req.body);
-    //LojaModels.cadastrarLoja(req.body, res);
+    LojaModels.cadastrarLoja(req.body, res);
   });
 };

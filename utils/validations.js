@@ -23,6 +23,8 @@ class Validations {
       Estado: yup.string().max(2).required("Digite seu UF!"),
       Cidade: yup.string().required("informe sua Cidade"),
       Bairro: yup.string().required("informe seu Bairro!"),
+      Rua:    yup.string().required(),
+      Numero: yup.number().required()
     });
   }
 }

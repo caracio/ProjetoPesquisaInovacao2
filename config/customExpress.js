@@ -2,7 +2,7 @@ const express = require("express");
 const cors = require('cors');
 const consign = require("consign");
 const path = require("path");
-
+  
 module.exports = () => {
   const app = express();
 
