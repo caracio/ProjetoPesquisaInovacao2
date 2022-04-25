@@ -1,18 +1,23 @@
-    function Cadastrar() {
-  const formulario = new URLSearchParams(
-    new FormData(document.getElementById("form_cadastro"))
+function cadastro() {
+  const formulario = Object.fromEntries(
+    new URLSearchParams(new FormData(document.getElementById("form_cadastro")))
   );
+  const idusuario = JSON.parse(sessionStorage.getItem("res")).id_Responsavel;
 
-  fetch("/dashboard/cadastro/Loja", {
+  fetch("/dashboard/cadastro/loja", {
     method: "POST",
-    body: formulario,
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ ...formulario, ID_Responsavel: idusuario }),
   })
     .then(async (response) => {
       if (!response.ok) {
         console.log(await response.json());
         return;
       }
-     console.log(await response.json())
+
+      console.log(await response.json());
     })
     .catch((error) => {
       console.log(error);
