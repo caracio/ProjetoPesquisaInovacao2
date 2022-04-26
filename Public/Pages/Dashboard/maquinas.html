@@ -42,7 +42,7 @@
                 </a>
                 <a class="active" href="./maquinas.html">
                     <span class="material-icons-sharp">devices</span>
-                    <h3>Maquinas</h3>
+                    <h3>Máquinas</h3>
                 </a>
                 <a href="../../index.html">
                     <span class="material-icons-sharp">login</span>
@@ -54,7 +54,7 @@
         <main>
             <h1>
                 Bem vindo ao nosso sistema de monitoramento de maquinas
-                <h2 class="text-muted2">Cadastre sua Loja</h2>
+                <h2 class="text-muted2">Cadastre sua Maquina</h2>
             </h1>
             <!-- primeira tela  -->
             <div class="graficos">
@@ -73,7 +73,7 @@
                 </div>
                 <div class="profile">
                     <div class="info">
-                        <p>Hey,<b>Victor</b></p>
+                        <p>Ei,<b>Matias</b></p>
                         <small class="text-muted">Admin</small>
                     </div>
                     <div class="profile-photo">
@@ -87,16 +87,19 @@
                 <div class="updates">
                     <div class="right-login">
                         <form id="form_cadastro" method="post" onsubmit="return cadastro()" class="card-login">
-                            <h1>Cadastre sua Maquina </h1>
+                            <h1>Cadastre sua Máquina </h1>
                             <div class="text-field">
-                                <label for="Nome">Nome da Maquina</label>
-                                <input name="Nome" placeholder="Nome da Maquina" type="text" />
+                                <label for="Nome">Nome da Máquina</label>
+                                <input name="Nome" placeholder="Nome da Máquina" type="text" />
                             </div>
                             <div class="text-field">
                                 <label for="CNPJ">Senha</label>
                                 <input name="CNPJ" placeholder="Senha" type="password" />
                             </div>
-                            <button type="submit" class="btn-login">Cadastra</button>
+                            <div class="erro">
+                                <span id="mensagemErro"></span>
+                              </div>
+                            <button type="submit" class="btn-login">Cadastre-se</button>
                         </form>
                     </div>
 

@@ -29,5 +29,5 @@ function cadastro() {
 
 const messageError = (errorInformation) => {
   console.log(errorInformation);
-  document.getElementById("xxxxxxxxxxx").innerHTML = errorInformation.message;
+  document.getElementById("mensagemErro").innerHTML = errorInformation.message;
 };
