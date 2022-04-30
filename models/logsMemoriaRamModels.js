@@ -1,4 +1,4 @@
-const conexao = require("../infraestrutura/conexao");
+const {conexao} = require("../infraestrutura/conexao");
 
 class LogsMemoriaRamModels {
   getLogsMonitoramento(req, res) {

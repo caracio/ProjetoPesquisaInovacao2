@@ -1,4 +1,4 @@
-const conexao = require("../infraestrutura/conexao");
+const {conexao} = require("../infraestrutura/conexao");
 
 class ResponsavelModels {
   cadastrarResponsavel(req, res) {
