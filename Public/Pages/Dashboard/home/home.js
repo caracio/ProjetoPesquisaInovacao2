@@ -6,7 +6,7 @@ function renderizarLojas() {
     document.getElementById("lojas").innerHTML += `
      <div class="memory">
      <div class="container-icones" onclick="redirectDashBoard(${informacoesUsuario.lojas[i].id_Loja})">
-         <img src="./hospital-building-animate.svg" alt="loja"></a>
+        <img src="../assets/images/hospital-building-animate.svg" alt="Loja"/></a>
      </div>
      <ul class="informations">
        <li>
@@ -30,5 +30,5 @@ renderizarLojas();
 
 function redirectDashBoard(redirectDashBoard) {
   sessionStorage.setItem("idLoja", JSON.stringify(redirectDashBoard));
-  window.location = "./dashboard.html";
+  window.location = "../dashboard-charts/dashboard.html";
 }

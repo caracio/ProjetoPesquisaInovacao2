@@ -18,7 +18,7 @@ function cadastro() {
         return;
       }
 
-      window.Location = "./home.html";
+      window.Location = "../home/home.html";
     })
     .catch((error) => {
       console.log(error);

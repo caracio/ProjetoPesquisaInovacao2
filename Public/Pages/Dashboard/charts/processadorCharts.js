@@ -14,7 +14,7 @@ async function plotarGrafico4(idGrafico) {
     type: "line",
 
     data: {
-      labels: gerarDatasUsoCpu(),
+      labels:["horario","horario","horario","horario","horario"],
       datasets: [
         {
           label: "Desempenho",
@@ -33,6 +33,7 @@ async function plotarGrafico4(idGrafico) {
       },
     },
   });
+
   setInterval(async () => {
     if (myChart.data.datasets[0].data.length == 5) {
       myChart.data.datasets[0].data.shift();

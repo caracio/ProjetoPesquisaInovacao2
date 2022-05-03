@@ -19,7 +19,7 @@ function login() {
       sessionStorage.setItem("res", JSON.stringify(res));
 
       if (sessionStorage.getItem("res")) {
-           window.location = "../Dashboard/home.html";
+           window.location = "../Dashboard/home/home.html";
            return;
       }
       alert("Erro!!!");
