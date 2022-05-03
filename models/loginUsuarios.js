@@ -26,9 +26,12 @@ class LoginUsuarios {
   async LoginAzure(req, res) {
     try {
       const pool = await conexaoAzure();
-      const results = await pool.request().query(`SELECT * FROM Responsavel;`)
+      const results = await pool.request()
+            .input("Email",req.Email)
+            .input("Senha",req.Senha)
+            .execute(`dbo.SP_Login_Responsavel_Monitorador`);
       res.status(200).json(results);
-    } catch (error) {
+    } catch (error) { 
       console.log(error);
     }
   }
