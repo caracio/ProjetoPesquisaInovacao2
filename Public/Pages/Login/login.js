@@ -1,3 +1,19 @@
+/*Declara a viravel hamburguer que quando é clicado chama uma função
+que pega o container e com a lista de classes altera ou adiciona com o
+toggle uma classe chamada show que muda o comportamento da sidebar
+*/
+
+var hamburguer = document.querySelector(".hamburguer");
+
+hamburguer.addEventListener("click", function () {
+  document.querySelector(".container").classList.toggle("show-menu");
+});
+
+/* OU usando arrow function
+document.querySelector(".hamburguer").addEventListener("click", () =>
+      document.querySelector(".container").classList.toggle("show-menu")
+);*/
+
 const res = require("express/lib/response");
 
 function login() {
@@ -19,8 +35,8 @@ function login() {
       sessionStorage.setItem("res", JSON.stringify(res));
 
       if (sessionStorage.getItem("res")) {
-           window.location = "../Dashboard/home/home.html";
-           return;
+        window.location = "../Dashboard/home/home.html";
+        return;
       }
       alert("Erro!!!");
     })
@@ -35,4 +51,3 @@ function messageErrorLogin(errorInformatiom) {
   console.log(errorInformatiom);
   document.getElementById("mensagemErro").innerHTML = errorInformatiom.message;
 }
-

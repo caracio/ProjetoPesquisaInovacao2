@@ -126,6 +126,12 @@ header nav {
   padding-left: 30%;
 }
 
+.img-logo{
+  position: absolute;
+  left: 10%;
+  top: 3vh;
+}
+
 header nav a {
   color: #747474;
   margin-top: 5rem;
@@ -466,6 +472,10 @@ footer p {
   .sidebar {
     display: block;
   }
+
+  .img-logo{
+    display: none;
+  }
 }
 
 @media (min-width: 425px) and (max-width: 768px) {
@@ -474,6 +484,10 @@ footer p {
   }
 
   header nav {
+    display: none;
+  }
+
+  .img-logo{
     display: none;
   }
 
@@ -636,6 +650,10 @@ footer p {
   }
 
   header nav {
+    display: none;
+  }
+
+  .img-logo{
     display: none;
   }
 
@@ -813,6 +831,10 @@ footer p {
     display: none;
   }
 
+  .img-logo{
+    display: none;
+  }
+
   .banner p {
     color: #747474;
     text-align: center;
@@ -985,6 +1007,10 @@ footer p {
   }
 
   header nav {
+    display: none;
+  }
+
+  .img-logo{
     display: none;
   }
 
