@@ -10,17 +10,17 @@
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;0,700;0,900;1,100&display=swap"
         rel="stylesheet" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet" />
-    <link rel="stylesheet" href="lojas.css" />
-    <title>Farmagraph Solutions Lojas</title>
+    <script type="text/javascript" src="https://www.chartjs.org/dist/2.8.0/Chart.min.js"></script>
+    <link rel="stylesheet" href="monitorador.css" />
+    <title>Document</title>
 </head>
-
 <body>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <div class="container">
         <aside>
             <div class="top">
                 <div class="logo">
-                   <a href="../home/home.html"> <img src="../../../Images/logo.png" alt="" /></a>
+                   <a href="../home/home.html"><img src="../../../Images/logo.png" /></a>
                     <h2><span class="danger"></span></h2>
                 </div>
                 <div class="close" id="close-btn">
@@ -36,7 +36,7 @@
                     <span class="material-icons-sharp">dashboard</span>
                     <h3>Dashboard</h3>
                 </a>
-                <a class="active" href="#">
+                <a href="../lojas/lojas.html">
                     <span class="material-icons-sharp">store</span>
                     <h3>Lojas</h3>
                 </a>
@@ -44,10 +44,10 @@
                     <span class="material-icons-sharp">devices</span>
                     <h3>Máquinas</h3>
                 </a>
-                <a href="../cadastro-monitorador/monitorador.html">
+                <a class="active" href="/">
                     <span class="material-icons-sharp">monitor</span>
                     <h3>Monitorador</h3>
-                  </a>
+                </a>
                 <a href="../../../index.html">
                     <span class="material-icons-sharp">login</span>
                     <h3>Sair</h3>
@@ -57,15 +57,13 @@
         <!-- fim da aside -->
         <main>
             <h1>
-                Bem vindo ao nosso sistema de monitoramento de máquinas
-                <h2 class="text-muted2">Cadastre sua Loja</h2>
+                Bem vindo ao nosso sistema de monitoramento de maquinas
+                <h2 class="text-muted2">Cadastre um monitorador</h2>
             </h1>
-
             <!-- primeira tela  -->
             <div class="graficos">
                 <img src="../assets/images/location-search-animate.svg" alt="">
             </div>
-
         </main>
         <!-- final dos graficos -->
         <div class="right">
@@ -86,38 +84,29 @@
                 <div class="updates">
                     <div class="right-login">
                         <form id="form_cadastro" method="post" onsubmit="return cadastro()" class="card-login">
-                            <h1>Cadastre sua Loja </h1>
+                            <h1>Cadastre o Monitorador</h1>
                             <div class="text-field">
-                                <label for="Nome">Nome</label>
-                                <input name="Nome" placeholder="Nome" type="text" />
+                                <label for="Nome">Nome o Monitorador</label>
+                                <input name="Nome" placeholder="Nome do monitorador" type="text" />
                             </div>
                             <div class="text-field">
-                                <label for="CNPJ">Cnpj</label>
-                                <input name="CNPJ" placeholder="Cnpj" type="text" />
+                                <label for="CPF">CPF</label>
+                                <input name="CPF" placeholder="CPF" type="text" />
                             </div>
                             <div class="text-field">
-                                <label for="CEP">Cep</label>
-                                <input name="CEP" placeholder="Cep" type="text" />
+                                <label for="Email">Email</label>
+                                <input name="Email" placeholder="Email" type="text" />
                             </div>
                             <div class="text-field">
-                                <label for="Estado">Estado</label>
-                                <input name="Estado" placeholder="Estado" type="text" />
+                                <label for="Senha">Senha</label>
+                                <input name="Senha" placeholder="Senha" type="password" />
                             </div>
                             <div class="text-field">
-                                <label for="Cidade">Cidade</label>
-                                <input name="Cidade" placeholder="Cidade" type="text" />
-                            </div>
-                            <div class="text-field">
-                                <label for="Bairro">Bairro</label>
-                                <input name="Bairro" placeholder="Bairro" type="text" />
-                            </div>
-                            <div class="text-field">
-                                <label for="Rua">Rua</label>
-                                <input name="Rua" placeholder="Rua" type="text" />
-                            </div>
-                            <div class="text-field">
-                                <label for="Numero">Número</label>
-                                <input name="Numero" placeholder="Número" type="password" />
+                                <label for="Acesso">Acesso</label>
+                                <select name="Acesso">
+                                    <option value="T">Total</option>
+                                    <option value="P">Parsial</option>
+                                </select>
                             </div>
                             <div class="erro">
                                 <span id="mensagemErro"></span>
@@ -132,5 +121,5 @@
 </body>
 
 </html>
-<script src="./cadastro.js"></script>
 <script src="../script.js"></script>
+<script src="lojas/cadastro.js"></script>

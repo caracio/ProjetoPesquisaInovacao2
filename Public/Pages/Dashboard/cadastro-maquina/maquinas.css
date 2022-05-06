@@ -3,14 +3,14 @@
   --color-danger: #ff7782;
   --color-sucess: #41f1b6;
   --color-warning: #ffbb55;
-  --color-white: #202528;
+  --color-white: #fafafa;
   --color-info-dark: #7d8da1;
   --color-info-light: #dce1eb;
-  --color-dark: #edeffd;
-  --color-light: rgba(0, 0, 0, 0.4);
-  --color-primary-variant: #2b134b;
-  --color-dark-variant: #a3bdcc;
-  --color-background: #181a1e;
+  --color-dark: #363949;
+  --color-light: rgba(132, 139, 200, 0.18);
+  --color-primary-variant: #fafafa;
+  --color-dark-variant: #677483;
+  --color-background: #f6f6f9;
 
   --card-border-radius: 2rem;
   --border-radius-1: 0.4rem;
@@ -39,8 +39,6 @@
   --color-light: rgba(0, 0, 0, 0.4);
   --box-shadow: 0 2rem 3rem var(--color-light);
   --color-primary-variant: #2b134b;
-
-  /* tela home  */
   --color-sucess-varinat: #019751f6;
   --color-dark-variant-home: #fafafa;
   --color-victor: #00ff8859;
@@ -398,32 +396,6 @@ main .graficos .memory .informations .teste {
   display: none;
 }
 
-.right .theme-toggler {
-  background: var(--color-light);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 1.6rem;
-  width: 4.2rem;
-  cursor: pointer;
-  border-radius: var(--border-radius-1);
-}
-
-.right .theme-toggler span {
-  font-size: 1.2rem;
-  width: 50%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.right .theme-toggler span.active {
-  background: var(--color-primary);
-  color: var(--color-white);
-  border-radius: var(--border-radius-1);
-}
-
 .right .top .profile {
   display: flex;
   gap: 2rem;
@@ -555,7 +527,6 @@ main .graficos .memory .informations .teste {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  margin: 1.6rem 0px;
 }
 
 .text-field > input {
@@ -569,12 +540,13 @@ main .graficos .memory .informations .teste {
   outline: none;
   box-sizing: border-box;
   border-radius: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 .text-field label {
-  color: #f0ffffde;
   margin-bottom: 0.6rem;
   font-size: 12pt;
+  margin-top: 1rem;
 }
 
 .text-field input::placeholder {
@@ -692,6 +664,7 @@ main .graficos .memory .informations .teste {
 
   .right .recent-updates {
     padding: 0.8rem;
+    margin-top: 7rem;
   }
 
   /* .right .recent-updates .updates {
