@@ -192,6 +192,10 @@ aside .sidebar a {
   transition: 300ms;
 }
 
+aside .sidebar a button {
+  background-color: transparent;
+}
+
 aside .sidebar a span {
   font-size: 1.6rem;
 }

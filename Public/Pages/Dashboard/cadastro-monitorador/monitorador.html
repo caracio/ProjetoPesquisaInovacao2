@@ -14,13 +14,14 @@
     <link rel="stylesheet" href="monitorador.css" />
     <title>Document</title>
 </head>
+
 <body>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <div class="container">
         <aside>
             <div class="top">
                 <div class="logo">
-                   <a href="../home/home.html"><img src="../../../Images/logo.png" /></a>
+                    <a href="../home/home.html"><img src="../../../Images/logo.png" /></a>
                     <h2><span class="danger"></span></h2>
                 </div>
                 <div class="close" id="close-btn">
@@ -48,8 +49,8 @@
                     <span class="material-icons-sharp">monitor</span>
                     <h3>Monitorador</h3>
                 </a>
-                <a href="../../../index.html">
-                    <span class="material-icons-sharp">login</span>
+                <a>
+                    <button onclick="sair()" class="material-icons-sharp">login</button>
                     <h3>Sair</h3>
                 </a>
             </div>
@@ -110,7 +111,7 @@
                             </div>
                             <div class="erro">
                                 <span id="mensagemErro"></span>
-                              </div>
+                            </div>
                             <button type="submit" class="btn-login">Cadastre-se</button>
                         </form>
                     </div>
@@ -121,5 +122,4 @@
 </body>
 
 </html>
-<script src="../script.js"></script>
-<script src="lojas/cadastro.js"></script>
+<script src="./script.js"></script>

@@ -31,3 +31,8 @@ const messageError = (errorInformation) => {
   console.log(errorInformation);
   document.getElementById("mensagemErro").innerHTML = errorInformation.message;
 };
+
+function sair(){
+  sessionStorage.clear();
+  window.location = "../../../index.html";
+}

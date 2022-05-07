@@ -9,7 +9,7 @@ module.exports = (app) => {
         message: "Preencha todos os campos de maneira correta!!!!",
       });
     }
-   // loginUsuarios.Login(req.body, res)
-    loginUsuarios.LoginAzure(req.body, res);
+   loginUsuarios.Login(req.body, res)
+    //loginUsuarios.LoginAzure(req.body, res);
   });
 };

@@ -5,7 +5,7 @@ const { conexaoAzure } = require("./infraestrutura/conexaoAzure");
 const Tabelas = require("./infraestrutura/tabelas");
 
 try {
-  conexaoAzure();
+  //conexaoAzure();
   conexao.connect((err) => {
     if (!err) {
       console.log("\nConnected Mysql");

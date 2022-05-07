@@ -195,6 +195,10 @@
   aside .sidebar a span {
     font-size: 1.6rem;
   }
+
+  aside .sidebar a button {
+    background-color: transparent;
+  }
   
   aside .sidebar a:last-child {
     position: absolute;
