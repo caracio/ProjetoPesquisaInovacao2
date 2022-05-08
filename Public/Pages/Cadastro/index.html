@@ -1,12 +1,16 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cadastro</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Farmagraph Solutions Cadastro</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;0,700;0,900;1,100&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
@@ -19,66 +23,61 @@
         <span>fechar</span>
       </div>
       <nav>
-        <a href="../Home/index.html#">Home</a>
-        <a href="../Home/index.html#quemSomos">Quem Somos</a>
-        <a href="../Home/index.html#sobre">Sobre</a>
-        <a href="#">Contato</a>
-        <a href="#" class="cadastro">Cadastre-se</a>
+        <a href="../../index.html">Home</a>
+        <a href="../../index.html#quemSomos">Quem Somos</a>
+        <a href="../../index.html#sobre">Sobre</a>
+        <a href="../../index.html#">Contato</a>
       </nav>
     </header>
+    <!-- menu amburge -->
     <div class="sidebar">
       <nav>
         <ul class="menu">
-          <li class="menu-item"><a href="../Home/index.html#" class="menu-link">Home</a></li>
+          <li class="menu-item"><a href="../../index.html" class="menu-link">Home</a></li>
           <li class="menu-item">
-            <a href="../Home/index.html#quemSomos" class="menu-link">Quem Somos</a>
+            <a href="../../index.html#quemSomos" class="menu-link">Quem Somos</a>
           </li>
-          <li class="menu-item"><a href="../Home/index.html#sobre" class="menu-link">Sobre</a></li>
-          <li class="menu-item"><a href="#" class="menu-link">Contato</a></li>
           <li class="menu-item">
-            <a href="#" class="menu-link">Cadastre-se</a>
+            <a href="../../index.html#sobre" class="menu-link">Sobre</a>
           </li>
+          <li class="menu-item"><a href="../../index.html#" class="menu-link">Contato</a></li>
         </ul>
       </nav>
     </div>
-    <main>
-      <div class="form">
-        <div class="bannerForm">
-          <img src="../Images/bannerLogin.png">
+  </div>
+  <div class="main-login">
+    <div class="left-login">
+      <h1>Seja bem vindo ao Farmagraph</h1>
+      <h2>Otimeze sua farmácia com o nosso sistema</h2>
+      <img src="./bonecos.svg" class="left-login-image" alt="animação" />
+    </div>
+    <div class="right-login">
+      <form id="form_cadastro" method="post" onsubmit="return cadastro()" class="card-login">
+        <h1>Crie sua conta</h1>
+        <div class="text-field">
+          <label for="Nome">Nome</label>
+          <input name="Nome" placeholder="Nome" type="text" />
         </div>
-        <form id="formCadastroMonitorador" class="formCadastroMonitorador" method="post" onsubmit="return entrar()">
-          <div class="titulo">
-            <h1>Cadatro Monitorador</h1>
-            <p>Coloque os dados do seu monitorador</p>
+        <div class="text-field">
+          <label for="Email">Email</label>
+          <input name="Email" placeholder="Usuario" type="text" />
+        </div>
+        <div class="text-field">
+          <label for="Senha">Senha</label>
+          <input name="Senha" placeholder="Senha" type="password" />
+        </div>
+        <div class="container-options">
+          <a href="../Login/index.html">Já tenho conta</a>
+          <div class="erro">
+            <span id="mensagemErro"></span>
           </div>
-          <div class="campos">
-            <label>nome:<input name="nome" type="text"></label>
-            <label>Sobrenome:<input name="sobreNome" type="text"></label>
-            <label>cpf:<input name="cpf" type="text"></label>
-            <label>grau de acesso
-              <select name="grauAcesso">
-                <option value=""></option>
-                <option value="P">Parcial</option>
-                <option value="T">Total</option>
-              </select>
-            </label>
-            <label>email:<input name="email" class="inputEmail" type="text"></label>
-            <label>senha:<input name="senha" type="password"></label>
-            <label>confirmar senha:<input name="confirmarSenha" type="password"></label>
-          </div>
-          <div class="optionsConta">
-            <p>já tem uma conta? </p><a href="../Login/index.html#">Faça login aqui</a>
-          </div>
-          <div class="optionButton">
-            <button type="submit" class="botao">Cadastrar</button>
-            <a href="./CadastroEmpresa/index.html#" class="botao">Cadastrar Empresa</a>
-            <a href="./CadastroLocalEmpresa/index.html#" class="botao">Cadastrar Local Empresa</a>
-          </div>
-        </form>
-      </div>
-    </main>
+        </div>
+        
+        <button type="submit" class="btn-login">Cadastre-se</button>
+      </form>
+    </div>
   </div>
 </body>
-<script src="script.js"></script>
 
 </html>
+<script src="./cadastro.js"></script>

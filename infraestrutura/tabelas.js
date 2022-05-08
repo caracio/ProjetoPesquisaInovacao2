@@ -1,50 +1,48 @@
 class Tabelas {
   init(conexao) {
     this.conexao = conexao;
-    this.RedeFarmacia();
-    this.Filial();
-    this.Computador();
-    this.MemoriaMassa();
-    this.Monitoramento();
+    this.Responsavel();
+    this.Loja();
     this.Monitorador();
-    this.MonitoradoresFiliais();
+    this.Computador();
+    this.MemoriaRam();
+    this.Log_MemoriaRam();
+    this.MemoriaMassa();
+    this.Log_MemoriaMassa();
+    this.Processador();
+    this.Log_Processador();
   }
   //projetoPiFarmacia --> Criação das Tabelas no Banco de Dados
-  RedeFarmacia() {
+  Responsavel() {
     const sql = `
-    create table if not exists projetoPiFarmacia.RedeFarmacia (
-      idRedeFarmacia int primary key auto_increment,
-      CNPJ char(14),
-      nomeRede varchar (15),
-                  email varchar(30),
-                  senha varchar(25)
-                  );
-        `;
+    CREATE TABLE IF NOT EXISTS  Responsavel(ID_Responsavel 	Integer PRIMARY KEY AUTO_INCREMENT
+                                           ,Nome     		  	VARCHAR(40)  NOT NULL
+                                           ,Email	      		VARCHAR(40)  NOT NULL
+                                           ,Senha    		  	VARCHAR(40)  NOT NULL
+         )AUTO_INCREMENT = 1;
+`;
     this.conexao.query(sql, (error) => {
       if (error) {
-        throw new Error("Erro ao Criar Tabela RedeFarmacia -->" + error);
+        throw new Error("Erro ao Criar Tabela Responsavel -->" + error);
       }
-      console.log("Tabela RedeFarmacia criada com sucesso!!!\n");
+      console.log("\nTabela Responsavel criada com sucesso!!!\n");
     });
   }
   Monitorador() {
     const sql = `
-    create table if not exists projetoPiFarmacia.Monitorador (
-      idMonitorador int primary key auto_increment,
-      nome varchar(45),
-      CPF char(11), 
-      email varchar(30),
-      senha varchar(25),
-      grauAcesso char(1),
-      fkRedeFarmacia int, 
-      constraint fk_redeFarmacia 
-        foreign key (fkRedeFarmacia) 
-          references redeFarmacia(idRedeFarmacia),
-      constraint Acesso
-        check (grauAcesso = 'P' or grauAcesso = 'T')
-        );
+    CREATE TABLE IF NOT EXISTS Monitorador (ID_Monitorador 		Integer PRIMARY KEY AUTO_INCREMENT
+                                           ,FK_Loja 		     	Integer 
+                                           ,Nome 			 	      VARCHAR(40) NOT NULL
+                                           ,CPF 		    	 	  CHAR(11)	NOT NULL
+                                           ,Email			 	      VARCHAR(40) NOT NULL
+                                           ,Senha 		 		    VARCHAR(40) NOT NULL
+                                    
+                                          ,CONSTRAINT FK_Loja_Monitorador
+                                                FOREIGN KEY (FK_Loja)
+                                                      REFERENCES Loja(ID_Loja)
 
-  `;
+                                              )AUTO_INCREMENT = 1; `;
+
     this.conexao.query(sql, (error) => {
       if (error) {
         throw new Error("Erro ao Criar Tabela Monitorador --->" + error);
@@ -52,41 +50,49 @@ class Tabelas {
       console.log("Tabela Monitorador criada com sucesso!!!\n");
     });
   }
-  Filial() {
-    const sql = `
-    create table if not exists projetoPiFarmacia.Filial (
-      idFilial int primary key auto_increment,
-      rua varchar(40),
-      bairro varchar(30),
-                cidade varchar(30),
-                numero tinyint,
-                grauAcesso char(2),
-                fkRedeFarmacia int,
-                constraint fk_redeFarmacia_Filial
-          foreign key (fkRedeFarmacia)
-            references RedeFarmacia(idRedeFarmacia)
-      );
 
+  Loja() {
+    const sql = `
+    CREATE TABLE IF NOT EXISTS Loja (ID_Loja 		 	      Integer PRIMARY KEY AUTO_INCREMENT
+                                    ,Nome 				      VARCHAR(70) NOT NULL
+                                    ,Rua 			  	      VARCHAR(40) NOT NULL
+                                    ,Bairro  			      VARCHAR(30) NOT NULL
+                                    ,Numero  			      SMALLINT 	NOT NULL
+                                    ,Cidade 			      VARCHAR(45) NOT NULL
+                                    ,Estado				      CHAR(2)     NOT NULL
+                                    ,CEP  				      CHAR(9) 	NOT NULL
+                                    ,CNPJ 			      	CHAR(14)	NOT NULL
+                                    ,FK_Responsavel   	Integer 
+                                    ,FK_Filial        	Integer
+                                    
+                                    ,CONSTRAINT FK_Responsavel_Loja 
+                                         FOREIGN KEY (FK_Responsavel)	
+                                              REFERENCES Responsavel(ID_Responsavel)
+                                                  
+                                    ,CONSTRAINT FK_Filial_Loja 
+                                         FOREIGN KEY (FK_Filial)	
+                                              REFERENCES Loja(ID_Loja)                                          						
+                                      );
   `;
+
     this.conexao.query(sql, (error) => {
       if (error) {
-        throw new Error("Erro ao Criar Tabela Filial --->" + error);
+        throw new Error("Erro ao Criar Tabela Loja --->" + error);
       }
-      console.log("Tabela Filial criada com sucesso!!!\n");
+      console.log("Tabela Loja criada com sucesso!!!\n");
     });
   }
+
   Computador() {
     const sql = `
-     create table if not exists projetoPiFarmacia.Computador (
-      idComputador int primary key auto_increment,
-                  processador varchar(30),
-                  GPU varchar(30),
-                  qtdMemoria tinyint,
-                  fkFilial int,
-                  constraint fk_Filial_Computador
-           foreign key (fkFilial)
-            references Filial(idFilial)
-      );
+    CREATE TABLE IF NOT EXISTS Computador(ID_Computador 	Integer PRIMARY KEY
+                                         ,Senha		 	    	VARCHAR(45)  NOT NULL
+                                         ,FK_Loja 	  	  INTEGER 
+                                            
+                                        ,CONSTRAINT FK_Computador_Loja 
+                                          FOREIGN KEY (FK_Loja)	
+                                              REFERENCES Loja(ID_Loja)                                          						
+                                      );
      `;
     this.conexao.query(sql, (error) => {
       if (error) {
@@ -95,24 +101,20 @@ class Tabelas {
       console.log("Tabela Computador criada com sucesso!!!\n");
     });
   }
+
   MemoriaMassa() {
     const sql = `
-        create table IF NOT EXISTS projetoPiFarmacia.MemoriaMassa (
-          idMemoriaMassa int primary key auto_increment,
-                      nome varchar(30),
-                      tipo char(3),
-                      memoriaTotal double,
-                      unidadeMedida char(2),
-                      fkComputador int,
-                      constraint fk_Computador_MemoriaMassa
-            foreign key(fkComputador)
-                references Computador(idComputador),
-          constraint Medida 
-            check (unidadeMedida = 'MB' or unidadeMedida = 'GB' or unidadeMedida = 'TB'),
-          constraint TipoMM 
-            check (tipo = 'HDD' or tipo = 'SDD')
-          );
+    CREATE TABLE IF NOT EXISTS MemoriaMassa(ID_MemoriaMassa 		  INT PRIMARY KEY AUTO_INCREMENT
+                                           ,FK_Computador		   	  INT
+                                           ,Modelo      					TEXT
+                                           ,EspacoArmazenamento		BIGINT
+                        
+                        ,CONSTRAINT FK_MemoriaMassa_Computador
+                                FOREIGN KEY (FK_Computador)
+                                      REFERENCES Computador(ID_Computador)
+                  )AUTO_INCREMENT = 1;
         `;
+
     this.conexao.query(sql, (error) => {
       if (error) {
         throw new Error("Erro ao Criar Tabela MemoriaMassa--->" + error);
@@ -120,61 +122,111 @@ class Tabelas {
       console.log("Tabela MemoriaMassa criada com sucesso!!!\n");
     });
   }
-  Monitoramento() {
+
+  Log_MemoriaMassa() {
     const sql = `
-        create table if not exists projetoPiFarmacia.Monitoramento (
-          idMonitoramento int auto_increment,
-                        fkComputador int,
-                        temperaturaCPU double,
-                        velocidadeCPU double,
-                        utilizacaoCPU tinyint,
-          memoriaEmUso float,
-                        velocidadeLeitura float,
-                        TempoAtividadeDisco float,
-                        dataHora datetime,
-                        primary key(idMonitoramento,fkComputador),
-                        constraint fk_Computador_Monitoramento
-              foreign key(fkComputador) 
-                references Computador(idComputador)
-          );
-                        
+   CREATE TABLE IF NOT EXISTS Log_MemoriaMassa(ID_Log_MemoriaMassa     INT PRIMARY KEY AUTO_INCREMENT
+										                          ,Fk_MemoriaMemoria       INT
+                                              ,Leitura				         BIGINT
+                                              ,Escrita         			   BIGINT
+                                              ,TempoTranferencia       BIGINT 
+                                              ,EspacoLivre         	   BIGINT
+										   
+										                          ,CONSTRAINT FK_Log_MemoriaMassa_MemoriaMassa
+											                               	FOREIGN KEY (Fk_MemoriaMemoria)
+														                                  REFERENCES MemoriaMassa(ID_MemoriaMassa)
+						                 )AUTO_INCREMENT = 1;
         `;
     this.conexao.query(sql, (error) => {
       if (error) {
-        throw new Error("Erro ao Criar Tabela Monitoramento --->" + error);
+        throw new Error("Erro ao Criar Tabela Log_MemoriaMassa --->" + error);
       }
-      console.log("Tabela Monitoramento criada com sucesso!!!\n");
+      console.log("Tabela Log_MemoriaMassa criada com sucesso!!!\n");
     });
   }
 
-  MonitoradoresFiliais() {
+  MemoriaRam() {
     const sql = `
-                create table if not exists projetoPiFarmacia.MonitoradoresFiliais (
-								  fkMonitorador int,
-                                  fkRedeFarmacia int,
-                                  fkFilial int,
-                                  login varchar(30),
-                                  senha varchar(30),
-                                  constraint fkMonitorador_MonitoradoresFiliais
-										foreign key (fkMonitorador)
-											references Monitorador(idMonitorador),
-								   constraint fkRedeFarmacia_MonitoradoresFiliais
-										foreign key(fkRedeFarmacia)
-											references  Monitorador(fkRedeFarmacia),
-									constraint fkFilial_MonitoradoresFiliais 
-										foreign key (fkFilial)
-											references Filial(idFilial),
-									primary key (fkMonitorador,fkRedeFarmacia,fkFilial)
-							
-									);
+    CREATE TABLE IF NOT EXISTS MemoriaRam(ID_MemoriaRam 	         INT PRIMARY KEY AUTO_INCREMENT
+                                         ,FK_Computador		   	     INT 		
+                                         ,Total_Armazenamento      BIGINT
+                        
+                                        ,CONSTRAINT FK_MemoriaRam_Computador
+                                              FOREIGN KEY (FK_Computador)
+                                                    REFERENCES Computador(ID_Computador)
+                              )AUTO_INCREMENT = 1;
                 `;
 
     this.conexao.query(sql, (error) => {
       if (error) {
-        throw new Error("Erro ao Criar Tabela MonitoradoresFiliais --->" + error);
+        throw new Error("Erro ao Criar Tabela MemoriaRam --->" + error);
       }
-      console.log("Tabela MonitoradoresFiliais criada com sucesso!!!\n");
+      console.log("Tabela MemoriaRam criada com sucesso!!!\n");
+    });
+  }
+
+  Log_MemoriaRam() {
+    const sql = `  
+      CREATE TABLE IF NOT EXISTS Log_MemoriaRam(ID_Log_MemoriaRam   INT PRIMARY KEY AUTO_INCREMENT
+                                               ,FK_MemoriaRam       INT
+                                               ,QTD_MemoriaUso	    BIGINT 
+                                               ,MemoriaDisponivel   BIGINT
+       
+                                               ,CONSTRAINT FK_Log_MemoriaRam_MemoriaRam
+                                                          FOREIGN KEY (FK_MemoriaRam)
+                                                                  REFERENCES MemoriaRam(ID_MemoriaRam)
+                                                                              )AUTO_INCREMENT = 1;     
+      
+      `;
+
+    this.conexao.query(sql, (error) => {
+      if (error) {
+        throw new Error("Erro ao Criar Tabela Log_MemoriaRam --->" + error);
+      }
+      console.log("Tabela Log_MemoriaRam criada com sucesso!!!\n");
+    });
+  }
+
+  Processador() {
+    const sql = `
+    CREATE TABLE IF NOT EXISTS Processador(ID_Processador  	INT PRIMARY KEY AUTO_INCREMENT
+                                          ,FK_Computador    INT 
+                                          ,Modelo 		    	TEXT
+                        
+                        ,CONSTRAINT FK_Processador_Computador
+                              FOREIGN KEY (FK_Computador)
+                                   REFERENCES Computador(ID_Computador)
+             )AUTO_INCREMENT = 1;    
+    `;
+
+    this.conexao.query(sql, (error) => {
+      if (error) {
+        throw new Error("Erro ao Criar Tabela Processador --->" + error);
+      }
+      console.log("Tabela Processador criada com sucesso!!!\n");
+    });
+  }
+
+  Log_Processador() {
+    const sql = `
+    CREATE TABLE IF NOT EXISTS Log_Processador(ID_Log_Processador INT PRIMARY KEY AUTO_INCREMENT
+                                              ,FK_Processador     INT
+                                              ,Frequencia		      BIGINT
+                                              ,Uso				        DOUBLE(4,2)
+
+                                              ,CONSTRAINT FK_Log_Processador_Processado 
+                                                      FOREIGN KEY (FK_Processador)
+                                                            REFERENCES Processador(ID_Processador)
+                          )AUTO_INCREMENT = 1;  
+    `;
+
+    this.conexao.query(sql, (error) => {
+      if (error) {
+        throw new Error("Erro ao Criar Tabela Log_Processador --->" + error);
+      }
+      console.log("Tabela Log_Processador criada com sucesso!!!\n");
     });
   }
 }
+
 module.exports = new Tabelas();
