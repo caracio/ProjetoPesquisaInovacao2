@@ -137,7 +137,7 @@
           </button>
           <div class="profile">
             <div class="info">
-              <p>Ei,<b>Matias</b></p>
+              <p>Ei,<b id="nomeUsuario"></b></p>
               <small class="text-muted">Admin</small>
             </div>
           </div>
@@ -152,18 +152,14 @@
               </div>
               <div class="message">
                 <p>
-                  Olá <b id="nomeUsuario">Matias</b> Escolha a máquina em
+                  Escolha a máquina em
                   que deseja monitora da sua farmácia
                 </p>
               </div>
               <div class="container-maquinas">
                 <div class="select-maquinas">
-                  <select onchange="">
-                    <option value="">Máquina 1</option>
-                    <option value="">Máquina 2</option>
-                    <option value="">Máquina 3</option>
-                    <option value="">Máquina 4</option>
-                    <option value="">Máquina 5</option>
+                  <select id="maquinasExistentes">
+                    <option value=""></option>
                   </select>
                 </div>
               </div>

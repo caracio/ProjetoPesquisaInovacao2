@@ -2,6 +2,7 @@ function renderizarLojas() {
   const informacoesUsuario = JSON.parse(sessionStorage.getItem("res"));
   console.log(informacoesUsuario);
 
+  document.getElementById("nomeAdmin").innerHTML = informacoesUsuario.nome;
   for (let i = 0; i < informacoesUsuario.lojas.length; i++) {
     document.getElementById("lojas").innerHTML += `
      <div class="memory">
