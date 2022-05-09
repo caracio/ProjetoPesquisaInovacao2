@@ -6,6 +6,7 @@ const Tabelas = require("./infraestrutura/tabelas");
 
 try {
   conexaoAzure();
+  console.log("Connected Sql Server");
   conexao.connect((err) => {
     if (!err) {
       console.log("\nConnected Mysql");

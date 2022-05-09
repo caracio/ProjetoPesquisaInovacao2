@@ -18,8 +18,8 @@ class LoginUsuarios {
         await res.status(400).json(results[0][0]);
         return;
       }
-
-      await res.status(200).json(results[0][0].usuario);
+      console.log(results[0]);
+      await res.status(200).json(results[0][0]);
     });
   }
 

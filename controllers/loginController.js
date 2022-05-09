@@ -10,6 +10,6 @@ module.exports = (app) => {
       });
     }
     //loginUsuarios.Login(req.body, res)
-     loginUsuarios.LoginAzure(req.body, res);
+    loginUsuarios.LoginAzure(req.body, res);
   });
 };
