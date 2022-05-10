@@ -4,6 +4,11 @@ function cadastro() {
   );
   const idusuario = JSON.parse(sessionStorage.getItem("res")).id_Responsavel;
 
+  const informacoesUsuario = JSON.parse(sessionStorage.getItem("res"));
+  console.log(informacoesUsuario);
+
+  document.getElementById("nomeAdmin").innerHTML = informacoesUsuario.nome;
+
   fetch("/dashboard/cadastro/loja", {
     method: "POST",
     headers: {
