@@ -1,0 +1,1 @@
+{"version":"1.0.0","name":"api-rest","dependencies":{"chart.js":{"version":"3.7.1"},"consign":{"version":"0.1.6"},"cors":{"version":"2.8.5"},"dotenv":{"version":"16.0.0"},"express":{"version":"4.17.3"},"mssql":{"version":"8.1.0"},"mysql2":{"version":"2.3.3"},"yup":{"version":"0.32.11"}}}

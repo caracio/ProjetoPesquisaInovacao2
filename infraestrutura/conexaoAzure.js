@@ -1,13 +1,13 @@
 const sql = require("mssql");
 
 const dbSettings = {
-  user: "root",
-  password: process.env.SENHA,
-  server: "localhost",
+  user: "adminProjeto",
+  password: process.env.SENHAAZURE,
+  server: "farmagraphsolutions.database.windows.net",
   database: "farmagraphsolutions",
   parseJSON: true,
   options: {
-    encrypt: false, // for azure
+    encrypt: true, // for azure
     trustServerCertificate: true, // change to true for local dev / self-signed certs
   },
 };
