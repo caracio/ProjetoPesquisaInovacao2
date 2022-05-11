@@ -47,16 +47,8 @@
             <span class="material-icons-sharp">dashboard</span>
             <h3>Dashboard</h3>
           </a>
-          <a href="../lojas/lojas.html">
-            <span class="material-icons-sharp">store</span>
-            <h3>Lojas</h3>
-          </a>
-          <a href="../cadastro-maquina/maquinas.html">
-            <span class="material-icons-sharp">devices</span>
-            <h3>Máquinas</h3>
-          </a>
-          <a href="../../../index.html">
-            <span class="material-icons-sharp">login</span>
+          <a>
+            <button onclick="sair()" class="material-icons-sharp">login</button>
             <h3>Sair</h3>
           </a>
         </div>
@@ -65,7 +57,7 @@
       <main>
         <h1>
           Drogaria SP
-          <h2 class="text-muted2">Escolha a filial em que deseja monitora</h2>
+          <h2 class="text-muted2">Escolha a loja em que deseja monitora</h2>
         </h1>
         <div id="lojas" class="graficos"></div>
         <!-- grafico-velocidade -->
@@ -76,17 +68,10 @@
           <button id="menu-btn">
             <span class="material-icons-sharp">menu</span>
           </button>
-          <div class="theme-toggler">
-            <span class="material-icons-sharp active">light_mode</span>
-            <span class="material-icons-sharp">dark_mode</span>
-          </div>
           <div class="profile">
             <div class="info">
               <p>Ei,<b>Matias</b></p>
               <small class="text-muted">Admin</small>
-            </div>
-            <div class="profile-photo">
-              <img src="../../../../public/Images/fotoPerfil.png" alt="" /> 
             </div>
           </div>
         </div>
@@ -100,13 +85,18 @@
               </div>
               <div class="message">
                 <p>
-                  Olá <b>Matias</b> Escolha a sua Loja e cadastre novas
-                  lojas diretamente pela nossa dashboard
+                  Olá <b>Matias</b> Escolha a loja que deseja monitorar
                 </p>
               </div>
               <div class="container-maquinas">
                 <div class="select-maquinas">
-                  <button><a href="../lojas/lojas.html  ">Adicionar Loja</a></button>
+                  <select onchange="">
+                    <option value="">Loja 1</option>
+                    <option value="">Loja 2</option>
+                    <option value="">Loja 3</option>
+                    <option value="">Loja 4</option>
+                    <option value="">Loja 5</option>
+                  </select>
                 </div>
               </div>
             </div>

@@ -3,35 +3,35 @@
     --color-danger: #ff7782;
     --color-sucess: #41f1b6;
     --color-warning: #ffbb55;
-    --color-white: #202528;
+    --color-white: #fafafa;
     --color-info-dark: #7d8da1;
     --color-info-light: #dce1eb;
-    --color-dark: #edeffd;
-    --color-light: rgba(0, 0, 0, 0.4);
-    --color-primary-variant: #2b134b;
-    --color-dark-variant: #a3bdcc;
-    --color-background: #181a1e;
-
+    --color-dark: #363949;
+    --color-light: rgba(132, 139, 200, 0.18);
+    --color-primary-variant: #fafafa;
+    --color-dark-variant: #677483;
+    --color-background: #f6f6f9;
+  
     --card-border-radius: 2rem;
     --border-radius-1: 0.4rem;
     --border-radius-2: 0.8rem;
     --border-radius-3: 1.2rem;
-
+  
     --card-padding: 1.8rem;
     --padding-1: 1.2rem;
-
+  
     --box-shadow: 0 2rem 3rem var(--color-light);
-
+  
     /* ============ tela home ======*/
     --color-sucess-varinat: #00ff88;
     --box-shadow-varinat: 0px 15px 40px -12px #00ff8052;
     --color-victor: #019751f6;
     --color-dark-variant-home: #363949;
-}
-
-/* ================== modo dark ============================  */
-
-.dark-theme-variables {
+  }
+  
+  /* ================== modo dark ============================  */
+  
+  .dark-theme-variables {
     --color-background: #181a1e;
     --color-white: #202528;
     --color-dark: #edeffd;
@@ -39,12 +39,10 @@
     --color-light: rgba(0, 0, 0, 0.4);
     --box-shadow: 0 2rem 3rem var(--color-light);
     --color-primary-variant: #2b134b;
-
-    /* tela home  */
     --color-sucess-varinat: #019751f6;
     --color-dark-variant-home: #fafafa;
     --color-victor: #00ff8859;
-}
+  }
 
 
 * {
@@ -204,6 +202,10 @@ aside .sidebar a span {
     font-size: 1.6rem;
 }
 
+aside .sidebar a button {
+    background-color: transparent;
+  }
+
 aside .sidebar a:last-child {
     position: absolute;
     bottom: 2rem;
@@ -346,32 +348,6 @@ main .graficos .memory .informations .teste {
 
 .right .top button {
     display: none;
-}
-
-.right .theme-toggler {
-    background: var(--color-light);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 1.6rem;
-    width: 4.2rem;
-    cursor: pointer;
-    border-radius: var(--border-radius-1);
-}
-
-.right .theme-toggler span {
-    font-size: 1.2rem;
-    width: 50%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.right .theme-toggler span.active {
-    background: var(--color-primary);
-    color: var(--color-white);
-    border-radius: var(--border-radius-1);
 }
 
 .right .top .profile {
@@ -523,7 +499,6 @@ main .graficos .memory .informations .teste {
 }
 
 .text-field label {
-    color: #f0ffffde;
     margin-bottom: 0.3rem;
     font-size: 12pt ;
 }

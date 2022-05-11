@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;0,700;0,900;1,100&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet" />
+    <script type="text/javascript" src="https://www.chartjs.org/dist/2.8.0/Chart.min.js"></script>
+    <link rel="stylesheet" href="maquinas.css" />
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <div class="container">
+        <aside>
+            <div class="top">
+                <div class="logo">
+                    <a href="../home/home.html"><img src="../../../Images/logo.png" alt="" /></a>
+                    <h2><span class="danger"></span></h2>
+                </div>
+                <div class="close" id="close-btn">
+                    <span class="material-icons-sharp">close</span>
+                </div>
+            </div>
+            <div class="sidebar">
+                <a href="../home/home.html">
+                    <span class="material-icons-sharp">home</span>
+                    <h3>Home</h3>
+                </a>
+                <a href="../dashboard-charts/dashboard.html">
+                    <span class="material-icons-sharp">dashboard</span>
+                    <h3>Dashboard</h3>
+                </a>
+                <a href="../lojas/lojas.html">
+                    <span class="material-icons-sharp">store</span>
+                    <h3>Lojas</h3>
+                </a>
+                <a class="active" href="../cadastro-maquina/maquinas.html">
+                    <span class="material-icons-sharp">devices</span>
+                    <h3>Máquinas</h3>
+                </a>
+                <a href="../cadastro-monitorador/monitorador.html">
+                    <span class="material-icons-sharp">monitor</span>
+                    <h3>Monitorador</h3>
+                </a>
+                <a>
+                    <button onclick="sair()" class="material-icons-sharp">login</button>
+                    <h3>Sair</h3>
+                </a>
+            </div>
+        </aside>
+        <!-- fim da aside -->
+        <main>
+            <h1>
+                Bem vindo ao nosso sistema de monitoramento de maquinas
+                <h2 class="text-muted2">Cadastre sua Maquina</h2>
+            </h1>
+            <!-- primeira tela  -->
+            <div class="graficos">
+                <img src="../assets/images/location-search-animate.svg" alt="">
+            </div>
+        </main>
+        <!-- final dos graficos -->
+        <div class="right">
+            <div class="top">
+                <button id="menu-btn">
+                    <span class="material-icons-sharp">menu</span>
+                </button>
+                <div class="profile">
+                    <div class="info">
+                        <p>Ei,<b>Matias</b></p>
+                        <small class="text-muted">Admin</small>
+                    </div>
+                </div>
+            </div>
+            <!--------------------- header final---------------->
+            <div class="recent-updates">
+                <h2></h2>
+                <div class="updates">
+                    <div class="right-login">
+                        <form id="form_cadastro" method="post" onsubmit="return cadastro()" class="card-login">
+                            <h1>Cadastre sua Máquina </h1>
+                            <div class="text-field">
+                                <label for="Nome">Nome da Máquina</label>
+                                <input name="Nome" placeholder="Nome da Máquina" type="text" />
+                            </div>
+                            <div class="text-field">
+                                <label for="CNPJ">Senha</label>
+                                <input name="CNPJ" placeholder="Senha" type="password" />
+                            </div>
+                            <div class="erro">
+                                <span id="mensagemErro"></span>
+                            </div>
+                            <button type="submit" class="btn-login">Cadastre-se</button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>
+<script src="./script.js"></script>

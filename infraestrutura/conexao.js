@@ -6,9 +6,9 @@ config();
 
 const conexao =  mysql.createConnection({
     host: 'localhost',
-    user: 'root',
-    password:  process.env.SENHA,
-    database: 'farmagraphsolutions'  
+    user: 'aluno',
+    password:  'sptech',
+    database: 'farmagraphsolutions'
 });
 
 

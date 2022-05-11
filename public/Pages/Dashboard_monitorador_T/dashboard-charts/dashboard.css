@@ -8,7 +8,7 @@
   --color-info-light: #dce1eb;
   --color-dark: #363949;
   --color-light: rgba(132, 139, 200, 0.18);
-  --color-primary-variant: #fafafa;
+  --color-primary-variant: #11e88;
   --color-dark-variant: #677483;
   --color-background: #f6f6f9;
 
@@ -21,12 +21,6 @@
   --padding-1: 1.2rem;
 
   --box-shadow: 0 2rem 3rem var(--color-light);
-
-  /* ============ tela home ======*/
-  --color-sucess-varinat: #00ff88;
-  --box-shadow-varinat: 0px 15px 40px -12px #00ff8052;
-  --color-victor: #019751f6;
-  --color-dark-variant-home: #363949;
 }
 
 /* ================== modo dark ============================  */
@@ -38,10 +32,6 @@
   --color-dark-variant: #a3bdcc;
   --color-light: rgba(0, 0, 0, 0.4);
   --box-shadow: 0 2rem 3rem var(--color-light);
-  --color-primary-variant: #2b134b;
-  --color-sucess-varinat: #019751f6;
-  --color-dark-variant-home: #fafafa;
-  --color-victor: #00ff8859;
 }
 
 
@@ -122,7 +112,7 @@ text-muted {
 }
 
 .text-muted2 {
-  color: #535960;
+  color: var(--color-info-dark);
   font-weight: 300;
 }
 
@@ -177,7 +167,7 @@ aside .sidebar {
   background: var(--color-white);
   display: flex;
   flex-direction: column;
-  height: 86vh;
+  height: 80vh;
   position: relative;
   top: 5rem;
   border-radius: var(--border-radius-2);
@@ -200,6 +190,10 @@ aside .sidebar a {
 
 aside .sidebar a span {
   font-size: 1.6rem;
+}
+
+aside .sidebar a button {
+  background-color: transparent;
 }
 
 aside .sidebar a:last-child {
@@ -237,7 +231,7 @@ aside .sidebar a:hover span {
 /* =========================main================== */
 
 main {
-  margin-top: 4.5rem;
+  margin-top: 1rem;
   max-width: 100%;
 }
 
@@ -311,6 +305,11 @@ main .insights .cotaniner-icones {
   gap: 1rem;
 }
 
+main .insights small {
+  margin-top: 1.3rem;
+  display: block;
+}
+
 main .graficos {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -330,27 +329,45 @@ main .graficos>div:hover {
   box-shadow: none;
 }
 
-
-main .graficos>div img {
-  cursor: pointer;
+main .graficos>div span {
+  background: var(--color-primary);
+  padding: 0.5rem;
+  border-radius: 50%;
+  color: #fafafa;
+  font-size: 2rem;
 }
 
-main .graficos .memory {
+main .graficos h3 {
+  margin: 1rem 0 0.6rem;
+  font-size: 1rem;
+}
+
+main .graficos.progress {
+  position: relative;
+  width: 92px;
+  height: 92px;
+  border-radius: 50%;
+}
+
+main .graficos .cotaniner-icones {
   display: flex;
-  gap: 5rem;
   align-items: center;
+  gap: 1rem;
 }
 
-main .graficos .memory .informations {
-  line-height: 2rem;
-  min-width: 40%;
+main .graficos small {
+  margin-top: 1.3rem;
+  display: block;
 }
 
-
-main .graficos .memory .informations .teste {
-  color: var(--color-dark-variant);
-  font-size: 14pt;
+main .graficos a {
+  text-align: center;
+  display: block;
+  margin: 1rem auto;
+  color: var(--color-primary);
 }
+
+/* ---------------------right------------------- */
 
 .right {
   margin-top: 1.4rem;
@@ -366,32 +383,6 @@ main .graficos .memory .informations .teste {
   display: none;
 }
 
-.right .theme-toggler {
-  background: var(--color-light);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 1.6rem;
-  width: 4.2rem;
-  cursor: pointer;
-  border-radius: var(--border-radius-1);
-}
-
-.right .theme-toggler span {
-  font-size: 1.2rem;
-  width: 50%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.right .theme-toggler span.active {
-  background: var(--color-primary);
-  color: var(--color-white);
-  border-radius: var(--border-radius-1);
-}
-
 .right .top .profile {
   display: flex;
   gap: 2rem;
@@ -405,7 +396,7 @@ main .graficos .memory .informations .teste {
 }
 
 .right .recent-updates h2 {
-  margin-bottom: 1rem;
+  margin-bottom: 0.8rem;
 }
 
 .right .recent-updates .updates {
@@ -414,13 +405,12 @@ main .graficos .memory .informations .teste {
   border-radius: var(--card-border-radius);
   box-shadow: var(--box-shadow);
   transition: all 300ms ease;
-  height: 86vh;
+  height: 88vh;
 }
 
 .right .recent-updates .updates:hover {
   box-shadow: none;
 }
-
 
 .right .recent-updates .updates.update {
   display: grid;
@@ -429,40 +419,23 @@ main .graficos .memory .informations .teste {
   margin-bottom: 1rem;
 }
 
-.right .recent-updates .update{
-  padding: 2px;
-}
-
 .right .recent-updates .message {
   margin-bottom: 2rem;
   font-size: 1.4rem;
 }
 
-.right .recent-updates .select-maquinas button {
-  width: 80%;
-  padding: 0.8rem 0;
-  margin: 1rem;
-  border: none;
+.right .recent-updates .select-maquinas select {
+  width: 100%;
+  padding: 0.7rem;
   border-radius: 0.5rem;
-  outline: none;
-  text-transform: uppercase;
-  font-weight: 800;
-  font-size: 9pt;
-  color: var(--color-primary-variant);
+  border: 1px solid var(--color-dark);
+  font-size: 13pt;
   cursor: pointer;
-  box-shadow: var(--box-shadow-varinat);
-  transition: all ease-in-out 500ms;
-  background: var(--color-victor);
-}
-
-.right .recent-updates .select-maquinas a {
-  color: var(--color-primary-variant);
 }
 
 
-.right .recent-updates .select-maquinas button:hover {
-  color: var(--color-dark-variant-home);
-  background-color: var(--color-sucess-varinat);
+.right .recent-updates .select-maquinas option {
+  line-height: 1rem;
 }
 
 /*---------- responsividade ------------*/
@@ -482,7 +455,7 @@ main .graficos .memory .informations .teste {
   }
 
   aside .sidebar {
-    height: 90vh;
+    height: 129vh;
   }
 
   aside .sidebar a {
@@ -490,8 +463,8 @@ main .graficos .memory .informations .teste {
   }
 
   aside .sidebar a:last-child {
+    margin-top: 0.8rem;
     position: relative;
-    margin-top: 1.8rem;
   }
 
   main .insights {
@@ -507,14 +480,14 @@ main .graficos .memory .informations .teste {
   }
 
   .right .recent-updates .updates {
-    height: auto;
+    height: 125vh;
   }
 }
 
-@media screen and (max-width: 1028px) {
+@media screen and (max-width: 1200px) {
   .container {
     width: 94%;
-    grid-template-columns: 7rem auto 15rem;
+    grid-template-columns: 7rem auto 14rem;
   }
 
   aside .logo h2 {
@@ -526,7 +499,7 @@ main .graficos .memory .informations .teste {
   }
 
   aside .sidebar {
-    height: 80vh;
+    height: 245vh;
   }
 
   aside .sidebar a {
@@ -538,14 +511,18 @@ main .graficos .memory .informations .teste {
     margin-top: 1.8rem;
   }
 
+
+  main .insights {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
   main .graficos {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 0.5rem;
+    grid-template-columns: 1fr;
   }
 
   .right .recent-updates .updates {
-    height: auto;
+    height: 240vh;
   }
 }
 
@@ -554,19 +531,6 @@ main .graficos .memory .informations .teste {
     width: 100%;
     grid-template-columns: 1fr;
   }
-
-  main .graficos {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 0.5rem;
-  }
-
-  main .graficos .memory {
-    flex-direction: column;
-    gap: 0.2rem;
-  }
-
-
 
   aside {
     position: fixed;
@@ -579,6 +543,10 @@ main .graficos .memory .informations .teste {
     padding-right: var(--card-padding);
     display: none;
     animation: showMenu 400ms ease forwards;
+  }
+
+  aside .sidebar{
+    height: 80%;
   }
 
   @keyframes showMenu {
@@ -618,7 +586,6 @@ main .graficos .memory .informations .teste {
     margin-top: 8rem;
     padding: 0 1rem;
   }
-
 
   .right {
     width: 94%;
@@ -672,7 +639,7 @@ main .graficos .memory .informations .teste {
   }
 
   .right .recent-updates {
-    padding: 0.8rem;
+    padding: 0.7rem;
   }
 
   .right .recent-updates {

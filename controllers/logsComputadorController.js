@@ -1,4 +1,4 @@
-const LogsMemoriaMassaModels = require("../models/LogsMemoriaMassaModels");
+const LogsMemoriaMassaModels = require("../models/logsMemoriaMassaModels");
 const LogsMemoriaRamModels = require("../models/logsMemoriaRamModels");
 const LogsProcessadorModels = require("../models/logsProcessadorModels");
 

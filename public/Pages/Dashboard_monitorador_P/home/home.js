@@ -32,3 +32,8 @@ function redirectDashBoard(redirectDashBoard) {
   sessionStorage.setItem("idLoja", JSON.stringify(redirectDashBoard));
   window.location = "../dashboard-charts/dashboard.html";
 }
+
+function sair(){
+  sessionStorage.clear();
+  window.location = "../../../index.html";
+}

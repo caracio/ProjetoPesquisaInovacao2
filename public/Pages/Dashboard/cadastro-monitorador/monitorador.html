@@ -11,16 +11,17 @@
         rel="stylesheet" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet" />
     <script type="text/javascript" src="https://www.chartjs.org/dist/2.8.0/Chart.min.js"></script>
-    <link rel="stylesheet" href="maquinas.css" />
+    <link rel="stylesheet" href="monitorador.css" />
     <title>Document</title>
 </head>
+
 <body>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <div class="container">
         <aside>
             <div class="top">
                 <div class="logo">
-                   <a href="../home/home.html"><img src="../../../Images/logo.png" alt="" /></a>
+                    <a href="../home/home.html"><img src="../../../Images/logo.png" /></a>
                     <h2><span class="danger"></span></h2>
                 </div>
                 <div class="close" id="close-btn">
@@ -40,12 +41,16 @@
                     <span class="material-icons-sharp">store</span>
                     <h3>Lojas</h3>
                 </a>
-                <a class="active" href="../cadastro-maquina/maquinas.html">
+                <a href="../cadastro-maquina/maquinas.html">
                     <span class="material-icons-sharp">devices</span>
                     <h3>Máquinas</h3>
                 </a>
-                <a href="../../../index.html">
-                    <span class="material-icons-sharp">login</span>
+                <a class="active" href="/">
+                    <span class="material-icons-sharp">monitor</span>
+                    <h3>Monitorador</h3>
+                </a>
+                <a>
+                    <button onclick="sair()" class="material-icons-sharp">login</button>
                     <h3>Sair</h3>
                 </a>
             </div>
@@ -54,7 +59,7 @@
         <main>
             <h1>
                 Bem vindo ao nosso sistema de monitoramento de maquinas
-                <h2 class="text-muted2">Cadastre sua Maquina</h2>
+                <h2 class="text-muted2">Cadastre um monitorador</h2>
             </h1>
             <!-- primeira tela  -->
             <div class="graficos">
@@ -67,17 +72,10 @@
                 <button id="menu-btn">
                     <span class="material-icons-sharp">menu</span>
                 </button>
-                <div class="theme-toggler">
-                    <span class="material-icons-sharp active">light_mode</span>
-                    <span class="material-icons-sharp">dark_mode</span>
-                </div>
                 <div class="profile">
                     <div class="info">
                         <p>Ei,<b>Matias</b></p>
                         <small class="text-muted">Admin</small>
-                    </div>
-                    <div class="profile-photo">
-                        <img src="../../../../public/Images/fotoPerfil.png" alt="" />
                     </div>
                 </div>
             </div>
@@ -87,18 +85,39 @@
                 <div class="updates">
                     <div class="right-login">
                         <form id="form_cadastro" method="post" onsubmit="return cadastro()" class="card-login">
-                            <h1>Cadastre sua Máquina </h1>
+                            <h1>Cadastre o Monitorador</h1>
                             <div class="text-field">
-                                <label for="Nome">Nome da Máquina</label>
-                                <input name="Nome" placeholder="Nome da Máquina" type="text" />
+                                <label for="Nome">Nome o Monitorador</label>
+                                <input name="Nome" placeholder="Nome do monitorador" type="text" />
                             </div>
                             <div class="text-field">
-                                <label for="CNPJ">Senha</label>
-                                <input name="CNPJ" placeholder="Senha" type="password" />
+                                <label for="CPF">CPF</label>
+                                <input name="CPF" placeholder="CPF" type="text" />
+                            </div>
+                            <div class="text-field">
+                                <label for="Email">Email</label>
+                                <input name="Email" placeholder="Email" type="text" />
+                            </div>
+                            <div class="text-field">
+                                <label for="Senha">Senha</label>
+                                <input name="Senha" placeholder="Senha" type="password" />
+                            </div>
+                            <div class="text-field">
+                                <label for="Acesso">Acesso</label>
+                                <select name="Acesso">
+                                    <option value="T">Total</option>
+                                    <option value="P">Parsial</option>
+                                </select>
+                            </div>
+                            <div class="text-field">
+                                <label for="Loja vinculada">Loja Associado</label>
+                                <select name="Loja vinculada" id="lojasExistentes">
+                                    <option value=""></option>
+                                </select>
                             </div>
                             <div class="erro">
                                 <span id="mensagemErro"></span>
-                              </div>
+                            </div>
                             <button type="submit" class="btn-login">Cadastre-se</button>
                         </form>
                     </div>
@@ -109,5 +128,4 @@
 </body>
 
 </html>
-<script src="../script.js"></script>
-<script src="lojas/cadastro.js"></script>
+<script src="./script.js"></script>
