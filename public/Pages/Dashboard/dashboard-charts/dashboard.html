@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <script
+      type="text/javascript"
+      src="https://www.gstatic.com/charts/loader.js"
+    ></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;0,700;0,900;1,100&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"
+      rel="stylesheet"
+    />
+    <script
+      type="text/javascript"
+      src="https://www.chartjs.org/dist/2.8.0/Chart.min.js"
+    ></script>
+    <link rel="stylesheet" href="dashboard.css" />
+    <title>Farmagraph Solutions Dashboard</title>
+  </head>
+
+  <body
+    onload='plotarGrafico("grafico-temperatura"),plotarGrafico1("grafico-memoriaRam"),plotarGrafico2("grafico-memoriaMassa"),plotarGrafico3("grafico-velocidade"),plotarGrafico4("grafico-usoCpu")'
+  >
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <div class="container">
+      <aside>
+        <div class="top">
+          <div class="logo">
+            <a href="../home/home.html"><img src="../../../Images/logo.png" alt="" /></a>
+            <h2><span class="danger"></span></h2>
+          </div>
+          <div class="close" id="close-btn">
+            <span class="material-icons-sharp">close</span>
+          </div>
+        </div>
+        <div class="sidebar">
+          <a href="../home/home.html">
+            <span class="material-icons-sharp">home</span>
+            <h3>Home</h3>
+          </a>
+          <a href="#" class="active">
+            <span class="material-icons-sharp">dashboard</span>
+            <h3>Dashboard</h3>
+          </a>
+          <a href="../lojas/lojas.html">
+            <span class="material-icons-sharp">store</span>
+            <h3>Lojas</h3>
+          </a>
+          <a href="../cadastro-maquina/maquinas.html">
+            <span class="material-icons-sharp">devices</span>
+            <h3>Máquinas</h3>
+          </a>
+          <a href="../cadastro-monitorador/monitorador.html">
+            <span class="material-icons-sharp">monitor</span>
+            <h3>Monitorador</h3>
+          </a>
+          <a>
+            <button onclick="sair()" class="material-icons-sharp">login</button>
+            <h3>Sair</h3>
+          </a>
+        </div>
+      </aside>
+      <!-- fim da aside -->
+      <main>
+        <h1 id="nomeLoja">
+          Ultra farma
+          <h2 class="text-muted2">Máquina 1</h2>
+        </h1>
+
+        <div class="date">
+          <input type="date" />
+        </div>
+
+        <div class="insights">
+          <!-- graficos -->
+          <div class="sales">
+            <div class="cotaniner-icones">
+              <span class="material-icons-sharp">analytics</span>
+              <h2>Temperatura</h2>
+            </div>
+            <canvas id="grafico-temperatura" width="600" ;></canvas>
+            <small class="text-muted">Ultimas 24 horas</small>
+          </div>
+          <!-- grafico-memoriaRam -->
+          <div class="expenses">
+            <div class="cotaniner-icones">
+              <span class="material-icons-sharp">bar_chart</span>
+              <h2>Memória Ram</h2>
+            </div>
+            <canvas id="grafico-memoriaRam"></canvas>
+            <small class="text-muted">Ultimas 24 horas</small>
+          </div>
+          <!-- grafico-memoriaMassa -->
+          <div class="income">
+            <div class="cotaniner-icones">
+              <span class="material-icons-sharp">stacked_line_chart</span>
+              <h2>Memória de Massa</h2>
+            </div>
+            <canvas id="grafico-memoriaMassa"></canvas>
+            <small class="text-muted">Ultimas 24 horas</small>
+          </div>
+        </div>
+
+        <!-- grafico-velocidade -->
+        <div class="graficos">
+          <div class="memory">
+            <div class="cotaniner-icones">
+              <span class="material-icons-sharp">memory</span>
+              <h2>Frequência da Cpu</h2>
+            </div>
+            <canvas id="grafico-velocidade"></canvas>
+            <small class="text-muted">Ultimas 24 horas</small>
+          </div>
+
+          <!-- grafico-usoCpu -->
+          <div class="memory-massa">
+            <div class="cotaniner-icones">
+              <span class="material-icons-sharp">av_timer</span>
+              <h2>Uso da Cpu</h2>
+            </div>
+            <canvas id="grafico-usoCpu"></canvas>
+            <small class="text-muted">Ultimas 24 horas</small>
+          </div>
+        </div>
+      </main>
+      <!-- final dos graficos -->
+      <div class="right">
+        <div class="top">
+          <button id="menu-btn">
+            <span class="material-icons-sharp">menu</span>
+          </button>
+          <div class="profile">
+            <div class="info">
+              <p>Ei,<b id="nomeUsuario"></b></p>
+              <small class="text-muted">Admin</small>
+            </div>
+          </div>
+        </div>
+        <!--------------------- header final---------------->
+        <div class="recent-updates">
+          <h2>Controle de Máquinas</h2>
+          <div class="updates">
+            <div class="update">
+              <div class="profile-photo">
+                <span class="material-icons-sharp">devices</span>
+              </div>
+              <div class="message">
+                <p>
+                  Escolha a máquina em
+                  que deseja monitora da sua farmácia
+                </p>
+              </div>
+              <div class="container-maquinas">
+                <div class="select-maquinas">
+                  <select id="maquinasExistentes">
+                    <option value=""></option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<script src="../script.js"></script>
+<script src="./dashboard.js"></script>
+<script src="../charts/memoriaMassaChart.js"></script>
+<script src="../charts/processadorCharts.js"></script>
+<script src="../charts/memoriaRamChart.js"></script>
