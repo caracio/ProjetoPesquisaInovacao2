@@ -1,8 +1,10 @@
 const dataChartMemoriaRam = [];
 
 async function getDataLogMemoriaRam() {
+  var idComputador = sessionStorage.getItem("idComputador");
+  var idLoja = sessionStorage.getItem("idLoja");
   const response = await (
-    await fetch(`/grafico/memoriaRam/${1}/Loja/${2}`)
+    await fetch(`/grafico/memoriaRam/${idComputador}/Loja/${idLoja}`)
   ).json();
   const responseTratada = (await response[0].QTD_MemoriaUso) / Math.pow(10, 9);
 

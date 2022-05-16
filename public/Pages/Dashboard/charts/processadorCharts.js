@@ -1,6 +1,8 @@
 async function getDataLogProcessador() {
+  var idComputador = sessionStorage.getItem("idComputador");
+  var idLoja = sessionStorage.getItem("idLoja");
   const response = await (
-    await fetch(`/grafico/processador/${1}/Loja/${2}`)
+    await fetch(`/grafico/processador/${idComputador}/Loja/${idLoja}`)
   ).json();
 ;
 
