@@ -16,7 +16,7 @@
 //ARRUMAR
 
 const informacoesUsuario = JSON.parse(sessionStorage.getItem("res"));
-console.log(informacoesUsuario.lojas[0].computadores);
+console.log(informacoesUsuario);
 
 function carregarMaquina() {
   var opcoesMaquina = document.getElementById('maquinasExistentes');

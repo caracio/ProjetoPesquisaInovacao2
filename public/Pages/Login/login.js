@@ -36,7 +36,11 @@ function login() {
       sessionStorage.setItem("res", JSON.stringify(res));
 
       if (sessionStorage.getItem("res")) {
-        window.location = "../Dashboard/home/home.html";
+        if(res.tipo == "Responsavel") {
+          window.location = "../Dashboard/home/home.html";
+        } else if (res.tipo == "Monitorador") {
+          window.location = "../Dashboard_monitorador_T/home/home.html";
+        }
         return;
       }
       alert("Erro!!!");
