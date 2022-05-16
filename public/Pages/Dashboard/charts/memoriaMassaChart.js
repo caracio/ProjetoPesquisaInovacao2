@@ -1,7 +1,9 @@
 var dataChartMemoriaMassa = [];
 
 async function getDataLogMemoriaMassa() {
-  const response = await (await fetch(`/grafico/memoriaMassa/${1}/Loja/${2}`)).json();
+  var idComputador = sessionStorage.getItem("idComputador");
+  var idLoja = sessionStorage.getItem("idLoja");
+  const response = await (await fetch(`/grafico/memoriaMassa/${idComputador}/Loja/${idLoja}`)).json();
   dataChartMemoriaMassa = [];
 
   dataChartMemoriaMassa.push(

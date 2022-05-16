@@ -547,6 +547,20 @@ main .graficos .memory .informations .teste {
   margin-bottom: 1rem;
 }
 
+.text-field > select {
+  width: 100%;
+  border: none;
+  padding: 0.8rem;
+  background-color: #514869;
+  color: #f0ffffde;
+  font-size: 12pt;
+  box-shadow: 0 0.1rem 1rem #00000056;
+  outline: none;
+  box-sizing: border-box;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
 .text-field label {
   margin-bottom: 0.6rem;
   font-size: 12pt;

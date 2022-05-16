@@ -1,13 +1,12 @@
+const informacoesUsuario = JSON.parse(sessionStorage.getItem("res"));
+
+document.getElementById("nomeAdmin").innerHTML = informacoesUsuario.nome;
+
 function cadastro() {
   const formulario = Object.fromEntries(
     new URLSearchParams(new FormData(document.getElementById("form_cadastro")))
   );
   const idusuario = JSON.parse(sessionStorage.getItem("res")).id_Responsavel;
-
-  const informacoesUsuario = JSON.parse(sessionStorage.getItem("res"));
-  console.log(informacoesUsuario);
-
-  document.getElementById("nomeAdmin").innerHTML = informacoesUsuario.nome;
 
   fetch("/dashboard/cadastro/loja", {
     method: "POST",

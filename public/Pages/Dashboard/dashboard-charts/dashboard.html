@@ -69,8 +69,7 @@
       <!-- fim da aside -->
       <main>
         <h1 id="nomeLoja">
-          Ultra farma
-          <h2 class="text-muted2">Máquina 1</h2>
+          <h2 class="text-muted2" id="titulo maquina"></h2>
         </h1>
 
         <div class="date">
@@ -78,15 +77,6 @@
         </div>
 
         <div class="insights">
-          <!-- graficos -->
-          <div class="sales">
-            <div class="cotaniner-icones">
-              <span class="material-icons-sharp">analytics</span>
-              <h2>Temperatura</h2>
-            </div>
-            <canvas id="grafico-temperatura" width="600" ;></canvas>
-            <small class="text-muted">Ultimas 24 horas</small>
-          </div>
           <!-- grafico-memoriaRam -->
           <div class="expenses">
             <div class="cotaniner-icones">
@@ -158,8 +148,7 @@
               </div>
               <div class="container-maquinas">
                 <div class="select-maquinas">
-                  <select id="maquinasExistentes">
-                    <option value=""></option>
+                  <select id="maquinasExistentes" onchange="mudarMaquina()">
                   </select>
                 </div>
               </div>

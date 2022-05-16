@@ -74,7 +74,7 @@
                 </button>
                 <div class="profile">
                     <div class="info">
-                        <p>Ei,<b>Matias</b></p>
+                        <p>Ei,<b id="nomeAdmin"></b></p>
                         <small class="text-muted">Admin</small>
                     </div>
                 </div>
@@ -93,6 +93,12 @@
                             <div class="text-field">
                                 <label for="CNPJ">Senha</label>
                                 <input name="CNPJ" placeholder="Senha" type="password" />
+                            </div>
+                            <div class="text-field">
+                                <label for="Loja vinculada">Loja Associada</label>
+                                <select name="Loja vinculada" id="lojasExistentes">
+                                    <option value=""></option>
+                                </select>
                             </div>
                             <div class="erro">
                                 <span id="mensagemErro"></span>

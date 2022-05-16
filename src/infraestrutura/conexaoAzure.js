@@ -2,7 +2,7 @@ const sql = require("mssql");
 
 const dbSettings = {
   user: "adminProjeto",
-  password: process.env.SENHAAZURE,
+  password: "2ads$grupo2",
   server: "farmagraphsolutions.database.windows.net",
   database: "farmagraphsolutions",
   parseJSON: true,
