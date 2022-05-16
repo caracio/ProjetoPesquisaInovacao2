@@ -1,10 +1,10 @@
-const {conexao} = require("../infraestrutura/conexao");
+const {conexaoAzure} = require("../infraestrutura/conexaoAzure");
 
 class LogsMemoriaRamModels {
   getLogsMonitoramento(req, res) {
     const sql = `CALL SP_DadosMemoriaRam(?,?,@_memoriaUso);`;
 
-    conexao.query(sql, [req.idComputador,req.idLoja], async(error,results)=>{
+    conexaoAzure.query(sql, [req.idComputador,req.idLoja], async(error,results)=>{
         if(error){
             await res.status(500).json(results);
             return;
