@@ -13,8 +13,11 @@ async function getDataLogMemoriaMassa() {
     dataChartMemoriaMassa.push(response.EspacoArmazenado / Math.pow(10, 9));
     dataChartMemoriaMassa.push(response.EspacoLivre / Math.pow(10, 9));
   }
-  console.log(dataChartMemoriaMassa);
-  // dataChartMemoriaMassa.shift();
+  if(dataChartMemoriaMassa == undefined){
+    sessionStorage.setItem("situacaoMaquina", "Desligada");
+  }else {
+    sessionStorage.setItem("situacaoMaquina", "Ligada");
+  }
   return dataChartMemoriaMassa;
 }
 

@@ -1,6 +1,12 @@
+const informacoesUsuario = JSON.parse(sessionStorage.getItem("res"));
+
 if(sessionStorage.getItem("idComputador") != undefined){
   document.getElementById("exibir-numeracao-maquina").innerHTML += `${sessionStorage.getItem("idComputador")}`;
+  document.getElementById("nomeProcessador").innerHTML = `${informacoesUsuario.lojas[0].computadores[0].Modelo}`;
+  document.getElementById("situacao-maquina").innerHTML = `Situação: ${sessionStorage.getItem("situacaoMaquina")}`;
 }
+
+console.log("situacaoMaquina");
 
 (function dadosUsuario() {
   document.getElementById("nomeUsuario").innerHTML = JSON.parse(
@@ -15,9 +21,6 @@ if(sessionStorage.getItem("idComputador") != undefined){
     });
   }
 })();
-
-const informacoesUsuario = JSON.parse(sessionStorage.getItem("res"));
-console.log(sessionStorage);
 
 function carregarMaquina() {
   var opcoesMaquina = document.getElementById('maquinasExistentes');
@@ -36,6 +39,7 @@ function mudarMaquina(){
   var opcoesMaquina = document.getElementById('maquinasExistentes');
   sessionStorage.setItem("idComputador", opcoesMaquina.value);
   document.getElementById("exibir-numeracao-maquina").innerHTML = `Informações da Máquina ${sessionStorage.getItem("idComputador")}`;
+  document.getElementById("nomeProcessador").innerHTML = `${informacoesUsuario.lojas[0].computadores[0].Modelo}`;
 };
 
 function sair() {
