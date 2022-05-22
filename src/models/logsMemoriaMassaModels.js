@@ -26,6 +26,7 @@ class LogsMemoriaMassaModels {
     .input('FK_Loja', idLoja)
     .output('EspacoArmazenado', sql.BigInt)
     .output('EspacoLivre', sql.BigInt)
+    .output('DataLog', sql.DateTime)
     .execute(
       'dbo.SP_LogsMemoriaMassa', async(error, results)=>{ 
         if (error) {

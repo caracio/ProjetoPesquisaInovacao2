@@ -29,6 +29,7 @@ class LogsMemoriaRamModels {
       .input("ID_Computador", idComputador)
       .input("ID_Loja", idLoja)
       .output("memoriaUso", sql.BigInt)
+      .output('DataLog', sql.DateTime)
       .execute("dbo.SP_LogsMemoriaRam", async (error, results) => {
         if (error) {
           return await res

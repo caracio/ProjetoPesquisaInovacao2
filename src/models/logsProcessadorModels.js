@@ -29,6 +29,7 @@ class LogsProcessadorModels {
       .input("FK_Loja", idLoja)
       .output("Frequencia", sql.BigInt)
       .output("Uso", sql.Float)
+      .output('DataLog', sql.DateTime)
       .execute("dbo.SP_Logs_Processador", async (error, results) => {
         if (error) {
           return await res
