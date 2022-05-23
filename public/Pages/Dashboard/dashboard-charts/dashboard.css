@@ -269,6 +269,10 @@ main .insights>div:hover {
   box-shadow: none;
 }
 
+.titulo-informacao-maquina {
+  padding-bottom: 1rem;
+}
+
 main .insights>div span {
   background: var(--color-primary);
   padding: 0.5rem;
@@ -405,7 +409,7 @@ main .graficos a {
   border-radius: var(--card-border-radius);
   box-shadow: var(--box-shadow);
   transition: all 300ms ease;
-  height: 88vh;
+  height: auto;
 }
 
 .right .recent-updates .updates:hover {
@@ -478,10 +482,6 @@ main .graficos a {
     grid-template-columns: repeat(2, 1fr);
     gap: 0.5rem;
   }
-
-  .right .recent-updates .updates {
-    height: 125vh;
-  }
 }
 
 @media screen and (max-width: 1200px) {
@@ -519,10 +519,6 @@ main .graficos a {
 
   main .graficos {
     grid-template-columns: 1fr;
-  }
-
-  .right .recent-updates .updates {
-    height: 240vh;
   }
 }
 

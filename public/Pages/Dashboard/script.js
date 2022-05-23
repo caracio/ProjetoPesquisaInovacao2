@@ -1,4 +1,4 @@
-function plotarGrafico(idGrafico) {
+/* function plotarGrafico(idGrafico) {
   const ctx = document.getElementById(idGrafico).getContext("2d");
   let myChart = new Chart(ctx, {
     type: "line",
@@ -45,7 +45,7 @@ function gerarDatas() {
     );
   }
   return datas.sort();
-}
+} */
 
 const sideMenu = document.querySelector("aside");
 const menuBtn = document.querySelector("#menu-btn");

@@ -32,6 +32,7 @@ function login() {
         return;
       }
       const res = await response.json();
+      console.log(res, response);
       sessionStorage.setItem("res", JSON.stringify(res));
 
       if (sessionStorage.getItem("res")) {
