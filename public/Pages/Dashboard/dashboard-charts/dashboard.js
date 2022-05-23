@@ -22,14 +22,6 @@ console.log("situacaoMaquina");
   }
 })();
 
-<<<<<<< HEAD
-//ARRUMAR
-
-const informacoesUsuario = JSON.parse(sessionStorage.getItem("res"));
-console.log(informacoesUsuario);
-
-=======
->>>>>>> origin/main
 function carregarMaquina() {
   var opcoesMaquina = document.getElementById('maquinasExistentes');
   for (let i = 0; i < informacoesUsuario.lojas[0].computadores.length; i++) {
