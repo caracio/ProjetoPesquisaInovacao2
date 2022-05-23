@@ -45,3 +45,7 @@ const messageError = (errorInformation) => {
     console.log(errorInformation);
     document.getElementById("mensagemErro").innerHTML = errorInformation.message;
 };
+
+const informacoesUsuario = JSON.parse(sessionStorage.getItem("res"));
+
+document.getElementById("nomeAdmin").innerHTML = informacoesUsuario.nome;
