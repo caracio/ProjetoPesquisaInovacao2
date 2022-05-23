@@ -3,18 +3,21 @@ var dataChartMemoriaMassa = [];
 async function getDataLogMemoriaMassa() {
   var idComputador = sessionStorage.getItem("idComputador");
   var idLoja = sessionStorage.getItem("idLoja");
-  const response = await (await fetch(`/grafico/memoriaMassa/${idComputador}/Loja/${idLoja}`)).json();
+  const response = await (
+    await fetch(`/grafico/memoriaMassa/${idComputador}/Loja/${idLoja}`)
+  ).json();
+ 
   dataChartMemoriaMassa = [];
 
-  dataChartMemoriaMassa.push(
-    await response.forEach((data) => {
-      if (data) {
-        dataChartMemoriaMassa.push(data.EspacoArmazenamento / Math.pow(10, 9));
-        dataChartMemoriaMassa.push(data.EspacoLivre / Math.pow(10, 9));
-      }
-    })
-  );
-  dataChartMemoriaMassa.pop();
+  if(await response){
+    dataChartMemoriaMassa.push(response.EspacoArmazenado / Math.pow(10, 9));
+    dataChartMemoriaMassa.push(response.EspacoLivre / Math.pow(10, 9));
+  }
+  if(dataChartMemoriaMassa == undefined){
+    sessionStorage.setItem("situacaoMaquina", "Desligada");
+  }else {
+    sessionStorage.setItem("situacaoMaquina", "Ligada");
+  }
   return dataChartMemoriaMassa;
 }
 

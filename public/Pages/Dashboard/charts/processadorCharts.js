@@ -5,8 +5,7 @@ async function getDataLogProcessador() {
     await fetch(`/grafico/processador/${idComputador}/Loja/${idLoja}`)
   ).json();
 ;
-
-  return await response[0];
+  return await response;
 }
 
 
@@ -40,9 +39,9 @@ async function plotarGrafico4(idGrafico) {
     if (myChart.data.datasets[0].data.length == 5) {
       myChart.data.datasets[0].data.shift();
     }
-    const DodosProcessador = await getDataLogProcessador();
+    const dadosProcessador = await getDataLogProcessador();
     
-    myChart.data.datasets[0].data.push(await DodosProcessador.Uso);
+    myChart.data.datasets[0].data.push(await dadosProcessador.Uso);
     myChart.update();
   }, 4000);
 
@@ -84,9 +83,9 @@ async function plotarGrafico3(idGrafico) {
     if (myChart.data.datasets[0].data.length == 5) {
       myChart.data.datasets[0].data.shift();
     }
-    const DodosProcessador = await getDataLogProcessador();
+    const dadosProcessador = await getDataLogProcessador();
     
-    myChart.data.datasets[0].data.push(await DodosProcessador.Frequencia / Math.pow(10,9));
+    myChart.data.datasets[0].data.push(await dadosProcessador.Frequencia / Math.pow(10,9));
     myChart.update();
   }, 4000);
 }

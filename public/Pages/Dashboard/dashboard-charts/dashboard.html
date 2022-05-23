@@ -25,7 +25,7 @@
   </head>
 
   <body
-    onload='plotarGrafico("grafico-temperatura"),plotarGrafico1("grafico-memoriaRam"),plotarGrafico2("grafico-memoriaMassa"),plotarGrafico3("grafico-velocidade"),plotarGrafico4("grafico-usoCpu")'
+    onload='plotarGrafico1("grafico-memoriaRam"),plotarGrafico2("grafico-memoriaMassa"),plotarGrafico3("grafico-velocidade"),plotarGrafico4("grafico-usoCpu")'
   >
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <div class="container">
@@ -72,12 +72,20 @@
           <h2 class="text-muted2" id="titulo maquina"></h2>
         </h1>
 
-        <div class="date">
-          <input type="date" />
+        <div class="insights">
+        <div class="expenses">
+          <h2 id="exibir-numeracao-maquina" class="titulo-informacao-maquina">
+            Informações da Máquina 
+          </h2>
+          <p>Modelo do Processador: <p id="nomeProcessador"></p></p>
+          <br>
+          <p id="situacao-maquina"></p>
         </div>
-
+        </div>
+       
         <div class="insights">
           <!-- grafico-memoriaRam -->
+
           <div class="expenses">
             <div class="cotaniner-icones">
               <span class="material-icons-sharp">bar_chart</span>
@@ -132,6 +140,7 @@
             </div>
           </div>
         </div>
+
         <!--------------------- header final---------------->
         <div class="recent-updates">
           <h2>Controle de Máquinas</h2>

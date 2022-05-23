@@ -6,7 +6,7 @@ async function getDataLogMemoriaRam() {
   const response = await (
     await fetch(`/grafico/memoriaRam/${idComputador}/Loja/${idLoja}`)
   ).json();
-  const responseTratada = (await response[0].QTD_MemoriaUso) / Math.pow(10, 9);
+  const responseTratada = (await response.memoriaUso) / Math.pow(10, 9);
 
   return responseTratada;
 }
