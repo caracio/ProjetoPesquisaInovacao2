@@ -57,8 +57,7 @@
       <!-- fim da aside -->
       <main>
         <h1 id="nomeLoja">
-          Ultra farma
-          <h2 class="text-muted2">Máquina 1</h2>
+          <h2 class="text-muted2" id="titulo maquina"></h2>
         </h1>
 
         <div class="date">
@@ -66,15 +65,6 @@
         </div>
 
         <div class="insights">
-          <!-- graficos -->
-          <div class="sales">
-            <div class="cotaniner-icones">
-              <span class="material-icons-sharp">analytics</span>
-              <h2>Temperatura</h2>
-            </div>
-            <canvas id="grafico-temperatura" width="600" ;></canvas>
-            <small class="text-muted">Ultimas 24 horas</small>
-          </div>
           <!-- grafico-memoriaRam -->
           <div class="expenses">
             <div class="cotaniner-icones">
@@ -125,8 +115,8 @@
           </button>
           <div class="profile">
             <div class="info">
-              <p>Ei,<b>Matias</b></p>
-              <small class="text-muted">Monitorador</small>
+              <p>Ei,<b id="nomeUsuario"></b></p>
+              <small class="text-muted">Admin</small>
             </div>
           </div>
         </div>
@@ -140,18 +130,13 @@
               </div>
               <div class="message">
                 <p>
-                  Olá <b id="nomeUsuario">Matias</b> Escolha a máquina em
+                  Escolha a máquina em
                   que deseja monitora da sua farmácia
                 </p>
               </div>
               <div class="container-maquinas">
                 <div class="select-maquinas">
-                  <select onchange="">
-                    <option value="">Máquina 1</option>
-                    <option value="">Máquina 2</option>
-                    <option value="">Máquina 3</option>
-                    <option value="">Máquina 4</option>
-                    <option value="">Máquina 5</option>
+                  <select id="maquinasExistentes" onchange="mudarMaquina()">
                   </select>
                 </div>
               </div>
