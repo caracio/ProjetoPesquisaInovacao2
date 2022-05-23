@@ -1,29 +1,27 @@
-function renderizarLojas() {
-  const informacoesUsuario = JSON.parse(sessionStorage.getItem("res"));
-  console.log(informacoesUsuario);
+const informacoesUsuario = JSON.parse(sessionStorage.getItem("res"));
 
-  for (let i = 0; i < informacoesUsuario.lojas.length; i++) {
+document.getElementById("nomeAdmin").innerHTML = informacoesUsuario.nome;
+
+function renderizarLojas() {
+  informacoesUsuario.lojas.map((lojas) => {
     document.getElementById("lojas").innerHTML += `
-     <div class="memory">
-     <div class="container-icones" onclick="redirectDashBoard(${informacoesUsuario.lojas[i].id_Loja})">
+     <div class="memory" onclick="redirectDashBoard(${lojas.id_Loja})">
+     <div class="container-icones">
         <img src="../assets/images/hospital-building-animate.svg" alt="Loja"/></a>
      </div>
      <ul class="informations">
        <li>
-         <h1>${informacoesUsuario.lojas[i].nome}</h1>
+         <h1>${lojas.nome}</h1>
        </li>
        <li>
-         <h1 class="teste">${informacoesUsuario.lojas[i].cidade}</h1>
+         <h1 class="teste">${lojas.cidade}</h1>
        </li>
        <li>
-         <h1 class="teste">${informacoesUsuario.lojas[i].estado}</h1>
+         <h1 class="teste">${lojas.estado}</h1>
        </li>
      </ul>
-   </div>
-
-     
-     `;
-  }
+   </div>`;
+  })
 }
 
 renderizarLojas();
@@ -33,7 +31,7 @@ function redirectDashBoard(redirectDashBoard) {
   window.location = "../dashboard-charts/dashboard.html";
 }
 
-function sair(){
+function sair() {
   sessionStorage.clear();
   window.location = "../../../index.html";
 }

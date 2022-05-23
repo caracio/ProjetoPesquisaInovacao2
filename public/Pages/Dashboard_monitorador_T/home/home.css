@@ -235,10 +235,6 @@ aside .sidebar a:hover {
   color: var(--color-primary);
 }
 
-aside .sidebar a:hover span {
-  margin-left: 1rem;
-}
-
 /* =========================main================== */
 
 main {
@@ -381,6 +377,8 @@ main .graficos .memory .informations .teste {
 
 .right .recent-updates {
   margin-top: 2rem;
+  margin-right: 3%;
+  position: fixed;
 }
 
 .right .recent-updates h2 {
