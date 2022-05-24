@@ -1,6 +1,26 @@
+// const { response } = require("express");
+
 const informacoesUsuario = JSON.parse(sessionStorage.getItem("res"));
+const email = informacoesUsuario.email;
+console.log(email);
 
 document.getElementById("nomeAdmin").innerHTML = informacoesUsuario.nome;
+
+function reRenderizarLojas(){
+  fetch(
+    "/recarregar/dados/loja",{
+      method: "POST",
+      body: email,
+    }
+  ).then(async(response)=>{
+    const res = await response.json();
+    console.log(res);
+  }).catch((error) => {
+    console.log(error);
+  });
+}
+
+reRenderizarLojas();
 
 function renderizarLojas() {
   informacoesUsuario.lojas.map((lojas) => {
