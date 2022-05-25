@@ -2,25 +2,32 @@
 
 const informacoesUsuario = JSON.parse(sessionStorage.getItem("res"));
 const email = informacoesUsuario.email;
-console.log(email);
+
 
 document.getElementById("nomeAdmin").innerHTML = informacoesUsuario.nome;
 
 function reRenderizarLojas(){
   fetch(
     "/recarregar/dados/loja",{
-      method: "POST",
-      body: email,
+      method: "POST", 
+      headers: {"Content-Type":"application/json"},
+      body: JSON.stringify({
+        Email: email
+      }),
     }
   ).then(async(response)=>{
-    const res = await response.json();
-    console.log(res);
+    const resposta = await response.json();
+    // console.log(resposta);
+    sessionStorage.setItem("res",JSON.stringify(resposta));
+    informacoesUsuario = JSON.parse(sessionStorage.getItem("res"));
   }).catch((error) => {
     console.log(error);
   });
 }
 
 reRenderizarLojas();
+
+console.log(informacoesUsuario);
 
 function renderizarLojas() {
   informacoesUsuario.lojas.map((lojas) => {

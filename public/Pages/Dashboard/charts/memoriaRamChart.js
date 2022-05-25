@@ -1,4 +1,5 @@
 const dataChartMemoriaRam = [];
+const datasHoras = [];
 
 async function getDataLogMemoriaRam() {
   var idComputador = sessionStorage.getItem("idComputador");
@@ -7,17 +8,22 @@ async function getDataLogMemoriaRam() {
     await fetch(`/grafico/memoriaRam/${idComputador}/Loja/${idLoja}`)
   ).json();
   const responseTratada = (await response.memoriaUso) / Math.pow(10, 9);
-
+  const dataCompleta = new Date(response.DataLog);
+  const minutos = dataCompleta.getMinutes() < 10 ?`0${dataCompleta.getMinutes()}`: dataCompleta.getMinutes(); 
+  if(datasHoras.length == 5){
+    datasHoras.pop(0);
+  }
+  datasHoras.push(`${dataCompleta.getHours()}:${minutos}:${dataCompleta.getSeconds()}`);
   return responseTratada;
 }
 
 async function plotarGrafico1(idGrafico) {
-  await getDataLogMemoriaRam();
+  // await getDataLogMemoriaRam();
   const ctx = document.getElementById(idGrafico).getContext("2d");
   let myChart = new Chart(ctx, {
     type: "bar",
     data: {
-      labels: ["dia","dia","dia","dia","dia",],
+      labels: datasHoras,
       datasets: [
         {
           label: "Desempenho",
