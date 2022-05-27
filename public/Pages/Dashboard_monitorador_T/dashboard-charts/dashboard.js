@@ -1,3 +1,12 @@
+const informacoesUsuario = JSON.parse(sessionStorage.getItem("res"));
+
+if(sessionStorage.getItem("idComputador") != undefined){
+  document.getElementById("exibir-numeracao-maquina").innerHTML += `${sessionStorage.getItem("idComputador")}`;
+  document.getElementById("nomeProcessador").innerHTML = `${informacoesUsuario.lojas[0].computadores[0].Modelo}`;
+  document.getElementById("situacao-maquina").innerHTML = `Situação: ${sessionStorage.getItem("situacaoMaquina")}`;
+}
+
+console.log("situacaoMaquina");
 
 (function dadosUsuario() {
   document.getElementById("nomeUsuario").innerHTML = JSON.parse(
@@ -13,30 +22,24 @@
   }
 })();
 
-//ARRUMAR
-
-const informacoesUsuario = JSON.parse(sessionStorage.getItem("res"));
-console.log(informacoesUsuario);
-
 function carregarMaquina() {
   var opcoesMaquina = document.getElementById('maquinasExistentes');
   for (let i = 0; i < informacoesUsuario.lojas[0].computadores.length; i++) {
     var option = document.createElement("option");
-    option.innerHTML = `Maquina ${informacoesUsuario.lojas[0].computadores[i].ID_Computador}`;
+    option.innerHTML = `Máquina ${informacoesUsuario.lojas[0].computadores[i].ID_Computador}`;
     option.value = informacoesUsuario.lojas[0].computadores[i].ID_Computador;
     opcoesMaquina.appendChild(option);
     opcoesMaquina.removeChild
   }
   sessionStorage.setItem("idComputador", informacoesUsuario.lojas[0].computadores[0].ID_Computador);
-
-  // option.text = informacoesUsuario.loja[0].computadores;
-  // opcoesMaquina.add(option);
 }
 carregarMaquina();
 
 function mudarMaquina(){
   var opcoesMaquina = document.getElementById('maquinasExistentes');
   sessionStorage.setItem("idComputador", opcoesMaquina.value);
+  document.getElementById("exibir-numeracao-maquina").innerHTML = `Informações da Máquina ${sessionStorage.getItem("idComputador")}`;
+  document.getElementById("nomeProcessador").innerHTML = `${informacoesUsuario.lojas[0].computadores[0].Modelo}`;
 };
 
 function sair() {

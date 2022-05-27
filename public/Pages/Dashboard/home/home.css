@@ -177,8 +177,8 @@ aside .sidebar {
   background: var(--color-white);
   display: flex;
   flex-direction: column;
-  height: 86vh;
-  position: relative;
+  /* height: 45vh; */
+  position: fixed;
   top: 5rem;
   border-radius: var(--border-radius-2);
 }
@@ -209,13 +209,15 @@ aside .sidebar a span {
 aside .sidebar a:last-child {
   position: absolute;
   bottom: 2rem;
-  width: 100%;
 }
 
 aside .sidebar a.active {
   background: var(--color-light);
   color: var(--color-primary);
   margin-left: 0;
+  width: 100%;
+  border-top-right-radius: inherit;
+  pointer-events: all;
 }
 
 aside .sidebar a.active:before {
@@ -232,10 +234,6 @@ aside .sidebar a.active span {
 
 aside .sidebar a:hover {
   color: var(--color-primary);
-}
-
-aside .sidebar a:hover span {
-  margin-left: 1rem;
 }
 
 /* =========================main================== */
@@ -460,7 +458,8 @@ main .graficos .memory .informations .teste {
   }
 
   aside .sidebar {
-    height: 90vh;
+    height: 70vh;
+    width: 5.6rem;
   }
 
   aside .sidebar a {
@@ -468,7 +467,7 @@ main .graficos .memory .informations .teste {
   }
 
   aside .sidebar a:last-child {
-    position: relative;
+    /* position: relative; */
     margin-top: 1.8rem;
   }
 
