@@ -103,22 +103,24 @@
               <span class="material-icons-sharp">stacked_line_chart</span>
               <h2>Memória de Massa</h2>
             </div>
-            <canvas id="grafico-memoriaMassa"></canvas>
+            <div class="root-grafico-memoriaMassa">
+              <div class="container-grafico-memoriaMassa">
+                <canvas id="grafico-memoriaMassa"></canvas>
+              </div>
+                <div class="informacoes-grafico-memoria-massa">
+                  <div>Total:<p id="valor-total"></p></div> 
+                  <br>
+                  <div>Em uso:<p id="valor-uso"></p></div>
+                  <br>
+                  <div>Disponível:<p id="valor-disponivel"></p></div>
+                </div>
+            </div>
             <small class="text-muted">Ultimas 24 horas</small>
           </div>
         </div>
 
         <!-- grafico-velocidade -->
         <div class="graficos">
-          <div class="memory">
-            <div class="cotaniner-icones">
-              <span class="material-icons-sharp">memory</span>
-              <h2>Frequência da Cpu</h2>
-            </div>
-            <canvas id="grafico-velocidade"></canvas>
-            <small class="text-muted">Ultimas 24 horas</small>
-          </div>
-
           <!-- grafico-usoCpu -->
           <div class="memory-massa">
             <div class="cotaniner-icones">

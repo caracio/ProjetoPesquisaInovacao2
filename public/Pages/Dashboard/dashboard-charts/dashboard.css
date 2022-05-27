@@ -188,24 +188,25 @@ aside .sidebar a {
   transition: 300ms;
 }
 
-aside .sidebar a span {
-  font-size: 1.6rem;
-}
-
 aside .sidebar a button {
   background-color: transparent;
+}
+
+aside .sidebar a span {
+  font-size: 1.6rem;
 }
 
 aside .sidebar a:last-child {
   position: absolute;
   bottom: 2rem;
-  width: 100%;
 }
 
 aside .sidebar a.active {
   background: var(--color-light);
   color: var(--color-primary);
   margin-left: 0;
+  width: 100%;
+  pointer-events: all;
 }
 
 aside .sidebar a.active:before {
@@ -222,10 +223,6 @@ aside .sidebar a.active span {
 
 aside .sidebar a:hover {
   color: var(--color-primary);
-}
-
-aside .sidebar a:hover span {
-  margin-left: 1rem;
 }
 
 /* =========================main================== */
@@ -371,6 +368,26 @@ main .graficos a {
   color: var(--color-primary);
 }
 
+.container-grafico-memoriaMassa{
+  width: 55%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.root-grafico-memoriaMassa{
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.informacoes-grafico-memoria-massa{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+
 /* ---------------------right------------------- */
 
 .right {
@@ -460,6 +477,7 @@ main .graficos a {
 
   aside .sidebar {
     height: 70vh;
+    width: 5.6rem;
   }
 
   aside .sidebar a {
@@ -467,8 +485,8 @@ main .graficos a {
   }
 
   aside .sidebar a:last-child {
-    margin-top: 0.8rem;
-    position: relative;
+    /* position: relative; */
+    margin-top: 1.8rem;
   }
 
   main .insights {
@@ -499,7 +517,7 @@ main .graficos a {
   }
 
   aside .sidebar {
-    height: 245vh;
+    height: 80vh;
   }
 
   aside .sidebar a {
