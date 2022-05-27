@@ -1,4 +1,4 @@
-const informacoesUsuario = JSON.parse(sessionStorage.getItem("res"));
+var informacoesUsuario = JSON.parse(sessionStorage.getItem("res"));
 
 if(sessionStorage.getItem("idComputador") != undefined){
   document.getElementById("exibir-numeracao-maquina").innerHTML += `${sessionStorage.getItem("idComputador")}`;
@@ -24,12 +24,14 @@ console.log("situacaoMaquina");
 
 function carregarMaquina() {
   var opcoesMaquina = document.getElementById('maquinasExistentes');
-  for (let i = 0; i < informacoesUsuario.lojas[0].computadores.length; i++) {
-    var option = document.createElement("option");
-    option.innerHTML = `Máquina ${informacoesUsuario.lojas[0].computadores[i].ID_Computador}`;
-    option.value = informacoesUsuario.lojas[0].computadores[i].ID_Computador;
-    opcoesMaquina.appendChild(option);
-    opcoesMaquina.removeChild
+  for (let il = 0; il < informacoesUsuario.lojas.length; il++) {
+    for (let i = 0; i < informacoesUsuario.lojas[il].computadores.length; i++) {
+      var option = document.createElement("option");
+      option.innerHTML = `Máquina ${informacoesUsuario.lojas[il].computadores[i].ID_Computador}`;
+      option.value = informacoesUsuario.lojas[il].computadores[i].ID_Computador;
+      opcoesMaquina.appendChild(option);
+      opcoesMaquina.removeChild
+    }
   }
   sessionStorage.setItem("idComputador", informacoesUsuario.lojas[0].computadores[0].ID_Computador);
 }

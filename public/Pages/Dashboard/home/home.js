@@ -25,6 +25,8 @@ function reRenderizarLojas(){
   });
 }
 
+
+
 reRenderizarLojas();
 
 console.log(informacoesUsuario);
