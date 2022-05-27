@@ -14,6 +14,7 @@ function fecharModal() {
 
 let btnOlho = document.querySelector('.fa-eye');
 
+
 // btnOlho.addEventListener('click', () => {
 //   let inputSenha = document.querySelector('#in_Senha');
 //   let inputConfirmaSenha = document.querySelector('#in_confirmar_Senha');
@@ -23,7 +24,7 @@ let btnOlho = document.querySelector('.fa-eye');
 //   } else {
 //     inputSenha.setAttribute('type', 'password');
 //   }
-  
+
 //   if (inputConfirmaSenha.getAttribute('type') == 'password') {
 //     inputConfirmaSenha.setAttribute('type', 'text');
 //   } else {
@@ -36,10 +37,10 @@ var btnSignup = document.querySelector('#signup');
 
 var body = document.querySelector('div #corpo');
 
-btnSignin.addEventListener("click", function (){
+btnSignin.addEventListener("click", function () {
   corpo.className = "sign-in-js"
 });
 
-btnSignup.addEventListener("click", function (){
+btnSignup.addEventListener("click", function () {
   corpo.className = "sign-up-js"
 });

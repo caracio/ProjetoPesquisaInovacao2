@@ -7,8 +7,8 @@
 }
 
 body {
-  width: 100%;
-  height: 100%;
+  max-width: 100vw;
+  max-height: 100vh;
 }
 
 header .hamburguer {
@@ -126,7 +126,7 @@ header nav {
   padding-left: 30%;
 }
 
-.img-logo{
+.img-logo {
   position: absolute;
   left: 10%;
   top: 3vh;
@@ -416,9 +416,79 @@ header nav .cadastro:hover {
   font-weight: bold;
 }
 
+/* ===================================================================== teste ===================================================================================== */
+.main-sobre-nos {
+  padding: 1rem;
+  bottom: 3rem;
+}
+
+.mySwiper {
+  overflow-x: hidden;
+  position: relative;
+  margin-bottom: 5rem;
+  background: #fafafa;
+}
+
+.testimonials_container h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 400;
+  padding: 2rem;
+}
+
+.testimonial {
+  padding-top: 2rem;
+
+}
+
+.avatar {
+  display: flex;
+  justify-content: center;
+  margin: 0 1rem;
+}
+
+.avatar img {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 00.3rem solid #fafafa;
+}
+
+.testimonial_info {
+  text-align: center;
+}
+
+.testimonial_body {
+  background: #02e493;
+  padding: 2rem;
+  margin-top: 3rem;
+  position: relative;
+  border-radius: 10px;
+}
+
+.testimonial_body p {
+  color: #fafafa;
+}
+
+.testimonial_body::before {
+  content: "";
+  display: block;
+  background: linear-gradient(130deg, transparent, #02e493, #02e493, #02e493, #02e493);
+  width: 3rem;
+  height: 3rem;
+  position: absolute;
+  left: 50%;
+  top: -1.5rem;
+  transform: rotate(45deg);
+}
+
+
+/* ===================================================================== footer ===================================================================== */
+
+
 footer {
-  background-color: #0a0a0ac5;
-  height: 15vh;
+  height: 20vh;
   width: 100%;
   display: flex;
   align-items: center;
@@ -426,24 +496,46 @@ footer {
 }
 
 footer p {
-  color: #fafafa;
   font-weight: 300;
   font-size: 15pt;
   margin-right: 3%;
 }
 
+.main-footer {
+  padding: 2rem;
+  width: 100%;
+  height: 100%;
+  background: #f6f6f6;
+}
+
+.main-footer .farma {
+  line-height: 2rem;
+}
+
 .img_midiaSocial_container {
-  padding: 0 0 0 3rem;
-  width: 57%;
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  gap: 2rem;
+}
+
+.img_midiaSocial_container .fa-brands {
+  font-size: 25px;
 }
 
 .img_midiaSocial {
   padding-right: 2%;
   width: 3vw;
   height: 100%;
+}
+
+.divisao {
+  height: 38%;
+}
+
+.sobre-footer {
+  display: flex;
+  justify-content: space-between;
 }
 
 /* ======================================  tela de login e cadastro abrindo modal =================================== */
@@ -473,7 +565,7 @@ footer p {
     display: block;
   }
 
-  .img-logo{
+  .img-logo {
     display: none;
   }
 }
@@ -487,7 +579,7 @@ footer p {
     display: none;
   }
 
-  .img-logo{
+  .img-logo {
     display: none;
   }
 
@@ -653,7 +745,7 @@ footer p {
     display: none;
   }
 
-  .img-logo{
+  .img-logo {
     display: none;
   }
 
@@ -831,7 +923,7 @@ footer p {
     display: none;
   }
 
-  .img-logo{
+  .img-logo {
     display: none;
   }
 
@@ -1010,7 +1102,7 @@ footer p {
     display: none;
   }
 
-  .img-logo{
+  .img-logo {
     display: none;
   }
 
