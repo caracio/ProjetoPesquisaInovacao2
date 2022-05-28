@@ -1,6 +1,35 @@
+// const { response } = require("express");
+
 const informacoesUsuario = JSON.parse(sessionStorage.getItem("res"));
+const email = informacoesUsuario.email;
+
 
 document.getElementById("nomeAdmin").innerHTML = informacoesUsuario.nome;
+
+function reRenderizarLojas(){
+  fetch(
+    "/recarregar/dados/loja",{
+      method: "POST", 
+      headers: {"Content-Type":"application/json"},
+      body: JSON.stringify({
+        Email: email
+      }),
+    }
+  ).then(async(response)=>{
+    const resposta = await response.json();
+    // console.log(resposta);
+    sessionStorage.setItem("res",JSON.stringify(resposta));
+    informacoesUsuario = JSON.parse(sessionStorage.getItem("res"));
+  }).catch((error) => {
+    console.log(error);
+  });
+}
+
+
+
+reRenderizarLojas();
+
+console.log(informacoesUsuario);
 
 function renderizarLojas() {
   informacoesUsuario.lojas.map((lojas) => {

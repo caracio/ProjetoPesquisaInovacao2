@@ -1,9 +1,17 @@
+const datasHorasProcessador = [];
+
 async function getDataLogProcessador() {
   var idComputador = sessionStorage.getItem("idComputador");
   var idLoja = sessionStorage.getItem("idLoja");
   const response = await (
     await fetch(`/grafico/processador/${idComputador}/Loja/${idLoja}`)
   ).json();
+  const dataCompleta = new Date(response.DataLog);
+  const minutos = dataCompleta.getMinutes() < 10 ?`0${dataCompleta.getMinutes()}`: dataCompleta.getMinutes(); 
+  if(datasHorasProcessador.length == 5){
+    datasHorasProcessador.pop(0);
+  }
+  datasHorasProcessador.push(`${dataCompleta.getHours()}:${minutos}:${dataCompleta.getSeconds()}`);
 ;
   return await response;
 }
@@ -42,6 +50,12 @@ async function plotarGrafico4(idGrafico) {
     const dadosProcessador = await getDataLogProcessador();
     
     myChart.data.datasets[0].data.push(await dadosProcessador.Uso);
+    myChart.data.datasets[0].data.forEach(dado => {
+      if (dado > 0) {
+        myChart.data.datasets[0].borderColor= ["#FF0000"];
+        myChart.data.datasets[0].backgroundColor= ["#FF0000"];
+      }
+    });
     myChart.update();
   }, 4000);
 
