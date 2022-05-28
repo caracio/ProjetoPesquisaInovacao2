@@ -80,7 +80,7 @@ async function plotarGrafico2() {
       myChart.data.datasets[0].backgroundColor = ["#31C1E130", "#11FBA760"];
     }
     document.getElementById("valor-total").innerHTML= `${response[0].toFixed(2)}GB`;
-    document.getElementById("valor-uso").innerHTML= `${response[1].toFixed(2)}GB (${(response[2] * 100 / response[0]).toFixed(2)}%)`;
+    document.getElementById("valor-uso").innerHTML= `${response[1].toFixed(2)}GB (${(response[1] * 100 / response[0]).toFixed(2)}%)`;
     document.getElementById("valor-disponivel").innerHTML= `${response[2].toFixed(2)}GB`;
     await response.shift();
     myChart.data.datasets[0].data = await response;

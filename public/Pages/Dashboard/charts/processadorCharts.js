@@ -33,6 +33,7 @@ async function plotarGrafico4(idGrafico) {
           beginAtZero: true,
         },
       },
+      maintainAspectRatio: false,
     },
   });
 

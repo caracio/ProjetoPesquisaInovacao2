@@ -1,163 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <script
-      type="text/javascript"
-      src="https://www.gstatic.com/charts/loader.js"
-    ></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;0,700;0,900;1,100&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"
-      rel="stylesheet"
-    />
-    <script
-      type="text/javascript"
-      src="https://www.chartjs.org/dist/2.8.0/Chart.min.js"
-    ></script>
-    <link rel="stylesheet" href="dashboard.css" />
-    <title>Farmagraph Solutions Dashboard</title>
-    <!-- Start of farmagraphsolutions Zendesk Widget script -->
-<script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=1327d6c7-59cb-4edb-a562-1620153b96a2"> </script>
-<!-- End of farmagraphsolutions Zendesk Widget script -->
-  </head>
 
-  <body
-    onload='plotarGrafico1("grafico-memoriaRam"),plotarGrafico2("grafico-memoriaMassa"),plotarGrafico3("grafico-velocidade"),plotarGrafico4("grafico-usoCpu")'
-  >
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <div class="container">
-      <aside>
-        <div class="top">
-          <div class="logo">
-            <a href="../home/home.html"><img src="../../../Images/logo.png" alt="" /></a>
-            <h2><span class="danger"></span></h2>
-          </div>
-          <div class="close" id="close-btn">
-            <span class="material-icons-sharp">close</span>
-          </div>
-        </div>
-        <div class="sidebar">
-          <a href="../home/home.html">
-            <span class="material-icons-sharp">home</span>
-            <h3>Home</h3>
-          </a>
-          <a href="#" class="active">
-            <span class="material-icons-sharp">dashboard</span>
-            <h3>Dashboard</h3>
-          </a>
-          <a>
-            <button onclick="sair()" class="material-icons-sharp">login</button>
-            <h3>Sair</h3>
-          </a>
-        </div>
-      </aside>
-      <!-- fim da aside -->
-      <main>
-        <h1 id="nomeLoja">
-          <h2 class="text-muted2" id="titulo maquina"></h2>
-        </h1>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;0,700;0,900;1,100&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet" />
+  <script type="text/javascript" src="https://www.chartjs.org/dist/2.8.0/Chart.min.js"></script>
+  <link rel="stylesheet" href="dashboard.css" />
+  <title>Farmagraph Solutions Dashboard</title>
+  <!-- Start of farmagraphsolutions Zendesk Widget script -->
+  <script id="ze-snippet"
+    src="https://static.zdassets.com/ekr/snippet.js?key=1327d6c7-59cb-4edb-a562-1620153b96a2"> </script>
+  <!-- End of farmagraphsolutions Zendesk Widget script -->
+</head>
 
-        <div class="insights">
+<body
+  onload='plotarGrafico1("grafico-memoriaRam"),plotarGrafico2("grafico-memoriaMassa"),plotarGrafico3("grafico-velocidade"),plotarGrafico4("grafico-usoCpu")'>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <div class="container">
+    <aside>
+      <div class="top">
+        <div class="logo">
+          <a href="../home/home.html"><img src="../../../Images/logo.png" alt="" /></a>
+          <h2><span class="danger"></span></h2>
+        </div>
+        <div class="close" id="close-btn">
+          <span class="material-icons-sharp">close</span>
+        </div>
+      </div>
+      <div class="sidebar">
+        <a href="../home/home.html">
+          <span class="material-icons-sharp">home</span>
+          <h3>Home</h3>
+        </a>
+        <a href="#" class="active">
+          <span class="material-icons-sharp">dashboard</span>
+          <h3>Dashboard</h3>
+        </a>
+        <a>
+          <button onclick="sair()" class="material-icons-sharp">login</button>
+          <h3>Sair</h3>
+        </a>
+      </div>
+    </aside>
+    <!-- fim da aside -->
+    <main>
+      <h1 id="nomeLoja">
+        <h2 class="text-muted2" id="titulo maquina"></h2>
+      </h1>
+
+      <div class="insights">
         <div class="expenses">
           <h2 id="exibir-numeracao-maquina" class="titulo-informacao-maquina">
-            Informações da Máquina 
+            Informações da Máquina
           </h2>
-          <p>Modelo do Processador: <p id="nomeProcessador"></p></p>
+          <p>Modelo do Processador:
+          <p id="nomeProcessador"></p>
+          </p>
           <br>
           <p id="situacao-maquina"></p>
         </div>
+      </div>
+
+      <div class="insights">
+        <!-- grafico-memoriaRam -->
+        <div class="expenses">
+          <div class="cotaniner-icones">
+            <span class="material-icons-sharp">bar_chart</span>
+            <h2>Memória Ram</h2>
+          </div>
+          <canvas id="grafico-memoriaRam"></canvas>
+          <small class="text-muted">Ultimas 24 horas</small>
         </div>
-       
-        <div class="insights">
-          <!-- grafico-memoriaRam -->
-
-          <div class="expenses">
-            <div class="cotaniner-icones">
-              <span class="material-icons-sharp">bar_chart</span>
-              <h2>Memória Ram</h2>
-            </div>
-            <canvas id="grafico-memoriaRam"></canvas>
-            <small class="text-muted">Ultimas 24 horas</small>
+        <!-- grafico-memoriaMassa -->
+        <div class="income">
+          <div class="cotaniner-icones">
+            <span class="material-icons-sharp">stacked_line_chart</span>
+            <h2>Memória de Massa</h2>
           </div>
-          <!-- grafico-memoriaMassa -->
-          <div class="income">
-            <div class="cotaniner-icones">
-              <span class="material-icons-sharp">stacked_line_chart</span>
-              <h2>Memória de Massa</h2>
+          <div class="root-grafico-memoriaMassa">
+            <div class="container-grafico-memoriaMassa">
+              <canvas id="grafico-memoriaMassa"></canvas>
             </div>
-            <canvas id="grafico-memoriaMassa"></canvas>
-            <small class="text-muted">Ultimas 24 horas</small>
+            <div class="informacoes-grafico-memoria-massa">
+              <div>Total:<p id="valor-total"></p>
+              </div>
+              <br>
+              <div>Em uso:<p id="valor-uso"></p>
+              </div>
+              <br>
+              <div>Disponível:<p id="valor-disponivel"></p>
+              </div>
+            </div>
           </div>
+          <small class="text-muted">Ultimas 24 horas</small>
         </div>
-
-        <!-- grafico-velocidade -->
-        <div class="graficos">
-          <div class="memory">
-            <div class="cotaniner-icones">
-              <span class="material-icons-sharp">memory</span>
-              <h2>Frequência da Cpu</h2>
-            </div>
-            <canvas id="grafico-velocidade"></canvas>
-            <small class="text-muted">Ultimas 24 horas</small>
+        <!-- grafico-usoCpu -->
+        <div class="memory-massa">
+          <div class="cotaniner-icones">
+            <span class="material-icons-sharp">av_timer</span>
+            <h2>Uso da Cpu</h2>
           </div>
-
-          <!-- grafico-usoCpu -->
-          <div class="memory-massa">
-            <div class="cotaniner-icones">
-              <span class="material-icons-sharp">av_timer</span>
-              <h2>Uso da Cpu</h2>
-            </div>
+          <div class="container-uso-cpu">
             <canvas id="grafico-usoCpu"></canvas>
-            <small class="text-muted">Ultimas 24 horas</small>
+          </div>
+          <small class="text-muted">Ultimas 24 horas</small>
+        </div>
+      </div>
+    </main>
+    <!-- final dos graficos -->
+    <div class="right">
+      <div class="top">
+        <button id="menu-btn">
+          <span class="material-icons-sharp">menu</span>
+        </button>
+        <div class="profile">
+          <div class="info">
+            <p>Ei,<b id="nomeUsuario"></b></p>
+            <small class="text-muted">Monitorador</small>
           </div>
         </div>
-      </main>
-      <!-- final dos graficos -->
-      <div class="right">
-        <div class="top">
-          <button id="menu-btn">
-            <span class="material-icons-sharp">menu</span>
-          </button>
-          <div class="profile">
-            <div class="info">
-              <p>Ei,<b id="nomeUsuario"></b></p>
-              <small class="text-muted">Monitorador</small>
-            </div>
-          </div>
-        </div>
+      </div>
 
-        <!--------------------- header final---------------->
-        <div class="recent-updates">
-          <h2>Controle de Máquinas</h2>
-          <div class="updates">
-            <div class="update">
-              <div class="profile-photo">
-                <span class="material-icons-sharp">devices</span>
-              </div>
-              <div class="message">
-                <p>
-                  Escolha a máquina em
-                  que deseja monitora da sua farmácia
-                </p>
-              </div>
-              <div class="container-maquinas">
-                <div class="select-maquinas">
-                  <select id="maquinasExistentes" onchange="mudarMaquina()">
-                  </select>
-                </div>
+      <!--------------------- header final---------------->
+      <div class="recent-updates">
+        <h2>Controle de Máquinas</h2>
+        <div class="updates">
+          <div class="update">
+            <div class="profile-photo">
+              <span class="material-icons-sharp">devices</span>
+            </div>
+            <div class="message">
+              <p>
+                Escolha a máquina em
+                que deseja monitora da sua farmácia
+              </p>
+            </div>
+            <div class="container-maquinas">
+              <div class="select-maquinas">
+                <select id="maquinasExistentes" onchange="mudarMaquina()">
+                </select>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </body>
+  </div>
+</body>
+
 </html>
 <script src="../script.js"></script>
 <script src="./dashboard.js"></script>

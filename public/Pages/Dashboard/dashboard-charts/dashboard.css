@@ -458,6 +458,10 @@ main .graficos a {
   line-height: 1rem;
 }
 
+.container-uso-cpu {
+  width: 100%;
+}
+
 /*---------- responsividade ------------*/
 
 @media screen and (max-width: 1422px) {
