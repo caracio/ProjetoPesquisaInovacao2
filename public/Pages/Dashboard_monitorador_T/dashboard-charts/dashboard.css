@@ -248,7 +248,7 @@ main .date input[type="date"] {
 
 main .insights {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 0.5rem;
 }
 
@@ -460,6 +460,7 @@ main .graficos a {
 
 .container-uso-cpu {
   width: 100%;
+  height: 25vh;
 }
 
 /*---------- responsividade ------------*/

@@ -29,11 +29,11 @@ async function plotarGrafico2() {
   await getDataLogMemoriaMassa();
 
   const data_pie = {
-    labels: ["Em uso", "Disponivel"],
+    labels: ["Em uso", "Disponível"],
     datasets: [
       {
         data: dataChartMemoriaMassa.shift(),
-        backgroundColor: ["#31C1E130", "#11FBA760"],
+        backgroundColor: ["#11FBA760","#1b98e0"],
         borderWidth: 1,
       },
     ],
@@ -60,27 +60,27 @@ async function plotarGrafico2() {
   setInterval(async () => {
     var response = await getDataLogMemoriaMassa();
     console.log(response);
-    if ((await response[2]) / response[0] >= 0.95) {
+    if ((await response[1] * 100) / response[0] >= 95) {
       myChart.data.datasets[0].backgroundColor.splice(
         0,
         myChart.data.datasets[0].backgroundColor.length
       );
-      myChart.data.datasets[0].backgroundColor = ["#ff0000", "#11FBA760"];
-    } else if ((await response[2]) / response[0] >= 0.75) {
+      myChart.data.datasets[0].backgroundColor = ["#ff0000", "#1b98e0"];
+    } else if ((await response[1] * 100) / response[0] >= 75) {
       myChart.data.datasets[0].backgroundColor.splice(
         0,
         myChart.data.datasets[0].backgroundColor.length
       );
-      myChart.data.datasets[0].backgroundColor = ["yellow", "#11FBA760"];
+      myChart.data.datasets[0].backgroundColor = ["#f6ce55", "#1b98e0"];
     } else {
       myChart.data.datasets[0].backgroundColor.splice(
         0,
         myChart.data.datasets[0].backgroundColor.length
       );
-      myChart.data.datasets[0].backgroundColor = ["#31C1E130", "#11FBA760"];
+      myChart.data.datasets[0].backgroundColor = ["#11FBA760","#1b98e0"];
     }
     document.getElementById("valor-total").innerHTML= `${response[0].toFixed(2)}GB`;
-    document.getElementById("valor-uso").innerHTML= `${response[1].toFixed(2)}GB (${(response[1] * 100 / response[0]).toFixed(2)}%)`;
+    document.getElementById("valor-uso").innerHTML= `${response[1].toFixed(2)}GB (${((response[1] * 100) / response[0]).toFixed(2)}%)`;
     document.getElementById("valor-disponivel").innerHTML= `${response[2].toFixed(2)}GB`;
     await response.shift();
     myChart.data.datasets[0].data = await response;
