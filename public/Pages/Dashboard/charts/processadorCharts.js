@@ -60,48 +60,47 @@ async function plotarGrafico4(idGrafico) {
     });
     myChart.update();
   }, 4000);
-
 }
 
-async function plotarGrafico3(idGrafico) {
-  const ctx = document.getElementById(idGrafico).getContext("2d");
-  let myChart = new Chart(ctx, {
-    type: "line",
+// async function plotarGrafico3(idGrafico) {
+//   const ctx = document.getElementById(idGrafico).getContext("2d");
+//   let myChart = new Chart(ctx, {
+//     type: "line",
 
-    data: {
-      labels: ["Horario", "Horario", "Horario", "Horario"],
-      datasets: [
-        {
-          label: "Desempenho",
-          data: [0],
-          backgroundColor: [
-            "#31C1E130",
-            "#11FBA760",
-            "#31C1E130",
-            "#11FBA760",
-            "#31C1E130",
-          ],
-          borderColor: ["#31C1E1", "#11FBA7"],
-          borderWidth: 1,
-        },
-      ],
-    },
-    options: {
-      scales: {
-        y: {
-          beginAtZero: true,
-        },
-      },
-    },
-  });
+//     data: {
+//       labels: ["Horario", "Horario", "Horario", "Horario"],
+//       datasets: [
+//         {
+//           label: "Desempenho",
+//           data: [0],
+//           backgroundColor: [
+//             "#31C1E130",
+//             "#11FBA760",
+//             "#31C1E130",
+//             "#11FBA760",
+//             "#31C1E130",
+//           ],
+//           borderColor: ["#31C1E1", "#11FBA7"],
+//           borderWidth: 1,
+//         },
+//       ],
+//     },
+//     options: {
+//       scales: {
+//         y: {
+//           beginAtZero: true,
+//         },
+//       },
+//     },
+//   });
   
-  setInterval(async () => {
-    if (myChart.data.datasets[0].data.length == 5) {
-      myChart.data.datasets[0].data.shift();
-    }
-    const dadosProcessador = await getDataLogProcessador();
+//   setInterval(async () => {
+//     if (myChart.data.datasets[0].data.length == 5) {
+//       myChart.data.datasets[0].data.shift();
+//     }
+//     const dadosProcessador = await getDataLogProcessador();
     
-    myChart.data.datasets[0].data.push(await dadosProcessador.Frequencia / Math.pow(10,9));
-    myChart.update();
-  }, 4000);
-}
+//     myChart.data.datasets[0].data.push(await dadosProcessador.Frequencia / Math.pow(10,9));
+//     myChart.update();
+//   }, 4000);
+// }
