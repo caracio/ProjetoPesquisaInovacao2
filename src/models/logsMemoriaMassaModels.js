@@ -24,6 +24,8 @@ class LogsMemoriaMassaModels {
     .request()
     .input('ID_Computador', idComputador)
     .input('FK_Loja', idLoja)
+    .output('leitura', sql.Int)
+    .output('escrita', sql.Int)
     .output('EspacoArmazenado', sql.BigInt)
     .output('EspacoLivre', sql.BigInt)
     .output('DataLog', sql.DateTime)
