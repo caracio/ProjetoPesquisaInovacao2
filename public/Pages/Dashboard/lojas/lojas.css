@@ -196,47 +196,44 @@ aside .sidebar a {
     position: relative;
     height: 3.7rem;
     transition: 300ms;
-}
-
-aside .sidebar a span {
-    font-size: 1.6rem;
-}
-
-aside .sidebar a button {
+  }
+  
+  aside .sidebar a button {
     background-color: transparent;
   }
-
-aside .sidebar a:last-child {
+  
+  aside .sidebar a span {
+    font-size: 1.6rem;
+  }
+  
+  aside .sidebar a:last-child {
     position: absolute;
     bottom: 2rem;
-    width: 100%;
-}
-
-aside .sidebar a.active {
+  }
+  
+  aside .sidebar a.active {
     background: var(--color-light);
     color: var(--color-primary);
     margin-left: 0;
-}
-
-aside .sidebar a.active:before {
+    width: 100%;
+    pointer-events: all;
+  }
+  
+  aside .sidebar a.active:before {
     content: "";
     width: 6px;
     height: 90%;
     background: var(--color-primary);
-}
-
-aside .sidebar a.active span {
+  }
+  
+  aside .sidebar a.active span {
     color: var(--color-primary);
     margin-left: calc(1rem - 3px);
-}
-
-aside .sidebar a:hover {
+  }
+  
+  aside .sidebar a:hover {
     color: var(--color-primary);
-}
-
-aside .sidebar a:hover span {
-    margin-left: 1rem;
-}
+  }
 
 /* =========================main================== */
 
@@ -579,16 +576,23 @@ main .graficos .memory .informations .teste {
         grid-template-columns: 7rem auto 32rem;
     }
 
-    aside .sidebar {
-        background: var(--color-white);
-        display: flex;
-        flex-direction: column;
-        height: 86vh;
-        position: relative;
-        top: 3rem;
-        border-radius: var(--border-radius-2);
-        height: 80%;
-    }
+    aside .sidebar h3 {
+        display: none;
+      }
+    
+      aside .sidebar {
+        height: 70vh;
+        width: 5.6rem;
+      }
+    
+      aside .sidebar a {
+        width: 5.6rem;
+      }
+    
+      aside .sidebar a:last-child {
+        /* position: relative; */
+        margin-top: 1.8rem;
+      }
 
     aside .logo h2 {
         display: none;

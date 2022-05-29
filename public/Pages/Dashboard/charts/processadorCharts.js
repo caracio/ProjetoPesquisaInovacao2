@@ -19,6 +19,7 @@ async function getDataLogProcessador() {
 
 async function plotarGrafico4(idGrafico) {
   const ctx = document.getElementById(idGrafico).getContext("2d");
+  
   let myChart = new Chart(ctx, {
     type: "line",
 
@@ -40,6 +41,7 @@ async function plotarGrafico4(idGrafico) {
           beginAtZero: true,
         },
       },
+      maintainAspectRatio: false,
     },
   });
 

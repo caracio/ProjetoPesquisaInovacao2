@@ -177,9 +177,8 @@ aside .sidebar {
   background: var(--color-white);
   display: flex;
   flex-direction: column;
-  /* height: 45vh; */
-  position: fixed;
-  top: 5rem;
+  height: 86vh;
+  position: relative;
   border-radius: var(--border-radius-2);
 }
 

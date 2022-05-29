@@ -177,9 +177,8 @@ aside .sidebar {
   background: var(--color-white);
   display: flex;
   flex-direction: column;
-  /* height: 45vh; */
-  position: fixed;
-  top: 5rem;
+  height: 86vh;
+  position: relative;
   border-radius: var(--border-radius-2);
 }
 
@@ -405,7 +404,7 @@ main .graficos .memory .informations .teste {
   margin-bottom: 1rem;
 }
 
-.right .recent-updates .update{
+.right .recent-updates .update {
   padding: 2px;
 }
 
@@ -485,6 +484,18 @@ main .graficos .memory .informations .teste {
 
   .right .recent-updates .updates {
     height: auto;
+  }
+
+  aside .sidebar h3 {
+    display: none;
+  }
+
+  aside .sidebar {
+    height: 96vh;
+  }
+
+  aside .sidebar a {
+    width: 5.6rem;
   }
 }
 
