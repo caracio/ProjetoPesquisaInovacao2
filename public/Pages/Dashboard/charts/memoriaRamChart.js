@@ -14,6 +14,7 @@ async function getDataLogMemoriaRam() {
     datasHoras.pop(0);
   }
   datasHoras.push(`${dataCompleta.getHours()}:${minutos}:${dataCompleta.getSeconds()}`);
+  document.getElementById("totalValorMemoriaRam").innerHTML = `${responseTratada.toFixed(2)}GB`;
   return responseTratada;
 }
 
@@ -28,7 +29,7 @@ async function plotarGrafico1(idGrafico) {
         {
           label: "Desempenho",
           data: [await getDataLogMemoriaRam()],
-          backgroundColor: "#31C1E130",
+          backgroundColor: "#1b98e0",
           borderColor: "#31C1E1",
           borderWidth: 1,
         },
