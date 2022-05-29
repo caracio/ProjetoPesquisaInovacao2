@@ -6,8 +6,6 @@ if(sessionStorage.getItem("idComputador") != undefined){
   document.getElementById("situacao-maquina").innerHTML = `Situação: ${sessionStorage.getItem("situacaoMaquina")}`;
 }
 
-console.log("situacaoMaquina");
-
 (function dadosUsuario() {
   document.getElementById("nomeUsuario").innerHTML = JSON.parse(
     sessionStorage.getItem("res")

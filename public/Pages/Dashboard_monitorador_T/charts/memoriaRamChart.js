@@ -14,6 +14,7 @@ async function getDataLogMemoriaRam() {
     datasHoras.pop(0);
   }
   datasHoras.push(`${dataCompleta.getHours()}:${minutos}:${dataCompleta.getSeconds()}`);
+  document.getElementById("totalValorMemoriaRam").innerHTML = `${responseTratada.toFixed(2)}GB`;
   return responseTratada;
 }
 
