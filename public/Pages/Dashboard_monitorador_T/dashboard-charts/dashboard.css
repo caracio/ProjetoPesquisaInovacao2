@@ -463,6 +463,12 @@ main .graficos a {
   height: 25vh;
 }
 
+.container-informacoes-memoria-ram{
+  display: flex;
+  width: 27%;
+  justify-content: space-between;
+}
+
 /*---------- responsividade ------------*/
 
 @media screen and (max-width: 1422px) {

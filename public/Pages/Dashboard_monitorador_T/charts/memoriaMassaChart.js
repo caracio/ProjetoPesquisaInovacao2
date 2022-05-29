@@ -59,7 +59,6 @@ async function plotarGrafico2() {
 
   setInterval(async () => {
     var response = await getDataLogMemoriaMassa();
-    console.log(response);
     if ((await response[1] * 100) / response[0] >= 95) {
       myChart.data.datasets[0].backgroundColor.splice(
         0,
