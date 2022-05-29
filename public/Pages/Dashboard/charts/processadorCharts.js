@@ -8,7 +8,7 @@ async function getDataLogProcessador() {
   ).json();
   const dataCompleta = new Date(response.DataLog);
   const minutos = dataCompleta.getMinutes() < 10 ?`0${dataCompleta.getMinutes()}`: dataCompleta.getMinutes(); 
-  if(datasHorasProcessador.length == 5){
+  if(datasHorasProcessador.length == 24){
     datasHorasProcessador.pop(0);
   }
   datasHorasProcessador.push(`${dataCompleta.getHours()}:${minutos}:${dataCompleta.getSeconds()}`);
@@ -24,7 +24,7 @@ async function plotarGrafico4(idGrafico) {
     type: "line",
 
     data: {
-      labels:["horario","horario","horario","horario","horario"],
+      labels: datasHorasProcessador,
       datasets: [
         {
           label: "Desempenho",
@@ -46,19 +46,36 @@ async function plotarGrafico4(idGrafico) {
   });
 
   setInterval(async () => {
-    if (myChart.data.datasets[0].data.length == 5) {
+    if (myChart.data.datasets[0].data.length == 24) {
       myChart.data.datasets[0].data.shift();
     }
     const dadosProcessador = await getDataLogProcessador();
     
-    myChart.data.datasets[0].data.push(await dadosProcessador.Uso);
-    myChart.data.datasets[0].data.forEach(dado => {
-      if (dado > 0) {
-        myChart.data.datasets[0].borderColor= ["#FF0000"];
-        myChart.data.datasets[0].backgroundColor= ["#FF0000"];
-      }
-    });
-    myChart.update();
+    for (let i = 1; i <= myChart.data.datasets[0].data.length; i++) {
+      // if (i == 0) {
+      //   if (dadosProcessador.Uso !=  myChart.data.datasets[0].data[i] && myChart.data.datasets[0].data[i] != undefined) {
+      //     myChart.data.datasets[0].data.push(await dadosProcessador.Uso);
+      //     myChart.data.datasets[0].data.map((dado) => {
+      //       if (dado > 0) {
+      //         myChart.data.datasets[0].borderColor= ["#FF0000"];
+      //         myChart.data.datasets[0].backgroundColor= ["#FF0000"];
+      //       }
+      //     });
+      //     myChart.update();
+      //   }
+      // } else {
+        if (dadosProcessador.Uso !=  myChart.data.datasets[0].data[i-1] && myChart.data.datasets[0].data[i-1] != undefined) {
+          myChart.data.datasets[0].data.push(await dadosProcessador.Uso);
+          myChart.data.datasets[0].data.map((dado) => {
+            if (dado > 0) {
+              myChart.data.datasets[0].borderColor= ["#FF0000"];
+              myChart.data.datasets[0].backgroundColor= ["#FF0000"];
+            }
+          });
+        }
+        myChart.update();
+      // }
+    }
   }, 4000);
 }
 
