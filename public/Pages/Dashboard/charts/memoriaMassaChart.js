@@ -1,5 +1,3 @@
-//var dataChartMemoriaMassa = [];
-
 async function getDataLogMemoriaMassa() {
   var idComputador = sessionStorage.getItem("idComputador");
   var idLoja = sessionStorage.getItem("idLoja");
@@ -82,6 +80,16 @@ async function plotarGrafico2() {
     document.getElementById("valor-uso").innerHTML= `${response[1].toFixed(2)}GB (${((response[1] * 100) / response[0]).toFixed(2)}%)`;
     document.getElementById("valor-disponivel").innerHTML= `${response[2].toFixed(2)}GB`;
     await response.shift();
+
+    var idComputador = sessionStorage.getItem("idComputador");
+    var idLoja = sessionStorage.getItem("idLoja");
+
+    const consulta = await (
+      await fetch(`/grafico/memoriaMassa/${idComputador}/Loja/${idLoja}`)
+    ).json();
+
+    document.getElementById("valor-leitura").innerHTML = `${consulta.leitura}KB/s`;
+    document.getElementById("valor-escrita").innerHTML = `${consulta.escrita}KB/s`;
     myChart.data.datasets[0].data = await response;
     myChart.update();
   }, 4000);
