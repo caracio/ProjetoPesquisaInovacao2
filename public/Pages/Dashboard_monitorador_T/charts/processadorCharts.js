@@ -15,8 +15,8 @@ async function getDataLogProcessador() {
   return await response;
 }
 
-function messagemSlack(mensagem) {
-  fetch("https://hooks.slack.com/services/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",{
+function mensagemSlack(mensagem) {
+  fetch("https://hooks.slack.com/services/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",{
     method: "POST", 
       headers: {"Content-Type":"application/x-www-form-urlencoded"},
       body: JSON.stringify({
@@ -67,20 +67,18 @@ async function plotarGrafico4(idGrafico) {
           dataCompleta = new Date(dadosProcessador.DataLog);
           myChart.data.datasets[0].data.push(await dadosProcessador.Uso);
           datasHorasProcessador.push(`${dataCompleta.getHours()}:${minutos}:${dataCompleta.getSeconds()}`);
-          myChart.data.datasets[0].data.map((dado) => {
-            if (dado > 0 ) {
+            if (dadosProcessador.Uso >= 0  && dadosProcessador.Uso <= 64) {
               myChart.data.datasets[0].borderColor= ["#1b98e0"];
               myChart.data.datasets[0].backgroundColor= ["#31C1E1"];
-            } else if (dado >= 65 && dado <= 84) {
+            } else if (dadosProcessador.Uso >= 65 && dadosProcessador.Uso <= 84) {
               myChart.data.datasets[0].borderColor= ["#FFFF00"];
               myChart.data.datasets[0].backgroundColor= ["#FFFF00"];
-              messagemSlack(`Atenção o processador da maquina ${sessionStorage.getItem("idComputador")} esta com ${dadosProcessador.Uso}% de uso`)
-            } else if (dado >= 85 ) {
+              mensagemSlack(`Atenção o processador da maquina ${sessionStorage.getItem("idComputador")} esta com ${dadosProcessador.Uso}% de uso`)
+            } else if (dadosProcessador.Uso >= 85 ) {
               myChart.data.datasets[0].borderColor= ["#FF0000"];
               myChart.data.datasets[0].backgroundColor= ["#FF0000"];
-              messagemSlack(`ALERTA!!! Cuidado o processador da maquina ${sessionStorage.getItem("idComputador")} esta com ${dadosProcessador.Uso}% de uso`)
+              mensagemSlack(`ALERTA!!! Cuidado o processador da maquina ${sessionStorage.getItem("idComputador")} esta com ${dadosProcessador.Uso}% de uso`)
             }
-          });
           i+= myChart.data.datasets[0].data.length-i;
         };
         myChart.update();
@@ -89,21 +87,19 @@ async function plotarGrafico4(idGrafico) {
       dataCompleta = new Date(dadosProcessador.DataLog);
       myChart.data.datasets[0].data.push(await dadosProcessador.Uso);
       datasHorasProcessador.push(`${dataCompleta.getHours()}:${minutos}:${dataCompleta.getSeconds()}`);
-      myChart.data.datasets[0].data.map((dado) => {
-        if (dado > 0 ) {
+        if (dadosProcessador.Uso >= 0  && dadosProcessador.Uso <= 64) {
           myChart.data.datasets[0].borderColor= ["#1b98e0"];
           myChart.data.datasets[0].backgroundColor= ["#31C1E1"];
-        } else if (dado >= 65 && dado <= 84) {
+        } else if (dadosProcessador.Uso >= 65 && dadosProcessador.Uso <= 84) {
           myChart.data.datasets[0].borderColor= ["#FFFF00"];
           myChart.data.datasets[0].backgroundColor= ["#FFFF00"];
-          messagemSlack(`Atenção o processador da maquina ${sessionStorage.getItem("idComputador")} esta com ${dadosProcessador.Uso}% de uso`)
+          mensagemSlack(`Atenção o processador da maquina ${sessionStorage.getItem("idComputador")} esta com ${dadosProcessador.Uso}% de uso`)
 
-        } else if (dado >= 85 ) {
+        } else if (dadosProcessador.Uso >= 85 ) {
           myChart.data.datasets[0].borderColor= ["#FF0000"];
           myChart.data.datasets[0].backgroundColor= ["#FF0000"];
-          messagemSlack(`ALERTA!!! Cuidado o processador da maquina ${sessionStorage.getItem("idComputador")} esta com ${dadosProcessador.Uso}% de uso`)
+          mensagemSlack(`ALERTA!!! Cuidado o processador da maquina ${sessionStorage.getItem("idComputador")} esta com ${dadosProcessador.Uso}% de uso`)
         }
-      });
       myChart.update();
     }
   }, 4000);
