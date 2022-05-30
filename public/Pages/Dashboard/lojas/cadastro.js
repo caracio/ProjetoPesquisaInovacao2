@@ -21,7 +21,7 @@ function cadastro() {
         messageError(errorInformation);
         return;
       }
-
+      window.alert("Loja cadastrada com sucesso");
       window.Location = "../home/home.html";
     })
     .catch((error) => {
