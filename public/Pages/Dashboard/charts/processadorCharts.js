@@ -16,7 +16,7 @@ async function getDataLogProcessador() {
 }
 
 function mensagemSlack(mensagem) {
-  fetch("https://hooks.slack.com/services/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",{
+  fetch("https://hooks.slack.com/services/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",{
     method: "POST", 
       headers: {"Content-Type":"application/x-www-form-urlencoded"},
       body: JSON.stringify({
