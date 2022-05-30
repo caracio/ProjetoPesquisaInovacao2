@@ -9,11 +9,12 @@ async function getDataLogMemoriaRam() {
     await fetch(`/grafico/memoriaRam/${idComputador}/Loja/${idLoja}`)
   ).json();
   const responseTratada = (await response.memoriaUso) / Math.pow(10, 9);
+  const valorTotal = (await response.totalArmazenamento) / Math.pow(10, 9);
   dataCompletaMemoriaRam = new Date(response.DataLog);
   if (datasHoras.length == 0) {
     datasHoras.push(`${dataCompletaMemoriaRam.getHours()}:${minutos}:${dataCompletaMemoriaRam.getSeconds()}`);
   }
-  document.getElementById("totalValorMemoriaRam").innerHTML = `${responseTratada.toFixed(2)}GB`;
+  document.getElementById("totalValorMemoriaRam").innerHTML = `${valorTotal.toFixed(2)}GB`;
   return responseTratada;
 }
 

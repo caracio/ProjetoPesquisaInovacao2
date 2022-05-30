@@ -87,19 +87,19 @@
                 <h2></h2>
                 <div class="updates">
                     <div class="right-login">
-                        <form id="form_cadastro" method="post" onsubmit="return cadastro()" class="card-login">
+                        <form id="form_cadastro" onsubmit="return cadastroMaquina()" class="card-login">
                             <h1>Cadastre sua Máquina </h1>
                             <div class="text-field">
-                                <label for="Nome">Nome da Máquina</label>
-                                <input name="Nome" placeholder="Nome da Máquina" type="text" />
+                                <label for="Numero">Numero da Máquina</label>
+                                <input id="Numero" placeholder="Numero da Máquina" type="text" />
                             </div>
                             <div class="text-field">
-                                <label for="CNPJ">Senha</label>
-                                <input name="CNPJ" placeholder="Senha" type="password" />
+                                <label for="Senha">Senha</label>
+                                <input id="Senha" placeholder="Senha" type="password" />
                             </div>
                             <div class="text-field">
                                 <label for="Loja vinculada">Loja Associada</label>
-                                <select name="Loja vinculada" id="lojasExistentes">
+                                <select id="lojasExistentes">
                                     <option value=""></option>
                                 </select>
                             </div>

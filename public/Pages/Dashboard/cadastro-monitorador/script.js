@@ -1,3 +1,6 @@
+const informacoesUsuario = JSON.parse(sessionStorage.getItem("res"));
+document.getElementById("nomeAdmin").innerHTML = informacoesUsuario.nome;
+
 function sair() {
     sessionStorage.clear();
     window.location = "../../../index.html";
@@ -10,21 +13,33 @@ function carregarLojas() {
 
     for (let i = 0; i < dados.length; i++) {
         var option = document.createElement("option");
-        option.text = dados[i].nome;
-        console.log(dados[i].nome);
-        opcoesLoja.add(option);
+        option.innerHTML = informacoesUsuario.lojas[i].nome;
+        option.value = informacoesUsuario.lojas[i].id_Loja;
+        opcoesLoja.appendChild(option);
     }
 }
 carregarLojas();
 
-function cadastroMonitorador() {
-    const formulario = new URLSearchParams(
-        new FormData(document.getElementById("form_cadastro"))
-    );
-
-    fetch("/cadastro/Monitorador", {
+function cadastro() {
+    
+    const nome = document.getElementById("Nome").value;
+    const cpf = document.getElementById("CPF").value;
+    const email = document.getElementById("Email").value;
+    const senha = document.getElementById("Senha").value;
+    const opcaoLoja = document.getElementById('lojasExistentes').value;
+    
+    fetch("/dashboard/cadastro/Monitorador", {
         method: "POST",
-        body: formulario,
+        headers: {
+            "Content-Type": "application/json",
+          },
+        body: JSON.stringify({
+            Nome: nome,
+            CPF: cpf,
+            Email: email,
+            Senha: senha,
+            FK_Loja:opcaoLoja,
+        }),
     })
         .then(async (response) => {
             if (!response.ok) {
@@ -32,7 +47,7 @@ function cadastroMonitorador() {
                 messageError(errorInformation);
                 return;
             }
-            window.alert = "Monitorador cadastrado com sucesso.";
+            alert("Monitorador cadastrado com sucesso.");
         })
         .catch(async (error) => {
             console.log(error);
@@ -46,6 +61,3 @@ const messageError = (errorInformation) => {
     document.getElementById("mensagemErro").innerHTML = errorInformation.message;
 };
 
-const informacoesUsuario = JSON.parse(sessionStorage.getItem("res"));
-
-document.getElementById("nomeAdmin").innerHTML = informacoesUsuario.nome;
