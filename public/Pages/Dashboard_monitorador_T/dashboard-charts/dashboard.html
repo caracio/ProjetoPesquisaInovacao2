@@ -20,7 +20,7 @@
 </head>
 
 <body
-  onload='plotarGrafico1("grafico-memoriaRam"),plotarGrafico2("grafico-memoriaMassa"),plotarGrafico3("grafico-velocidade"),plotarGrafico4("grafico-usoCpu")'>
+  onload='plotarGrafico1("grafico-memoriaRam"),plotarGrafico2("grafico-memoriaMassa"),plotarGrafico4("grafico-usoCpu")'>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <div class="container">
     <aside>
@@ -63,6 +63,10 @@
           <p id="nomeProcessador"></p>
           </p>
           <br>
+          <p>Modelo do Disco:
+          <p id="nomeDisco"></p>
+          </p>
+          <br>
           <p id="situacao-maquina"></p>
         </div>
       </div>
@@ -96,6 +100,12 @@
               </div>
               <br>
               <div>Disponível:<p id="valor-disponivel"></p>
+              </div>
+              <br>
+              <div>Leitura:<p id="valor-leitura"></p>
+              </div>
+              <br>
+              <div>Escrita:<p id="valor-escrita"></p>
               </div>
             </div>
           </div>
