@@ -1,8 +1,8 @@
-const customExpress = require("./config/customExpress");
+const customExpress = require("./src/config/customExpress");
 const app = customExpress();
-const { conexao } = require("./infraestrutura/conexao");
-const { conexaoAzure } = require("./infraestrutura/conexaoAzure");
-const Tabelas = require("./infraestrutura/tabelas");
+const { conexao } = require("./src/infraestrutura/conexao");
+const { conexaoAzure } = require("./src/infraestrutura/conexaoAzure");
+const Tabelas = require("./src/infraestrutura/tabelas");
 
 try {
   conexaoAzure();
