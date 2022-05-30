@@ -48,11 +48,18 @@ function carregarMaquina() {
   for (let il = 0; il < informacoesUsuario.lojas.length; il++) {
     if (informacoesUsuario.lojas[il].id_Loja == sessionStorage.getItem("idLoja")) {
       for (let i = 0; i < informacoesUsuario.lojas[il].computadores.length; i++) {
-        var option = document.createElement("option");
-        option.innerHTML = `Máquina ${informacoesUsuario.lojas[il].computadores[i].ID_Computador}`;
-        option.value = informacoesUsuario.lojas[il].computadores[i].ID_Computador;
-        opcoesMaquina.appendChild(option);
-        opcoesMaquina.removeChild
+        if (i > 0 && informacoesUsuario.lojas[il].computadores[i].ID_Computador != informacoesUsuario.lojas[il].computadores[i - 1].ID_Computador) {
+          var option = document.createElement("option");
+          option.innerHTML = `Máquina ${informacoesUsuario.lojas[il].computadores[i].ID_Computador}`;
+          option.value = informacoesUsuario.lojas[il].computadores[i].ID_Computador;
+          opcoesMaquina.appendChild(option);
+        } else if(i == 0) {
+          var option = document.createElement("option");
+          option.innerHTML = `Máquina ${informacoesUsuario.lojas[il].computadores[i].ID_Computador}`;
+          option.value = informacoesUsuario.lojas[il].computadores[i].ID_Computador;
+          opcoesMaquina.appendChild(option);
+        }
+        // opcoesMaquina.removeChild
       }
     }
   }
@@ -60,9 +67,9 @@ function carregarMaquina() {
 }
 carregarMaquina();
 
-for (let index = 0; index < opcoesMaquina.options.length; index++) {
-  if (opcoesMaquina.options[index].value == sessionStorage.getItem("idComputador")) {
-    opcoesMaquina.selectedIndex = index;
+for (let i = 0; i < opcoesMaquina.options.length; i++) {
+  if (opcoesMaquina.options[i].value == sessionStorage.getItem("idComputador")) {
+    opcoesMaquina.selectedIndex = i;
   }
 }
 
