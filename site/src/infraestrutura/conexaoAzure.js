@@ -2,7 +2,7 @@ const sql = require("mssql");
 
 const dbSettings = {
   user: "adminProjeto",
-  password: "2ads$grupo2",
+  password: "x",
   server: "farmagraphsolutions.database.windows.net",
   database: "farmagraphsolutions",
   parseJSON: true,
